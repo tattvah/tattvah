@@ -1,0 +1,59 @@
+@import '../../scss-utilities/header';
+@import '../../scss-utilities/footer';
+@import '../../scss-utilities/global';
+@import "../../scss-utilities/tailwind";
+@import '../../scss-utilities/breakpoints';
+
+
+.Main {
+    grid-column: center-start/center-end;
+    width: 100%;
+    justify-content: center;
+}
+
+.gallery-heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 8rem;
+    margin-top: 2rem;
+    font-family: Inter;
+    text-align: center;
+}
+
+.gallery {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+@media (max-width:1024px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width:600px) {
+    .gallery {
+        column-count: 1;
+    }
+}
+
+.gallery a {
+    display: block;
+    break-inside: avoid;
+    margin-bottom: 20px;
+
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery img:hover {
+    transform: rotate(0.5deg) scale(1.03);
+    transition: all 0.3s;
+}
