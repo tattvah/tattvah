@@ -54,7 +54,7 @@ sliderElement.addEventListener('mouseleave', () => {
 // Newsletter CTA Subscribe Form
 
 document.addEventListener('DOMContentLoaded', function () {
-    initZohoForm('#cta-subscribe-form', 'Shrey-Sharma-Website-Newsletter', 'success');
+    initZohoForm('#cta-subscribe-form', 'Tattvah-Website-Newsletter', 'success');
 });
 
 // Newsletter CTA Subscribe Form

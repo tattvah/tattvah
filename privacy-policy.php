@@ -150,7 +150,7 @@
                 mailing list by unsubscribing.
             </p>
             <p>
-                You can contact gettrained@shreysharma.com to request your personal information, or in case you have any
+                You can contact gettrained@tattvah.com to request your personal information, or in case you have any
                 questions regarding our privacy policy.
             </p>
         </section>

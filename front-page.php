@@ -22,7 +22,7 @@
 
 		<section class="blog-header-section">
 			<div class="blog-img-text-container">
-				<img src="https://shreysharma.com/wp-content/uploads/2025/01/home-banner-1.webp" width="427"
+				<img src="https://tattvah.com/wp-content/uploads/2025/01/home-banner-1.webp" width="427"
 					height="437" fetchpriority="high" alt="Tattvah">
 				<div class="text-container">
 					<p>I make it Simple,</p>

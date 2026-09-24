@@ -24,12 +24,12 @@
 			<p class="top-heading">WELL HEY THERE,</p>
 			<div class="hero-container">
 				<img class="hero-image" width="613" height="758" fetchpriority="high"
-					src="https://shreysharma.com/wp-content/uploads/2025/01/aboutus-banner-main.webp"
-					alt="About Shrey Video">
-				<h1>I'M SHREY</h1>
+					src="https://tattvah.com/wp-content/uploads/2025/01/aboutus-banner-main.webp"
+					alt="About tattvah Video">
+				<h1>I'M tattvah</h1>
 				<img class="hero-side-image" width="289" height="328" loading="lazy"
-					src="https://shreysharma.com/wp-content/uploads/2025/01/aboutus-side-hero.webp"
-					alt="About Shrey Side Img">
+					src="https://tattvah.com/wp-content/uploads/2025/01/aboutus-side-hero.webp"
+					alt="About tattvah Side Img">
 				<div class="hero-text">
 					<p>I am pretty hands on with</p>
 					<p class="highlight">Technology, People, Money & Life.</p>
@@ -52,8 +52,8 @@
 					If you haven't yet got it then your seeking is not deep enough.</h2>
 			</div>
 			<div class="about-text-img">
-				<img src="https://shreysharma.com/wp-content/uploads/2025/01/retro-img.webp" alt="IN RETROSPECT"
-					width="321" height="421" loading="lazy">
+				<img src="https://tattvah.com/wp-content/uploads/2025/01/retro-img.webp" alt="IN RETROSPECT" width="321"
+					height="421" loading="lazy">
 				<div class="text-content">
 					<h3>IN RETROSPECT</h3>
 					<p>Since childhood, everything intrigued me—money, business/power, value, and whatever life threw my
@@ -75,8 +75,8 @@
 
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/02/card-about-2013.webp"
-								width="420" height="480" loading="lazy" alt="2013">
+							<img src="https://tattvah.com/wp-content/uploads/2025/02/card-about-2013.webp" width="420"
+								height="480" loading="lazy" alt="2013">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -96,8 +96,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2014.webp"
-								width="420" height="480" loading="lazy" alt="2014">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2014.webp" width="420"
+								height="480" loading="lazy" alt="2014">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -118,8 +118,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2015.webp"
-								width="420" height="480" loading="lazy" alt="2015">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2015.webp" width="420"
+								height="480" loading="lazy" alt="2015">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -141,8 +141,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2016.webp"
-								width="420" height="480" loading="lazy" alt="2016">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2016.webp" width="420"
+								height="480" loading="lazy" alt="2016">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -166,8 +166,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2017.webp"
-								width="420" height="480" loading="lazy" alt="2017">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2017.webp" width="420"
+								height="480" loading="lazy" alt="2017">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -188,8 +188,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2018.webp"
-								width="420" height="480" loading="lazy" alt="2018">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2018.webp" width="420"
+								height="480" loading="lazy" alt="2018">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -213,8 +213,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2019.webp"
-								width="420" height="480" loading="lazy" alt="2019">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2019.webp" width="420"
+								height="480" loading="lazy" alt="2019">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -235,8 +235,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2020.webp"
-								width="420" height="480" loading="lazy" alt="2020">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2020.webp" width="420"
+								height="480" loading="lazy" alt="2020">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -260,8 +260,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2021.webp"
-								width="420" height="480" loading="lazy" alt="2021">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2021.webp" width="420"
+								height="480" loading="lazy" alt="2021">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -289,8 +289,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2022.webp"
-								width="420" height="480" loading="lazy" alt="2022">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2022.webp" width="420"
+								height="480" loading="lazy" alt="2022">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -314,8 +314,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2023.webp"
-								width="420" height="480" loading="lazy" alt="2023">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2023.webp" width="420"
+								height="480" loading="lazy" alt="2023">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -340,8 +340,8 @@
 					</div>
 					<div class="card swiper-slide" data-tilt>
 						<div class="for-overlay">
-							<img src="https://shreysharma.com/wp-content/uploads/2025/01/about-card-2024.webp"
-								width="420" height="480" loading="lazy" alt="2024">
+							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2024.webp" width="420"
+								height="480" loading="lazy" alt="2024">
 							<div class="overlay"></div>
 							<div class="overlay-secondary"></div>
 						</div>
@@ -401,13 +401,13 @@
 		"@context": "https://schema.org/",
 		"@type": "Person",
 		"name": "Tattvah",
-		"url": "https://shreysharma.com",
-		"image": "https://shreysharma.com/wp-content/uploads/2026/09/Shrey-Sharma-Youngest-Salesforce-MVP.webp",
+		"url": "https://tattvah.com",
+		"image": "https://tattvah.com/wp-content/uploads/2026/09/Tattvah-Youngest-Salesforce-MVP.webp",
 		"sameAs": [
-			"https://www.linkedin.com/in/imshreysharma",
-			"https://www.youtube.com/@theshreysharma",
-			"https://www.instagram.com/imshreysharma/",
-			"https://x.com/iamshreysharma"
+			"https://www.linkedin.com/in/imtattvah",
+			"https://www.youtube.com/@thetattvah",
+			"https://www.instagram.com/imtattvah/",
+			"https://x.com/iamtattvah"
 		],
 		"jobTitle": "CEO of Tattvah, Founder of S2 Labs",
 		"worksFor": {

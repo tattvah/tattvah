@@ -1,5 +1,5 @@
 <div class="loading-div">
-    <img src="https://shreysharma.com/wp-content/uploads/2025/01/Form-Loader-Gif.gif" alt="loader">
+    <img src="https://tattvah.com/wp-content/uploads/2025/01/Form-Loader-Gif.gif" alt="loader">
 </div>
 
 <footer class="footer">
@@ -19,7 +19,7 @@
 
         <div class="footer-products">
             <a href="/social-highlights/">Social Highlights</a>
-            <a href="/about-shrey/">About Shrey</a>
+            <a href="/about-tattvah/">About tattvah</a>
         </div>
 
     </div>

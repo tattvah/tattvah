@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="banner-image">
-                    <img src="https://shreysharma.com/wp-content/uploads/2025/01/contact-banner-img.webp" width="410"
+                    <img src="https://tattvah.com/wp-content/uploads/2025/01/contact-banner-img.webp" width="410"
                         height="210" fetchpriority="high" alt="Tattvah">
                 </div>
             </div>

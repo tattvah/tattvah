@@ -53,15 +53,14 @@
 
             <!-- Main Header -->
             <div class="header-main">
-                <a href="/" class="ShreySharma-home" aria-label="ShreySharma">
-                    <img class="logo-ShreySharma"
-                        src="https://shreysharma.com/wp-content/uploads/2025/01/Signature-Logo.webp" width="132"
-                        height="62" alt="Signature Logo">
+                <a href="/" class="tattvah-home" aria-label="tattvah">
+                    <img class="logo-tattvah" src="https://tattvah.com/wp-content/uploads/2025/01/Signature-Logo.webp"
+                        width="132" height="62" alt="Signature Logo">
                 </a>
                 <div class="nav-container">
                     <nav>
                         <a href="/" class="nav-item">Home</a>
-                        <a href="/about-shrey/" class="nav-item">About Shrey</a>
+                        <a href="/about-tattvah/" class="nav-item">About tattvah</a>
                         <a href="/tattvah-shows/" class="nav-item">The Tattvah Show</a>
                         <a href="/social-highlights/" class="nav-item">Social Highlights</a>
                         <a href="/contact-us/" class="nav-item">Contact</a>
@@ -81,10 +80,9 @@
         <!-- Side Bar Toggle Button -->
         <div class="mobile-toggle-bar" data-aos="fade-down" data-aos-duration="2000">
 
-            <a href="/" class="ShreySharma-home" aria-label="ShreySharma">
-                <img class="logo-ShreySharma"
-                    src="https://shreysharma.com/wp-content/uploads/2025/01/Signature-Logo.webp" width="132" height="62"
-                    alt="Signature Logo">
+            <a href="/" class="tattvah-home" aria-label="tattvah">
+                <img class="logo-tattvah" src="https://tattvah.com/wp-content/uploads/2025/01/Signature-Logo.webp"
+                    width="132" height="62" alt="Signature Logo">
             </a>
 
             <button id="toggle-btn" aria-label="Toggle Button">
@@ -104,14 +102,13 @@
 
         <!-- Side Bar -->
         <div id="side-navbar">
-            <a href="/" class="ShreySharma-home side-bar-logo" aria-label="ShreySharma">
-                <img class="logo-ShreySharma"
-                    src="https://shreysharma.com/wp-content/uploads/2025/01/Signature-Logo.webp" width="132" height="62"
-                    alt="Signature Logo">
+            <a href="/" class="tattvah-home side-bar-logo" aria-label="tattvah">
+                <img class="logo-tattvah" src="https://tattvah.com/wp-content/uploads/2025/01/Signature-Logo.webp"
+                    width="132" height="62" alt="Signature Logo">
             </a>
             <ul>
                 <li><a href="/" class="nav-item">Home</a></li>
-                <li><a href="/about-shrey/" class="nav-item">About Shrey</a></li>
+                <li><a href="/about-tattvah/" class="nav-item">About tattvah</a></li>
                 <li><a href="/tattvah-shows/" class="nav-item">The Tattvah Show</a></li>
                 <li><a href="/social-highlights/" class="nav-item">Social Highlights</a></li>
                 <li><a href="/contact-us/" class="nav-item">Contact</a></li>
@@ -135,7 +132,7 @@
                         fill="#DFDFDF" />
                 </svg>
             </a>
-            <a href="https://www.instagram.com/imshreysharma/" target="_blank" class="icon instagram"
+            <a href="https://www.instagram.com/imtattvah/" target="_blank" class="icon instagram"
                 aria-label="Instagram">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_74_40" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
@@ -149,7 +146,7 @@
                     </g>
                 </svg>
             </a>
-            <a href="https://x.com/iamshreysharma" target="_blank" class="icon twitter" aria-label="Twitter">
+            <a href="https://x.com/iamtattvah" target="_blank" class="icon twitter" aria-label="Twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <g clip-path="url(#clip0_3430_3402)">
                         <path
@@ -163,7 +160,7 @@
                     </defs>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/imshreysharma/" target="_blank" class="icon linkedin"
+            <a href="https://www.linkedin.com/in/imtattvah/" target="_blank" class="icon linkedin"
                 aria-label="Linkedin">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_74_49" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
@@ -177,7 +174,7 @@
                     </g>
                 </svg>
             </a>
-            <a href="https://www.youtube.com/@theshreysharma/featured" target="_blank" class="icon youtube"
+            <a href="https://www.youtube.com/@thetattvah/featured" target="_blank" class="icon youtube"
                 aria-label="Youtube">
                 <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -185,7 +182,7 @@
                         fill="#DFDFDF" />
                 </svg>
             </a>
-            <a href="https://www.facebook.com/ShreyShrma76" target="_blank" class="icon facebook" aria-label="Facebook">
+            <a href="https://www.facebook.com/tattvahShrma76" target="_blank" class="icon facebook" aria-label="Facebook">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M19.2 0H0.8C0.3575 0 0 0.3575 0 0.8V19.2C0 19.6425 0.3575 20 0.8 20H19.2C19.6425 20 20 19.6425 20 19.2V0.8C20 0.3575 19.6425 0 19.2 0ZM16.89 5.8375H15.2925C14.04 5.8375 13.7975 6.4325 13.7975 7.3075V9.235H16.7875L16.3975 12.2525H13.7975V20H10.68V12.255H8.0725V9.235H10.68V7.01C10.68 4.4275 12.2575 3.02 14.5625 3.02C15.6675 3.02 16.615 3.1025 16.8925 3.14V5.8375H16.89Z"

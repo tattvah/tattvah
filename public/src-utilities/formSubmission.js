@@ -220,6 +220,6 @@ export const initZohoForm = (formID, leadSource, redirectionLocation) => {
 		}
 
 		// Redirect
-		window.location.href = `https://shreysharma.com/${redirectionLocation}`;
+		window.location.href = `https://tattvah.com/${redirectionLocation}`;
     });
 };

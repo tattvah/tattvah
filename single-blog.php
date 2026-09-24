@@ -25,7 +25,7 @@
                 <div class="blog-info-container">
                     <div class="blog-detail-author-date">
                         <div class="author-icon">
-                            <img src="https://shreysharma.com/wp-content/uploads/2025/01/author-img.webp" width="45"
+                            <img src="https://tattvah.com/wp-content/uploads/2025/01/author-img.webp" width="45"
                                 height="46" alt="Tattvah">
                         </div>
                         <div class="date-view-container">

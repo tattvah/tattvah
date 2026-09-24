@@ -20,7 +20,7 @@
 
         <section class="blog-header-section">
             <div class="blog-img-text-container">
-                <img src="https://shreysharma.com/wp-content/uploads/2025/01/home-banner-1.webp" alt="">
+                <img src="https://tattvah.com/wp-content/uploads/2025/01/home-banner-1.webp" alt="">
                 <div class="text-container">
                     <p>I make it Simple,</p>
                     <p> I make it Valuable,and</p>

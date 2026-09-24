@@ -19,13 +19,6 @@ module.exports = {
 		privacyPolicy: './privacy-policy/privacyPolicy.js',
 		notFound: './not-found/notFound.js',
 		success: './success/success.js',
-		search: './search/search.js',
-		searchList: './search-list/searchList.js',
-		socialHighlights: './social-highlights/socialHighlights.js',
-		tattvahShows: './tattvah-shows/tattvahShows.js',
-		tattvahShow: './tattvah-show/tattvahShow.js',
-		newsletters: './newsletters/newsletters.js',
-		newsletter: './newsletter/newsletter.js',
 	},
 	devServer: {
 		static: './build',
