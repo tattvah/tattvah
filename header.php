@@ -60,17 +60,11 @@
                 <div class="nav-container">
                     <nav>
                         <a href="/" class="nav-item">Home</a>
-                        <a href="/about-tattvah/" class="nav-item">About tattvah</a>
-                        <a href="/tattvah-shows/" class="nav-item">The Tattvah Show</a>
-                        <a href="/social-highlights/" class="nav-item">Social Highlights</a>
+                        <a href="/about-us/" class="nav-item">About Tattvah</a>
+                        <a href="/products/" class="nav-item">Shop Products</a>
+                        <a href="/blogs/" class="nav-item">Blogs</a>
+                        <a href="/our-team/" class="nav-item">Our Team</a>
                         <a href="/contact-us/" class="nav-item">Contact</a>
-                        <a href="/search/" aria-label="Search" class="nav-item"><svg width="15" height="15"
-                                viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M5.26861 0C8.17842 0 10.5372 2.35945 10.5372 5.26998C10.5372 6.57532 10.059 7.77525 9.27276 8.69953L9.49161 8.91843H10.1319L14.1847 12.9723L12.9689 14.1884L8.91611 10.1346V9.49408L8.69726 9.27517C7.77323 10.0616 6.57361 10.54 5.26861 10.54C2.35884 10.54 0 8.18055 0 5.26998C0 2.35945 2.35884 0 5.26861 0ZM5.26861 1.62153C3.24222 1.62153 1.62111 3.24307 1.62111 5.26998C1.62111 7.2969 3.24222 8.91843 5.26861 8.91843C7.295 8.91843 8.91611 7.2969 8.91611 5.26998C8.91611 3.24307 7.295 1.62153 5.26861 1.62153Z"
-                                    fill="#070908" />
-                            </svg>
-                        </a>
                     </nav>
                 </div>
             </div>
@@ -108,18 +102,11 @@
             </a>
             <ul>
                 <li><a href="/" class="nav-item">Home</a></li>
-                <li><a href="/about-tattvah/" class="nav-item">About tattvah</a></li>
-                <li><a href="/tattvah-shows/" class="nav-item">The Tattvah Show</a></li>
-                <li><a href="/social-highlights/" class="nav-item">Social Highlights</a></li>
+                <li><a href="/about-us/" class="nav-item">About Tattvah</a></li>
+                <li><a href="/products/" class="nav-item">Shop Products</a></li>
+                <li><a href="/blogs/" class="nav-item">Blogs</a></li>
+                <li><a href="/our-team/" class="nav-item">Our Team</a></li>
                 <li><a href="/contact-us/" class="nav-item">Contact</a></li>
-                <li><a href="/search/" aria-label="Search" class="nav-item"><svg width="15" height="15"
-                            viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.26861 0C8.17842 0 10.5372 2.35945 10.5372 5.26998C10.5372 6.57532 10.059 7.77525 9.27276 8.69953L9.49161 8.91843H10.1319L14.1847 12.9723L12.9689 14.1884L8.91611 10.1346V9.49408L8.69726 9.27517C7.77323 10.0616 6.57361 10.54 5.26861 10.54C2.35884 10.54 0 8.18055 0 5.26998C0 2.35945 2.35884 0 5.26861 0ZM5.26861 1.62153C3.24222 1.62153 1.62111 3.24307 1.62111 5.26998C1.62111 7.2969 3.24222 8.91843 5.26861 8.91843C7.295 8.91843 8.91611 7.2969 8.91611 5.26998C8.91611 3.24307 7.295 1.62153 5.26861 1.62153Z"
-                                fill="#070908" />
-                        </svg>
-                    </a>
-                </li>
             </ul>
         </div>
 

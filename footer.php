@@ -18,14 +18,20 @@
         </div>
 
         <div class="footer-products">
-            <a href="/social-highlights/">Social Highlights</a>
-            <a href="/about-tattvah/">About tattvah</a>
+            <a href="/products/">Products</a>
+            <a href="/blogs/">Blogs</a>
+            <a href="/about-tattvah/">About Tattvah</a>
+            <a href="/our-team/">Our Team</a>
         </div>
 
     </div>
 
     <div class="legal">
         <span>All rights reserved.</span>
-        <span><a href="/privacy-policy/">Privacy Policy</a></span>
+        <span>
+            <a href="/privacy-policy/">Privacy Policy</a> | 
+            <a href="/refund-policy/">Refund Policy</a> | 
+            <a href="/terms-and-conditions/">Terms</a>
+        </span>
     </div>
 </footer>

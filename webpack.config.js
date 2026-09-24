@@ -19,6 +19,11 @@ module.exports = {
 		privacyPolicy: './privacy-policy/privacyPolicy.js',
 		notFound: './not-found/notFound.js',
 		success: './success/success.js',
+		trackOrder: './track-order/trackOrder.js',
+		refundPolicy: './refund-policy/refundPolicy.js',
+		ourTeam: './our-team/ourTeam.js',
+		product: './product/product.js',
+		products: './products/products.js',
 	},
 	devServer: {
 		static: './build',

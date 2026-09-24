@@ -1,0 +1,63 @@
+@import '../../scss-utilities/global';
+@import '../../scss-utilities/header';
+@import '../../scss-utilities/breakpoints';
+@import '../../scss-utilities/footer';
+
+.single-product-page {
+    
+    // Main Image Hover Zoom
+    .main-image-box {
+        img {
+            transition: transform 0.5s ease;
+        }
+        &:hover img {
+            transform: scale(1.05); // Smooth zoom on hover
+        }
+    }
+
+    // WordPress Editor Content Styling
+    .wp-content {
+        
+        h2, h3, h4 {
+            color: #111;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h2 { font-size: 1.5rem; }
+        h3 { font-size: 1.25rem; }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        // Custom List Styling for 'Product Inclusions' (Matches Phool.co vibe)
+        ul {
+            list-style: none;
+            padding-left: 0;
+            
+            li {
+                position: relative;
+                padding-left: 1.75rem;
+                margin-bottom: 0.75rem;
+                color: #4B5563;
+                
+                &::before {
+                    // Golden bullet point matching the theme
+                    content: "•";
+                    color: #D3A13B;
+                    font-size: 1.8rem;
+                    position: absolute;
+                    left: 0;
+                    top: -0.3rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
