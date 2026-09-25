@@ -1798,8 +1798,12 @@ window.addEventListener('scroll', () => {
     toggleBtnMain.classList.remove('show');
     closeNavbar();
   } else if (currentScrollY > lastScrollY) {
+    // Scrolling down
     header.classList.add('hidden');
     toggleBtnMain.classList.add('show');
+  } else {
+    // Scrolling up
+    header.classList.remove('hidden');
   }
   lastScrollY = currentScrollY;
 });

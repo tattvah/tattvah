@@ -133,6 +133,7 @@ ol[class] {
     row-gap: 60px;
     width: 100vw;
     margin: 0 0 100px 0;
+    padding-top: var(--header-height, 160px);
     grid-template-columns:
         [full-start] minmax(16rem, 1fr) [center-start] repeat(10,
             [col-start] minmax(min-content, 12.8rem) [col-end]) [center-end] minmax(16rem, 1fr) [full-end];

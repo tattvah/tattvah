@@ -1,7 +1,7 @@
 @import './breakpoints';
 
 :root {
-	--header-height: 100px;
+	--header-height: 150px;
 	--header-color-white: #ffffff;
 	--header-color-dark-1: #2B2B2B;
 	--header-color-dark-2: #424242;
@@ -10,6 +10,35 @@
 	--header-backdrop-background: rgba(232, 232, 237, 0.4);
 	--header-backdrop-filter: saturate(180%) blur(20px);
 	--color-head-nav: #886590;
+}
+
+.announcement-bar {
+	background: #C8A253; // Gold color from Sugandh Lok
+	color: #fff;
+	text-align: center;
+	padding: 0.5rem;
+	font-size: 13px;
+	font-family: 'Mulish', sans-serif;
+	font-weight: 600;
+	position: relative;
+	z-index: 1001;
+
+	.announce-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+
+		.star {
+			font-size: 10px;
+		}
+
+		@media screen and (max-width: 768px) {
+			.hidden-mobile {
+				display: none;
+			}
+		}
+	}
 }
 
 .header {
@@ -24,76 +53,111 @@
 
 	.header-wrapper {
 		display: flex;
-		position: fixed;
-		top: 0;
+		position: relative;
 		width: 100%;
 		background: white;
 		z-index: 1000;
 		transition: top 0.3s ease-in-out;
+	}
 
-		// Main Header CSS
-		.header-main {
-			position: relative;
+	.desktop-header {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background: #fff;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+		.header-top-row {
 			display: flex;
-			gap: 50px;
 			align-items: center;
 			justify-content: space-between;
+			padding: 1.5rem 3rem 1rem;
+			border-bottom: 1px solid #f1f1f1;
 
-			.tattvah-home {
-				fill: var(--header-color-dark-1);
-				width: fit-content;
-
-				@media screen and (max-width: 75em) {
-					width: 150px;
-				}
-
-			}
-
-			@media screen and (max-width: 75em) {
-				gap: 30px;
-			}
-
-			.nav-container {
+			.header-left,
+			.header-right {
 				display: flex;
-				flex: 1;
+				gap: 1.5rem;
 				align-items: center;
-				justify-content: space-evenly;
 
-				@media screen and (max-width: 75em) {
-					gap: 20px;
-				}
+				.header-icon {
+					color: #2B2B2B;
+					transition: color 0.3s ease;
 
-				nav {
-					display: flex;
-					font-size: 16px;
-					gap: 50px;
-					align-items: center;
-
-					@media screen and (max-width: 75em) {
-						gap: 40px;
+					&:hover {
+						color: #D3A13B;
 					}
-
-					.nav-item {
-						color: var(--header-color-dark-1);
-						cursor: pointer;
-					}
-
-					.nav-item[data-nav] {
-						display: flex;
-						gap: 5px;
-						align-items: center;
-
-					}
-
 				}
 			}
 
+			.header-center {
+				text-align: center;
+
+				.logo-tattvah {
+					max-width: 140px;
+					height: auto;
+				}
+			}
 		}
 
+		.header-bottom-row {
+			display: flex;
+			justify-content: center;
+			padding: 1rem 2rem;
+
+			nav {
+				display: flex;
+				align-items: center;
+				gap: 2.5rem;
+				font-size: 14px;
+				font-family: 'Mulish', sans-serif;
+				font-weight: 600;
+
+				.nav-item {
+					color: #2B2B2B;
+					text-transform: uppercase;
+					letter-spacing: 0.05em;
+					text-decoration: none;
+					transition: all 0.3s ease;
+
+					&:hover {
+						color: #D3A13B;
+					}
+
+					&.nav-pill-filled {
+						background: #4A0E1B;
+						color: #fff;
+						padding: 0.5rem 1.5rem;
+						border-radius: 50px;
+
+						&:hover {
+							background: #330811;
+							color: #fff;
+						}
+					}
+
+					&.nav-pill-outline {
+						border: 1px solid #D3A13B;
+						color: #D3A13B;
+						padding: 0.5rem 1.5rem;
+						border-radius: 50px;
+
+						&:hover {
+							background: #D3A13B;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.mobile-toggle-bar {
+		display: none; // Default hidden on desktop
 	}
 
 	.header-wrapper.hidden {
-		top: -100px;
+		top: -150px;
 	}
 
 	.header-back-drop {
@@ -384,7 +448,7 @@
 
 		.header-wrapper {
 			flex-direction: column;
-			height: 90px;
+			// height: 90px;
 			padding: 0 20px;
 			justify-content: space-evenly;
 		}

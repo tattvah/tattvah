@@ -4,34 +4,45 @@
 
 <footer class="footer">
     <div class="footer-inner">
-
-        <div class="footer-tagline">
-            <h2>Ask. Collaborate. Share. </h2>
-            <a href="/contact-us/">Connect With Me!
-                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M14.1737 6.01973L13.4416 5.31957L8.85411 0.73298L8.15395 0L6.68799 1.43314L10.2562 5.0014H0V7.03989H10.2562L7.42097 9.90617L6.68799 10.6072L8.15395 12.0723L8.85411 11.3402L14.1737 6.01973Z"
-                        fill="white" />
-                </svg>
-            </a>
-            <p>A click is all it takes</p>
+        <div class="footer-col brand-col">
+            <img class="footer-logo" src="https://tattvah.com/wp-content/uploads/2025/01/Signature-Logo.webp"
+                alt="Tattvah Logo">
+            <p class="brand-desc">100% natural, earth-born elements for your sacred rituals. Pure, ethical, and
+                traditional.</p>
         </div>
 
-        <div class="footer-products">
-            <a href="/products/">Products</a>
-            <a href="/blogs/">Blogs</a>
-            <a href="/about-tattvah/">About Tattvah</a>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="/about-us/">About Tattvah</a>
+            <a href="/blogs/">Tattvah Journal</a>
             <a href="/our-team/">Our Team</a>
+            <a href="/contact-us/">Contact Us</a>
         </div>
 
+        <div class="footer-col">
+            <h3>Shop</h3>
+            <a href="/products/">Agarbattis</a>
+            <a href="/products/">Dhoop & Cones</a>
+            <a href="/products/">Sambrani Cups</a>
+            <a href="/products/">Gift Sets</a>
+        </div>
+
+        <div class="footer-col newsletter-col">
+            <h3>Newsletter</h3>
+            <p>Subscribe for exclusive updates and offers.</p>
+            <form class="footer-newsletter">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">→</button>
+            </form>
+        </div>
     </div>
 
     <div class="legal">
-        <span>All rights reserved.</span>
+        <span>&copy; <?php echo date('Y'); ?> Tattvah. All rights reserved.</span>
         <span>
-            <a href="/privacy-policy/">Privacy Policy</a> | 
-            <a href="/refund-policy/">Refund Policy</a> | 
-            <a href="/terms-and-conditions/">Terms</a>
+            <a href="/privacy-policy/">Privacy Policy</a> |
+            <a href="/refund-policy/">Refund Policy</a> |
+            <a href="/terms-and-conditions/">Terms of Service</a>
         </span>
     </div>
 </footer>
