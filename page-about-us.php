@@ -4,419 +4,117 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:wght@300;400;500&family=Roboto:wght@400;500&family=Raleway:wght@500&family=Roboto:wght@400;500&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href='/wp-content/themes/tattvah/build/aboutUs/aboutUs.css?a10'>
-	<script type="module" defer src='/wp-content/themes/tattvah/build/aboutUs/aboutUs.bundle.js?a10'></script>
+	<link rel="stylesheet" href='<?php echo get_theme_file_uri(\"build/aboutUs/aboutUs.css\"); ?>'>
+	<script type="module" defer src='<?php echo get_theme_file_uri(\"build/aboutUs/aboutUs.bundle.js\"); ?>'></script>
 
 	<?php
 	$homeUrl = get_home_url();
 	get_header();
 	?>
 
-	<main class="main--container">
+	<main class="pt-[140px] md:pt-[160px] w-full bg-sugandhlok-bg font-openSans text-gray-800">
 
-		<section class="hero-section">
-			<p class="top-heading">WELL HEY THERE,</p>
-			<div class="hero-container">
-				<img class="hero-image" width="613" height="758" fetchpriority="high"
-					src="https://tattvah.com/wp-content/uploads/2025/01/aboutus-banner-main.webp"
-					alt="About tattvah Video">
-				<h1>I'M tattvah</h1>
-				<img class="hero-side-image" width="289" height="328" loading="lazy"
-					src="https://tattvah.com/wp-content/uploads/2025/01/aboutus-side-hero.webp"
-					alt="About tattvah Side Img">
-				<div class="hero-text">
-					<p>I am pretty hands on with</p>
-					<p class="highlight">Technology, People, Money & Life.</p>
-					<p>I can help you become too!</p>
+		<!-- Hero Section -->
+		<section class="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+			<img src="https://sugandhlok.com/cdn/shop/files/Home_Page_Images-03.png" alt="About Tattvah"
+				class="absolute inset-0 w-full h-full object-cover">
+			<div class="absolute inset-0 bg-black/50"></div>
+			<div class="relative z-10 text-center px-4 max-w-3xl mx-auto" data-aos="fade-up">
+				<h1 class="text-4xl md:text-6xl font-lora text-white mb-4 uppercase tracking-widest">Our Story</h1>
+				<div class="w-16 h-1 bg-sugandhlok-peach mx-auto mb-6"></div>
+				<p class="text-lg md:text-xl text-white font-openSans font-light">Rooted in tradition, crafted with
+					utmost purity.</p>
+			</div>
+		</section>
+
+		<!-- Brand Story -->
+		<section class="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+				<div data-aos="fade-right">
+					<img src="https://sugandhlok.com/cdn/shop/files/bulgarian-rose-3.jpg" alt="Our Heritage"
+						class="w-full h-auto rounded-md shadow-sm">
 				</div>
-				<div class="hero-text-mobile">
-					<p>I am pretty hands on with
-						<span class="highlight">Technology, People, Money & Life. </span>
-						I can help you become too!
+				<div data-aos="fade-left">
+					<h2 class="text-3xl md:text-4xl font-lora text-sugandhlok-maroon mb-6 leading-tight">A Legacy of
+						Pure Devotion & Craftsmanship</h2>
+					<p class="mb-4 leading-relaxed text-gray-600">
+						Tattvah stands as a testament to India's rich heritage of agarbatti and dhoop making. Since our
+						inception, our mission has been to provide fragrances that are rooted in tradition and crafted
+						with utmost purity.
 					</p>
+					<p class="mb-6 leading-relaxed text-gray-600">
+						We believe in the power of nature. Every stick is lovingly hand-rolled using authentic,
+						time-honored methods. We source only the finest pure flora, essential oils, and sacred resins to
+						ensure a premium, long-lasting aroma that elevates your sacred spaces.
+					</p>
+					<a href="/products/"
+						class="inline-block px-8 py-3 border border-sugandhlok-maroon text-sugandhlok-maroon font-semibold uppercase tracking-widest text-sm hover:bg-sugandhlok-maroon hover:text-white transition-colors rounded-sm">Explore
+						Our Collection</a>
 				</div>
-
 			</div>
-
 		</section>
 
-		<section class="about-business">
-			<div class="about-mid-text">
-				<h2>One thing I always knew is that the true seeker always gets it.
-					If you haven't yet got it then your seeking is not deep enough.</h2>
-			</div>
-			<div class="about-text-img">
-				<img src="https://tattvah.com/wp-content/uploads/2025/01/retro-img.webp" alt="IN RETROSPECT" width="321"
-					height="421" loading="lazy">
-				<div class="text-content">
-					<h3>IN RETROSPECT</h3>
-					<p>Since childhood, everything intrigued me—money, business/power, value, and whatever life threw my
-						way. The curiosity wasn't sufficient to create something meaningful in this world. It was
-						accompanied by hunger to learn, the commitment to push through, the resilience to never give up,
-						and luck that allowed me to execute. This amazing adventure paved the way for humility. The
-						lesson? "If success doesn't make you humble enough, it is not the real one!"</p>
+		<!-- Mission / Values -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 md:px-8">
+				<div class="text-center mb-16" data-aos="fade-up">
+					<h2 class="text-3xl md:text-4xl font-lora text-sugandhlok-maroon mb-4">Our Core Values</h2>
+					<div class="w-16 h-1 bg-sugandhlok-peach mx-auto"></div>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+					<div data-aos="fade-up" data-aos-delay="0">
+						<div class="w-32 h-32 mx-auto rounded-full border-2 border-sugandhlok-peach p-2 mb-6">
+							<img src="https://sugandhlok.com/cdn/shop/files/Natural_2x_fb33f089-f8be-4d0b-bbeb-e24077e027d7.png"
+								alt="100% Natural" class="w-full h-full object-cover rounded-full">
+						</div>
+						<h3 class="font-lora text-xl text-gray-900 mb-3">100% Natural</h3>
+						<p class="text-gray-600 text-sm leading-relaxed">Sourced directly from nature, our ingredients
+							are completely free from synthetic chemicals, charcoal, and toxic fumes.</p>
+					</div>
+
+					<div data-aos="fade-up" data-aos-delay="100">
+						<div class="w-32 h-32 mx-auto rounded-full border-2 border-sugandhlok-peach p-2 mb-6">
+							<img src="https://sugandhlok.com/cdn/shop/files/Kind_2x_f40da00c-d95e-48f5-be6b-5d207c33038b.png"
+								alt="Hand Crafted" class="w-full h-full object-cover rounded-full">
+						</div>
+						<h3 class="font-lora text-xl text-gray-900 mb-3">Hand Crafted</h3>
+						<p class="text-gray-600 text-sm leading-relaxed">Each product is meticulously hand-rolled by
+							skilled artisans preserving generations of traditional Indian craftsmanship.</p>
+					</div>
+
+					<div data-aos="fade-up" data-aos-delay="200">
+						<div class="w-32 h-32 mx-auto rounded-full border-2 border-sugandhlok-peach p-2 mb-6">
+							<img src="https://sugandhlok.com/cdn/shop/files/Responsible_2x_c956c29a-d632-4da0-b88a-2fd15962f1ec.png"
+								alt="Ethical & Eco-friendly" class="w-full h-full object-cover rounded-full">
+						</div>
+						<h3 class="font-lora text-xl text-gray-900 mb-3">Ethical & Eco-friendly</h3>
+						<p class="text-gray-600 text-sm leading-relaxed">We are deeply committed to sustainability and
+							women empowerment, providing livelihoods to rural women across India.</p>
+					</div>
 				</div>
 			</div>
-
 		</section>
 
-		<section class="history-section">
-			<h2 class="hidden-heading-one">Tattvah History Section</h2>
-			<span class="swiper-button-prev"> </span>
-
-			<div class="swiper job-card-slider">
-				<div class="swiper-wrapper">
-
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/02/card-about-2013.webp" width="420"
-								height="480" loading="lazy" alt="2013">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2013</p>
-							</div>
-							<div class="card-description">
-								<p>
-									In just the first year of college, I chose hands-on learning over formal education.
-									After briefly getting into startup ideas and failing, I decided to join my father's
-									business. Later, when it became difficult to work with him I jumped to coding,
-									striving to become exceptional in it.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2014.webp" width="420"
-								height="480" loading="lazy" alt="2014">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2014</p>
-							</div>
-							<div class="card-description">
-								<p>
-									I completed programming languages and data structures, which are essentials for
-									landing an engineering job earlier than others. With two years left in college, I
-									worked as a doubt faculty and then discovered Salesforce. As there was no one
-									teaching it back then, I took it upon myself to learn.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2015.webp" width="420"
-								height="480" loading="lazy" alt="2015">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2015</p>
-							</div>
-							<div class="card-description">
-								<p>
-									In my 2nd year of college, I got Salesforce certified, sparking interest among
-									peers
-									and seniors. They asked me to train them, leading to the creation of S2 Labs to
-									help
-									others build their Salesforce careers.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2016.webp" width="420"
-								height="480" loading="lazy" alt="2016">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2016</p>
-							</div>
-							<div class="card-description">
-								<p>
-									As I graduated, offers poured in from top Indian and U.S. firms, but I
-									stayed in
-									Jaipur, scaling S2 Labs. Soon, I dived into Salesforce consulting, fueled by
-									Salesforce Hulk—the first and largest independent Salesforce community that
-									I
-									had
-									started to produce Salesforce content on Youtube.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2017.webp" width="420"
-								height="480" loading="lazy" alt="2017">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2017</p>
-							</div>
-							<div class="card-description">
-								<p>
-									I dedicated myself to managing Salesforce Hulk, S2 Labs, and my
-									consulting
-									business,
-									working tirelessly to balance and grow all three simultaneously.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2018.webp" width="420"
-								height="480" loading="lazy" alt="2018">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2018</p>
-							</div>
-							<div class="card-description">
-								<p>
-									When I couldn't handle all the assignments alone, I built a team of
-									5,
-									founding
-									Tattvah—a 100% bootstrapped company that has grown into a thriving
-									organization
-									with
-									over 450 team members today.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2019.webp" width="420"
-								height="480" loading="lazy" alt="2019">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2019</p>
-							</div>
-							<div class="card-description">
-								<p>
-									With projects and hiring struggles, I learned my first lesson of
-									entrepreneurship:
-									uncertainty is part of life, and I must be ready for whatever
-									comes.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2020.webp" width="420"
-								height="480" loading="lazy" alt="2020">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2020</p>
-							</div>
-							<div class="card-description">
-								<p>
-									Being named the 'Youngest Salesforce MVP' came with the role
-									of
-									delivering
-									more
-									and
-									more value to the industry.
-
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2021.webp" width="420"
-								height="480" loading="lazy" alt="2021">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2021</p>
-							</div>
-							<div class="card-description">
-								<p>
-									The COVID pandemic hit, but the IT industry boomed, and
-									I
-									had
-									the
-									responsibility
-									to
-									build a team capable of meeting the demands of the
-									projects
-									we
-									received.
-
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2022.webp" width="420"
-								height="480" loading="lazy" alt="2022">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2022</p>
-							</div>
-							<div class="card-description">
-								<p>
-									This was the time when I had to choose between our
-									values
-									and
-									retaining
-									people,
-									and
-									I chose our values above anything else.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2023.webp" width="420"
-								height="480" loading="lazy" alt="2023">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2023</p>
-							</div>
-							<div class="card-description">
-								<p>
-									As the team grew, my focus was on building an
-									MNC
-									culture
-									with
-									the
-									right
-									systems,
-									processes, policies, and strategies.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<div class="card swiper-slide" data-tilt>
-						<div class="for-overlay">
-							<img src="https://tattvah.com/wp-content/uploads/2025/01/about-card-2024.webp" width="420"
-								height="480" loading="lazy" alt="2024">
-							<div class="overlay"></div>
-							<div class="overlay-secondary"></div>
-						</div>
-						<div class="card-content">
-							<div class="card-heading">
-								<p>2024</p>
-							</div>
-							<div class="card-description">
-								<p>
-									With the growing team came the
-									responsibility of
-									building
-									leaders.
-									Therefore, I
-									was
-									invested in ‘manufacturing talent’ within
-									the
-									organization.
-								</p>
-							</div>
-
-						</div>
-					</div>
-				</div>
+		<!-- Newsletter -->
+		<section class="py-20 bg-sugandhlok-maroon text-white text-center">
+			<div class="max-w-2xl mx-auto px-4" data-aos="zoom-in">
+				<h2 class="text-3xl font-lora mb-4 text-sugandhlok-peach">Join Our Journey</h2>
+				<p class="mb-8 font-light text-white/80">Subscribe to our newsletter for exclusive updates, spiritual
+					insights, and special offers.</p>
+				<form
+					class="flex flex-col sm:flex-row gap-0 max-w-md mx-auto border border-sugandhlok-peach/30 rounded-sm overflow-hidden">
+					<input type="email" placeholder="Your Email Address" required
+						class="flex-1 bg-transparent px-4 py-3 text-white focus:outline-none placeholder-white/50 border-none">
+					<button type="submit"
+						class="bg-sugandhlok-peach text-sugandhlok-maroon font-bold px-6 py-3 hover:bg-white transition-colors">SUBSCRIBE</button>
+				</form>
 			</div>
-
-			<span class="swiper-button-next"> </span>
-
-			<div class="left-side"></div>
-			<div class="right-side"></div>
-
-		</section>
-
-		<section class="newsletter-subscribe">
-			<p class="form-top-heading">SIGN UP FOR NEWSLETTER</p>
-			<h2>Let my journey save a mile for you!</h2>
-			<p class="form-middle-heading">Entrepreneurship doesn't come with a manual; the lessons I picked up along my
-				way might help.</p>
-			<form class="subscribe-form" id="cta-subscribe-form">
-				<div class="subscribe-btn">
-					<div class="field-box">
-						<input type="email" name="lemail" id="form-email" placeholder="Enter your Email Address">
-					</div>
-					<button type="submit" class="button"><b>SUBSCRIBE</b></button>
-				</div>
-			</form>
 		</section>
 
 	</main>
 
 	<?php get_footer(); ?>
-
 	</body>
-
-	<script type="application/ld+json">
-		{
-		"@context": "https://schema.org/",
-		"@type": "Person",
-		"name": "Tattvah",
-		"url": "https://tattvah.com",
-		"image": "https://tattvah.com/wp-content/uploads/2026/09/Tattvah-Youngest-Salesforce-MVP.webp",
-		"sameAs": [
-			"https://www.linkedin.com/in/imtattvah",
-			"https://www.youtube.com/@thetattvah",
-			"https://www.instagram.com/imtattvah/",
-			"https://x.com/iamtattvah"
-		],
-		"jobTitle": "CEO of Tattvah, Founder of S2 Labs",
-		"worksFor": {
-			"@type": "Organization",
-			"name": "Tattvah, S2 Labs"
-		},
-		"award": "Youngest Salesforce MVP (2019)"
-		}
-	</script>
-
 
 </html>

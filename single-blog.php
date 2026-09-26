@@ -7,114 +7,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blog/blog.css?a10'>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/blog/blog.bundle.js?a10'></script>
+    <link rel="stylesheet" href='<?php echo get_theme_file_uri(\"build/blog/blog.css\"); ?>'>
+    <script type="module" defer src='<?php echo get_theme_file_uri(\"build/blog/blog.bundle.js\"); ?>'></script>
 
     <?php
     $homeUrl = get_home_url();
     get_header();
     ?>
 
-    <main class="main--container">
+    <main class="main--container bg-sugandhlok-bg font-openSans text-gray-800 pt-8 md:pt-16 pb-24">
 
-        <section class="hero-section">
-            <div class="heading-content">
-                <h4>
-                    <?php the_title(); ?>
-                </h4>
-                <div class="blog-info-container">
-                    <div class="blog-detail-author-date">
-                        <div class="author-icon">
-                            <img src="https://tattvah.com/wp-content/uploads/2025/01/author-img.webp" width="45"
-                                height="46" alt="Tattvah">
-                        </div>
-                        <div class="date-view-container">
-                            <p class="author-name">Tattvah</p>
-                            <span class="date">
-                                <?php echo get_the_date(); ?>
-                            </span>
+        <article
+            class="max-w-4xl mx-auto px-4 md:px-8 bg-white shadow-sm rounded-md overflow-hidden border border-gray-100">
+            <!-- Hero Header -->
+            <header class="p-8 md:p-12 border-b border-gray-100">
+                <div class="flex items-center gap-4 text-xs text-gray-500 uppercase tracking-widest mb-6 font-semibold">
+                    <span class="text-sugandhlok-peach">Journal</span>
+                    <span>•</span>
+                    <span><?php echo get_the_date(); ?></span>
+                    <?php if (get_field("read_time")): ?>
+                        <span>•</span>
+                        <span class="flex items-center gap-1">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="6" cy="6" r="5"></circle>
+                                <polyline points="6 3 6 6 8 8"></polyline>
+                            </svg>
+                            <?php echo get_field("read_time"); ?>
+                        </span>
+                    <?php endif; ?>
+                </div>
 
+                <h1 class="text-3xl md:text-5xl font-lora text-gray-900 leading-tight mb-8"><?php the_title(); ?></h1>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <img src="https://tattvah.com/wp-content/uploads/2025/01/author-img.webp" alt="Tattvah"
+                            class="w-12 h-12 rounded-full object-cover border-2 border-sugandhlok-peach">
+                        <div>
+                            <p class="font-lora text-lg text-gray-900">By Tattvah</p>
+                            <p class="text-xs text-gray-500">Master Craftsmen</p>
                         </div>
                     </div>
-                    <div class="share-post">
 
-                        <a data-link="<?php echo get_permalink(); ?>" id="copylink" class="copylink">
-                            <div class="copied_text">
-                                <p class="link_copied">Copied</p>
+                    <div class="flex items-center gap-4">
+                        <!-- Share button -->
+                        <button data-link="<?php echo get_permalink(); ?>" id="copylink"
+                            class="copylink flex items-center gap-2 text-sugandhlok-maroon hover:text-sugandhlok-peach transition-colors text-sm font-semibold uppercase tracking-wider group relative">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"></path>
+                            </svg>
+                            Share
+                            <div
+                                class="copied_text absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs py-1 px-2 rounded opacity-0 transition-opacity">
+                                Copied!
                             </div>
-                            Share this post
-                        </a>
-
+                        </button>
                     </div>
                 </div>
-                <div class="audio-heading">
-                    <p>Listen to the content</p>
-                </div>
-                <div class="audio-container">
+            </header>
 
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill"></div>
+            <!-- Audio Player -->
+            <?php if (get_field('audio')): ?>
+                <div class="bg-gray-50 p-6 border-b border-gray-100 flex items-center gap-6">
+                    <div class="flex-1">
+                        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Listen to the Article
+                        </p>
+                        <div
+                            class="h-2 bg-gray-200 rounded-full w-full overflow-hidden relative cursor-pointer progress-bar-container">
+                            <div class="progress-bar-fill absolute top-0 left-0 h-full bg-sugandhlok-peach w-0"></div>
+                        </div>
                     </div>
-                    <button class="play-pause-btn" aria-label="Play-Pause">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 1C5.925 1 1 5.925 1 12C1 18.075 5.925 23 12 23C18.075 23 23 18.075 23 12C23 5.925 18.075 1 12 1ZM17.183 13.415L10.4505 17.302C10.1945 17.4495 9.914 17.5235 9.6335 17.5235C9.353 17.5235 9.0725 17.4495 8.8165 17.302C8.305 17.0065 7.9995 16.478 7.9995 15.887V8.113C7.9995 7.5225 8.305 6.9935 8.8165 6.698C9.328 6.4025 9.9385 6.4025 10.45 6.698L17.1825 10.585C17.694 10.8805 17.9995 11.409 17.9995 12C17.9995 12.591 17.6945 13.1195 17.183 13.415Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                    <button class="control-btn mute-btn" aria-label="Mute">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18.3596 19.3599C18.1026 19.3599 17.8456 19.2609 17.6506 19.0649C17.2606 18.6729 17.2626 18.0399 17.6546 17.6499C19.1666 16.1479 19.9996 14.1419 19.9996 11.9999C19.9996 9.8579 19.1666 7.8519 17.6546 6.3499C17.2626 5.9599 17.2606 5.3279 17.6506 4.9349C18.0396 4.5429 18.6716 4.5409 19.0646 4.9309C20.9576 6.8119 21.9996 9.3219 21.9996 11.9999C21.9996 14.6779 20.9576 17.1879 19.0646 19.0689C18.8696 19.2629 18.6146 19.3599 18.3596 19.3599Z"
-                                fill="white" />
-                            <path
-                                d="M15.5296 16.53C15.2716 16.53 15.0136 16.431 14.8186 16.233C14.4296 15.84 14.4336 15.207 14.8266 14.819C15.5716 14.082 15.9996 13.054 15.9996 12C15.9996 10.946 15.5716 9.91798 14.8266 9.18098C14.4336 8.79298 14.4306 8.15998 14.8186 7.76698C15.2066 7.37498 15.8396 7.37098 16.2326 7.75898C17.3556 8.86898 17.9996 10.415 17.9996 12C17.9996 13.585 17.3556 15.131 16.2326 16.241C16.0376 16.434 15.7836 16.53 15.5296 16.53Z"
-                                fill="white" />
-                            <path
-                                d="M12 21.9999C11.74 21.9999 11.484 21.8979 11.293 21.7069L6.586 16.9999H4C2.897 16.9999 2 16.1029 2 14.9999V8.99992C2 7.89692 2.897 6.99992 4 6.99992H6.586L11.293 2.29292C11.579 2.00592 12.009 1.92092 12.383 2.07592C12.757 2.23092 13 2.59592 13 2.99992V20.9999C13 21.4039 12.757 21.7689 12.383 21.9239C12.259 21.9749 12.129 21.9999 12 21.9999Z"
-                                fill="white" />
-                        </svg>
-                    </button>
+                    <div class="flex items-center gap-3">
+                        <button
+                            class="play-pause-btn w-10 h-10 rounded-full bg-sugandhlok-maroon text-white flex items-center justify-center hover:bg-red-900 transition-colors shadow-sm"
+                            aria-label="Play-Pause">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </button>
+                        <button
+                            class="control-btn mute-btn w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-gray-50 transition-colors"
+                            aria-label="Mute">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                                <path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" />
+                            </svg>
+                        </button>
+                    </div>
+                    <audio id="audio" src="<?php echo get_field('audio'); ?>"></audio>
                 </div>
+            <?php endif; ?>
 
-                <audio id="audio" src="<?php echo get_field('audio'); ?>"></audio>
+            <!-- Featured Image -->
+            <div class="w-full h-[40vh] md:h-[60vh] bg-gray-100 overflow-hidden relative">
+                <?php $img = get_field('banner_image') ?: 'https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png'; ?>
+                <img fetchpriority="high" src="<?php echo esc_url($img); ?>"
+                    alt="<?php echo esc_attr(get_field('banner_alt_text') ?: get_the_title()); ?>"
+                    class="w-full h-full object-cover">
             </div>
-            <div class="banner-image">
-                <div>
-                    <img fetchpriority="high" width="1216" height="742" src="<?php echo get_field('banner_image'); ?>"
-                        alt="<?php echo get_field('banner_alt_text'); ?>">
-                </div>
-            </div>
-        </section>
 
-        <section class="main-blog">
-
-            <div class="blog-details">
+            <!-- Content -->
+            <div
+                class="p-8 md:p-12 prose prose-lg prose-headings:font-lora prose-headings:text-sugandhlok-maroon prose-a:text-sugandhlok-peach max-w-none text-gray-600 leading-relaxed font-openSans">
                 <?php the_content(); ?>
             </div>
+        </article>
 
-        </section>
-
-        <section class="newsletter-subscribe">
-            <p class="form-top-heading">SIGN UP FOR NEWSLETTER</p>
-            <h2>Let my journey save a mile for you!</h2>
-            <p>Entrepreneurship doesn't come with a manual; the lessons I picked up along my way might help.</p>
-            <form class="subscribe-form" id="cta-subscribe-form">
-                <div class="subscribe-btn">
-                    <div class="field-box">
-                        <input type="email" name="lemail" id="form-email" placeholder="Enter your Email Address">
-                    </div>
-                    <button type="submit" class="button"><b>SUBSCRIBE</b></button>
-                </div>
+        <!-- Newsletter -->
+        <section
+            class="max-w-4xl mx-auto mt-16 bg-sugandhlok-maroon text-white p-12 text-center rounded-md shadow-sm border border-sugandhlok-peach/30"
+            data-aos="fade-up">
+            <h2 class="text-3xl font-lora mb-4 text-sugandhlok-peach">Join Our Journey</h2>
+            <p class="mb-8 font-light text-white/80 max-w-lg mx-auto">Subscribe to our newsletter for exclusive updates,
+                spiritual insights, and special offers.</p>
+            <form
+                class="flex flex-col sm:flex-row gap-0 max-w-md mx-auto border border-sugandhlok-peach/30 rounded-sm overflow-hidden"
+                id="cta-subscribe-form">
+                <input type="email" name="lemail" id="form-email" placeholder="Your Email Address" required
+                    class="flex-1 bg-transparent px-4 py-3 text-white focus:outline-none placeholder-white/50 border-none">
+                <button type="submit"
+                    class="bg-sugandhlok-peach text-sugandhlok-maroon font-bold px-6 py-3 hover:bg-white transition-colors">SUBSCRIBE</button>
             </form>
         </section>
 
     </main>
 
     <?php get_footer(); ?>
-
     <?php echo get_field('schema_code'); ?>
-
     </body>
 
 </html>

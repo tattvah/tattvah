@@ -75,111 +75,80 @@ if (is_front_page()) {
 
 </head>
 
-<body>
+<body class="font-openSans text-gray-800 bg-sugandhlok-bg">
 
-    <header class="header">
+    <header class="header bg-white sticky top-0 z-50 shadow-sm border-b border-gray-200">
         <!-- Announcement Bar -->
-        <div class="announcement-bar">
-            <div class="announce-text">
+        <div class="announcement-bar bg-sugandhlok-maroon text-white text-center py-2 text-sm md:text-base font-openSans uppercase tracking-wider font-semibold">
+            <div class="announce-text flex justify-center items-center gap-2">
                 <span class="star">✦</span>
                 <span>Get 10% off on your first order use code "TATTVAH10"</span>
-                <span class="star hidden-mobile">✦</span>
-                <span class="hidden-mobile">Celebrate Navratri with our New Gift Set!</span>
+                <span class="star hidden md:inline">✦</span>
+                <span class="hidden md:inline">Celebrate Navratri with our New Gift Set!</span>
             </div>
         </div>
 
-        <!-- Main Navbar Desktop -->
-        <div class="header-wrapper desktop-header" data-aos="fade-down" data-aos-duration="2000">
-            <div class="header-top-row">
-                <div class="header-left">
-                    <a href="#" class="header-icon" aria-label="Search">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path
-                                d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="header-center">
-                    <a href="/" class="tattvah-home" aria-label="tattvah">
-                        <img class="logo-tattvah"
-                            src="https://tattvah.com/wp-content/uploads/2025/01/Signature-Logo.webp" width="200"
-                            height="94" alt="Signature Logo">
-                    </a>
-                </div>
-                <div class="header-right">
-                    <a href="#" class="header-icon" aria-label="Account">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path
-                                d="M20 21V19C20 17.8954 19.1046 17 18 17H6C4.89543 17 4 17.8954 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="header-icon" aria-label="Cart">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path
-                                d="M16 11V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V11M5 9H19L20 21H4L5 9Z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="header-bottom-row nav-container">
-                <nav>
-                    <a href="/products/" class="nav-item">Agarbattis</a>
-                    <a href="/products/" class="nav-item">Dhoop</a>
-                    <a href="/products/" class="nav-item">Cones</a>
-                    <a href="/products/" class="nav-item">Havan Cups</a>
-                    <a href="/products/" class="nav-item">Best Sellers</a>
-                    <a href="/blogs/" class="nav-item">Blogs</a>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Side Bar Toggle Button (Mobile) -->
-        <div class="mobile-toggle-bar" data-aos="fade-down" data-aos-duration="2000">
-            <a href="/" class="tattvah-home" aria-label="tattvah">
-                <img class="logo-tattvah" src="https://tattvah.com/wp-content/uploads/2025/01/Signature-Logo.webp"
-                    width="132" height="62" alt="Signature Logo">
-            </a>
-
-            <div class="mobile-icons">
-                <a href="#" class="header-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5">
-                        <path
-                            d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" />
-                    </svg></a>
-                <a href="#" class="header-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5">
-                        <path d="M16 11V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V11M5 9H19L20 21H4L5 9Z" />
-                    </svg></a>
-                <button id="toggle-btn" aria-label="Toggle Button">
-                    <span id="toggle-icon"><svg width="30" height="30" viewBox="0 0 83 94" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M76.3203 32.8999H32.6797V34.8098H76.3203V32.8999Z" fill="#2B2B2B" />
-                            <path d="M76.3203 54.8159H32.6797V56.7258H76.3203V54.8159Z" fill="#2B2B2B" />
-                            <path d="M76.3203 77.8159H32.6797V79.7258H76.3203V77.8159Z" fill="#2B2B2B" />
-                        </svg></span>
+        <!-- Main Navbar -->
+        <div class="header-wrapper max-w-7xl mx-auto px-4 py-4 md:px-8 flex items-center justify-between" data-aos="fade-down" data-aos-duration="1000">
+            
+            <div class="header-left flex items-center gap-4">
+                <!-- Hamburger -->
+                <button id="toggle-btn" aria-label="Toggle Button" class="md:hidden text-sugandhlok-maroon focus:outline-none">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12H21M3 6H21M3 18H21" />
+                    </svg>
                 </button>
+                <a href="#" class="header-icon text-sugandhlok-maroon hover:text-sugandhlok-peach transition-colors" aria-label="Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" />
+                    </svg>
+                </a>
             </div>
+
+            <div class="header-center">
+                <a href="/" class="tattvah-home block" aria-label="tattvah">
+                    <!-- Replace logo styling to match Sugandh Lok centered focus -->
+                    <img class="logo-tattvah mx-auto h-16 w-auto object-contain" src="https://tattvah.com/wp-content/uploads/2025/01/Signature-Logo.webp" alt="Signature Logo">
+                </a>
+            </div>
+
+            <div class="header-right flex items-center gap-4">
+                <a href="#" class="header-icon text-sugandhlok-maroon hover:text-sugandhlok-peach transition-colors hidden md:block" aria-label="Account">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21V19C20 17.8954 19.1046 17 18 17H6C4.89543 17 4 17.8954 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" />
+                    </svg>
+                </a>
+                <a href="#" class="header-icon text-sugandhlok-maroon hover:text-sugandhlok-peach transition-colors relative" aria-label="Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M16 11V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V11M5 9H19L20 21H4L5 9Z" />
+                    </svg>
+                    <!-- Example badge -->
+                    <span class="absolute -top-1 -right-2 bg-sugandhlok-peach text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Desktop Navigation Bar -->
+        <div class="header-bottom-row hidden md:block border-t border-gray-100 bg-white">
+            <nav class="max-w-7xl mx-auto flex justify-center gap-8 py-3">
+                <a href="/products/" class="nav-item text-sm uppercase tracking-wider text-gray-700 hover:text-sugandhlok-maroon font-semibold transition-colors">Agarbattis</a>
+                <a href="/products/" class="nav-item text-sm uppercase tracking-wider text-gray-700 hover:text-sugandhlok-maroon font-semibold transition-colors">Dhoop</a>
+                <a href="/products/" class="nav-item text-sm uppercase tracking-wider text-gray-700 hover:text-sugandhlok-maroon font-semibold transition-colors">Cones</a>
+                <a href="/products/" class="nav-item text-sm uppercase tracking-wider text-gray-700 hover:text-sugandhlok-maroon font-semibold transition-colors">Havan Cups</a>
+                <a href="/products/" class="nav-item text-sm uppercase tracking-wider text-gray-700 hover:text-sugandhlok-maroon font-semibold transition-colors">Best Sellers</a>
+                <a href="/blogs/" class="nav-item text-sm uppercase tracking-wider text-gray-700 hover:text-sugandhlok-maroon font-semibold transition-colors">Blogs</a>
+            </nav>
         </div>
 
         <!-- Side Bar (Mobile) -->
-        <div id="side-navbar">
-            <a href="/" class="tattvah-home side-bar-logo" aria-label="tattvah">
-                <img class="logo-tattvah" src="https://tattvah.com/wp-content/uploads/2025/01/Signature-Logo.webp"
-                    width="132" height="62" alt="Signature Logo">
-            </a>
-            <ul>
-                <li><a href="/" class="nav-item">Home</a></li>
-                <li><a href="/about-us/" class="nav-item">About Tattvah</a></li>
-                <li><a href="/products/" class="nav-item">Shop Products</a></li>
-                <li><a href="/blogs/" class="nav-item">Blogs</a></li>
-                <li><a href="/our-team/" class="nav-item">Our Team</a></li>
-                <li><a href="/contact-us/" class="nav-item">Contact</a></li>
+        <div id="side-navbar" class="hidden absolute top-full left-0 w-full bg-white shadow-md z-40 border-t border-gray-200">
+            <ul class="flex flex-col py-4 px-6 space-y-4">
+                <li><a href="/" class="nav-item block text-gray-700 font-semibold uppercase tracking-wider text-sm hover:text-sugandhlok-maroon">Home</a></li>
+                <li><a href="/about-us/" class="nav-item block text-gray-700 font-semibold uppercase tracking-wider text-sm hover:text-sugandhlok-maroon">About Tattvah</a></li>
+                <li><a href="/products/" class="nav-item block text-gray-700 font-semibold uppercase tracking-wider text-sm hover:text-sugandhlok-maroon">Shop Products</a></li>
+                <li><a href="/blogs/" class="nav-item block text-gray-700 font-semibold uppercase tracking-wider text-sm hover:text-sugandhlok-maroon">Blogs</a></li>
+                <li><a href="/our-team/" class="nav-item block text-gray-700 font-semibold uppercase tracking-wider text-sm hover:text-sugandhlok-maroon">Our Team</a></li>
+                <li><a href="/contact-us/" class="nav-item block text-gray-700 font-semibold uppercase tracking-wider text-sm hover:text-sugandhlok-maroon">Contact</a></li>
             </ul>
         </div>
-
-
     </header>

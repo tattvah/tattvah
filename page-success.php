@@ -5,36 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href=<?php echo get_theme_file_uri('/build/notFound/notFound.css'); ?>>
+    <script type="module" defer src=<?php echo get_theme_file_uri('/build/success/success.bundle.js'); ?>></script>
+    <?php get_header(); ?>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href=<?php echo get_theme_file_uri('/build/notFound/notFound.css?a10'); ?>>
-    <script type="module" defer src=<?php echo get_theme_file_uri('/build/success/success.bundle.js?a10'); ?>></script>
-
-    <?php
-    get_header();
-    ?>
-
-    <main class="main--container">
-        <section class="notfound">
-            <div class="success container pt5">
-                <div class="areaText">
-                    <h1 class="headingclass white-text mb0"> Thanks!</h1><br>
-                    <p class="white-text mt0 textchange"></p>
-                    <p class="emailid"></p>
-                </div>
+    <main class="main--container bg-sugandhlok-bg font-openSans flex items-center justify-center min-h-[70vh]">
+        <section class="text-center px-4 max-w-2xl mx-auto" data-aos="zoom-in">
+            <div
+                class="w-20 h-20 bg-sugandhlok-peach rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm">
+                <svg width="40" height="40" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"></path>
+                </svg>
             </div>
+            <h1 class="text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-4">Thank You!</h1>
+            <p class="text-gray-600 text-lg mb-8 textchange">Your request was successful.</p>
+            <p class="emailid font-medium text-gray-800"></p>
+            <a href="/"
+                class="inline-block mt-8 px-8 py-3 bg-sugandhlok-maroon text-white font-semibold uppercase tracking-widest text-sm hover:bg-red-900 transition-colors rounded-sm shadow-sm">Back
+                to Home</a>
         </section>
-
     </main>
 
     <?php get_footer(); ?>
-
     </body>
 
 </html>
