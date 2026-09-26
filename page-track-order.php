@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='<?php echo get_theme_file_uri(\"build/trackOrder/trackOrder.css\"); ?>'>
-    <script type="module" defer src='<?php echo get_theme_file_uri(\"build/trackOrder/trackOrder.bundle.js\"); ?>'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/trackOrder/trackOrder.css?v2'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/trackOrder/trackOrder.bundle.js?v2'></script>
     <?php
     $homeUrl = get_home_url();
     get_header();

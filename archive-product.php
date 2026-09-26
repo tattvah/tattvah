@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='<?php echo get_theme_file_uri(\"build/products/products.css\"); ?>'>
-    <script type="module" defer src='<?php echo get_theme_file_uri(\"build/products/products.bundle.js\"); ?>'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/products/products.css?v2'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/products/products.bundle.js?v2'></script>
 
     <?php
     $homeUrl = get_home_url();

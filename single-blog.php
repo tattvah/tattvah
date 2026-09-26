@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href='<?php echo get_theme_file_uri(\"build/blog/blog.css\"); ?>'>
-    <script type="module" defer src='<?php echo get_theme_file_uri(\"build/blog/blog.bundle.js\"); ?>'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blog/blog.css?v2'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/blog/blog.bundle.js?v2'></script>
 
     <?php
     $homeUrl = get_home_url();

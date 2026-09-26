@@ -9,8 +9,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href='<?php echo get_theme_file_uri(\"build/blogs/blogs.css\"); ?>'>
-    <script type="module" defer src='<?php echo get_theme_file_uri(\"build/blogs/blogs.bundle.js\"); ?>'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blogs/blogs.css?v2'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/blogs/blogs.bundle.js?v2'></script>
     <?php
     $homeUrl = get_home_url();
     get_header();

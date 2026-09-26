@@ -10,8 +10,8 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:wght@400;500&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href='<?php echo get_theme_file_uri(\"build/frontPage/frontPage.css\"); ?>'>
-	<script type="module" defer src='<?php echo get_theme_file_uri(\"build/frontPage/frontPage.bundle.js\"); ?>'></script>
+	<link rel="stylesheet" href='/wp-content/themes/tattvah/build/frontPage/frontPage.css?v2'>
+	<script type="module" defer src='/wp-content/themes/tattvah/build/frontPage/frontPage.bundle.js?v2'></script>
 	<!-- Swiper CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 

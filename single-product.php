@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,8 +7,8 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href='<?php echo get_theme_file_uri(\"build/product/product.css\"); ?>'>
-    <script type="module" defer src='<?php echo get_theme_file_uri(\"build/product/product.bundle.js\"); ?>'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/product/product.css?v2'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/product/product.bundle.js?v2'></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
