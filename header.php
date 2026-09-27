@@ -58,11 +58,11 @@ if (is_front_page()) {
         <!-- Unified Top Announcement Bar -->
         <div id="sl-top-bar" class="sl-announcement-bar-unified">
             <div class="sl-promo-content">
-                <span>Free shipping for orders over Rs.600</span>
+                <span>Pure and natural by design.</span>
                 <span class="sl-promo-star sl-promo-hide-mobile">✦</span>
-                <span class="sl-promo-hide-mobile">Celebrate Navratri with our New Gift Set!</span>
+                <span class="sl-promo-hide-mobile">Driven by conscious choices.</span>
                 <span class="sl-promo-star sl-promo-hide-mobile">✦</span>
-                <span class="sl-promo-hide-mobile">Get 10% off on your first order with code "TATTVAH10"</span>
+                <span class="sl-promo-hide-mobile">Deeply rooted in tradition.</span>
             </div>
         </div>
 
@@ -151,6 +151,7 @@ if (is_front_page()) {
                 <ul class="sl-nav-list">
                     <li class="sl-nav-item"><a href="/" class="sl-nav-link">Home</a></li>
                     <li class="sl-nav-item"><a href="/about-us/" class="sl-nav-link">About Us</a></li>
+                    <li class="sl-nav-item"><a href="/blogs/" class="sl-nav-link">Blogs</a></li>
 
                     <li class="sl-nav-item">
                         <a href="/products/" class="sl-nav-link">
@@ -226,6 +227,7 @@ if (is_front_page()) {
             <ul class="sl-drawer-nav">
                 <li><a href="/" class="sl-drawer-link">Home</a></li>
                 <li><a href="/about-us/" class="sl-drawer-link">About Us</a></li>
+                <li><a href="/blogs/" class="sl-drawer-link">Blogs</a></li>
                 <li><a href="/products/" class="sl-drawer-link">Shop</a></li>
                 <?php
                 if (isset($header_tags) && !empty($header_tags) && !is_wp_error($header_tags)) {

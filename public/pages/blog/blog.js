@@ -2,6 +2,9 @@ import './blog.scss';
 import './../../src-utilities/header';
 import './../../src-utilities/footer';
 import './../../src-utilities/country';
+import gsap, { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
 
 //copy link to clipboard
 function fallbackCopyTextToClipboard(text) {
@@ -155,7 +158,67 @@ function updateProgress(event) {
 
 // Newsletter CTA Subscribe Form
 document.addEventListener('DOMContentLoaded', function () {
-	initZohoForm('#cta-subscribe-form', 'Tattvah-Website-Newsletter', 'success');
-});
+	// initZohoForm might be defined elsewhere, but just in case it doesn't exist, use try/catch
+	try {
+		initZohoForm('#cta-subscribe-form', 'Tattvah-Website-Newsletter', 'success');
+	} catch (e) {}
 
-// Newsletter CTA Subscribe Form
+	// GSAP Animations for Single Blog Page
+	
+	// A. Header fade in
+	const blogHeader = document.querySelector('.sl-blog-header');
+	if (blogHeader) {
+		gsap.fromTo(blogHeader,
+			{ y: 30, opacity: 0 },
+			{ y: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 0.1 }
+		);
+	}
+
+	// B. Banner Image Subtle Zoom
+	const blogBanner = document.querySelector('.sl-blog-banner img');
+	if (blogBanner) {
+		gsap.fromTo(blogBanner,
+			{ scale: 1.05 },
+			{ scale: 1, duration: 1.5, ease: "power2.out" }
+		);
+	}
+
+	// C. Article content blocks staggered fade in
+	// Animate paragraphs, headings, blockquotes inside the article
+	const articleContent = document.querySelectorAll('.sl-blog-content > p, .sl-blog-content > h2, .sl-blog-content > h3, .sl-blog-content > ul');
+	if (articleContent.length > 0) {
+		gsap.fromTo(articleContent,
+			{ y: 30, opacity: 0 },
+			{
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				stagger: 0.1,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: ".sl-blog-content",
+					start: "top 80%",
+				}
+			}
+		);
+	}
+
+	// D. Related Posts Staggered
+	const relatedCards = document.querySelectorAll('.resource');
+	if (relatedCards.length > 0) {
+		gsap.fromTo(relatedCards,
+			{ y: 50, opacity: 0 },
+			{
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				stagger: 0.15,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: ".resource-list",
+					start: "top 85%",
+				}
+			}
+		);
+	}
+});

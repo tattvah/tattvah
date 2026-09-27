@@ -1,7 +1,9 @@
 import './product.scss';
 import '../../src-utilities/header';
 import '../../src-utilities/footer';
+import gsap, { ScrollTrigger } from 'gsap/all';
 
+gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Product JS Loaded");
     // 1. Initialize Swiper for Thumbnails
@@ -87,6 +89,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 1024: { slidesPerView: 4, spaceBetween: 30 }
             }
         });
+    }
+
+    // 5. GSAP Animations for Product Page
+    // A. Main Product Layout Fade In
+    const spMedia = document.querySelector('.sp-media');
+    const spDetails = document.querySelector('.sp-details');
+    
+    if (spMedia && spDetails) {
+        gsap.fromTo(spMedia, 
+            { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", delay: 0.1 }
+        );
+        gsap.fromTo(spDetails, 
+            { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", delay: 0.3 }
+        );
+    }
+
+    // B. Main Product Image Subtle Zoom
+    const spMainImg = document.querySelector('.sp-main-image-wrapper img');
+    if (spMainImg) {
+        gsap.fromTo(spMainImg,
+            { scale: 1.05 },
+            { scale: 1, duration: 1.5, ease: "power2.out" }
+        );
+    }
+
+    // C. Other Products Staggered Fade-in
+    const opCards = document.querySelectorAll('.op-card');
+    if (opCards.length > 0) {
+        gsap.fromTo(opCards,
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".other-products-section",
+                    start: "top 80%",
+                }
+            }
+        );
     }
 });
 
