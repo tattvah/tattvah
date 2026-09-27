@@ -21,6 +21,7 @@ module.exports = {
 		success: './success/success.js',
 		trackOrder: './track-order/trackOrder.js',
 		refundPolicy: './refund-policy/refundPolicy.js',
+		shippingPolicy: './shipping-policy/shippingPolicy.js',
 		ourTeam: './our-team/ourTeam.js',
 		product: './product/product.js',
 		products: './products/products.js',
