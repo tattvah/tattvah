@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,17 +12,12 @@
     get_header();
     ?>
 
-    <main class="main--container bg-sugandhlok-bg font-openSans text-gray-800" style="min-height: 60vh;">
-        <!-- Page Header -->
-        <section class="pt-16 md:pt-24 pb-12 max-w-7xl mx-auto px-4 md:px-8 text-center" data-aos="fade-up">
-            <h1 class="text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-4">Terms and Conditions</h1>
-            <div class="w-16 h-1 bg-sugandhlok-peach mx-auto mb-6"></div>
-        </section>
-
-        <!-- Content -->
-        <section class="pb-24 max-w-4xl mx-auto px-4 md:px-8">
-            <div
-                class="bg-white p-8 md:p-12 rounded-md shadow-sm border border-gray-100 prose prose-lg prose-headings:font-lora prose-headings:text-sugandhlok-maroon prose-a:text-sugandhlok-peach max-w-none text-gray-600 leading-relaxed font-openSans">
+    <main class="sl-policy-page-wrapper">
+        <div class="sl-policy-container">
+            <div class="sl-policy-header" data-aos="fade-up">
+                <h1 class="sl-policy-title">Terms and Conditions</h1>
+            </div>
+            <div class="sl-policy-content" data-aos="fade-up" data-aos-delay="100">
                 <p>
                     The website “Tattvah.com” is the property of Tattvah, and it intends to provide
                     information that may be of interest to users/visitors. The contents of the site, including texts,
@@ -104,7 +99,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </div>
     </main>
 
     <?php get_footer(); ?>

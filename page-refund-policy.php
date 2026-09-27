@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,25 +11,56 @@
     get_header();
     ?>
 
-    <main class="main--container bg-sugandhlok-bg font-openSans text-gray-800" style="min-height: 60vh;">
-        <!-- Page Header -->
-        <section class="pt-16 md:pt-24 pb-12 max-w-7xl mx-auto px-4 md:px-8 text-center" data-aos="fade-up">
-            <h1 class="text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-4"><?php the_title(); ?></h1>
-            <div class="w-16 h-1 bg-sugandhlok-peach mx-auto mb-6"></div>
-        </section>
-
-        <!-- Content -->
-        <section class="pb-24 max-w-4xl mx-auto px-4 md:px-8">
-            <div
-                class="bg-white p-8 md:p-12 rounded-md shadow-sm border border-gray-100 prose prose-lg prose-headings:font-lora prose-headings:text-sugandhlok-maroon prose-a:text-sugandhlok-peach max-w-none text-gray-600 leading-relaxed font-openSans">
-                <?php if (have_posts()):
-                    while (have_posts()):
-                        the_post();
-                        the_content();
-                    endwhile;
-                endif; ?>
+    <main class="sl-policy-page-wrapper">
+        <div class="sl-policy-container">
+            <div class="sl-policy-header" data-aos="fade-up">
+                <h1 class="sl-policy-title"><?php the_title(); ?></h1>
             </div>
-        </section>
+            <div class="sl-policy-content" data-aos="fade-up" data-aos-delay="100">
+                <p>At TATTVAH, we want you to receive your order in good condition and as described.</p>
+                <p>If you receive a damaged, defective, incorrect, or incomplete product, please contact us as soon as possible after delivery.</p>
+
+                <h2>Eligible Issues</h2>
+                <p>Depending on the product and circumstances, we may assist with:</p>
+                <ul>
+                    <li>Damaged products</li>
+                    <li>Incorrect products</li>
+                    <li>Defective products</li>
+                    <li>Missing items</li>
+                    <li>Other issues covered under the applicable product or order policy</li>
+                </ul>
+
+                <h2>How to Request a Return or Replacement</h2>
+                <p>Please contact us <a href="mailto:tattvahd@gmail.com">tattvahd@gmail.com</a> with:</p>
+                <ul>
+                    <li>Order number</li>
+                    <li>Product name</li>
+                    <li>Description of the issue</li>
+                    <li>Clear photographs/videos of the product</li>
+                    <li>Photographs of the packaging, where applicable</li>
+                </ul>
+                <p>Our team will review the request and let you know the next steps.</p>
+
+                <h2>Product Condition</h2>
+                <p>Where a return is approved, the product may need to be returned in the condition specified by TATTVAH.<br>Certain products may not be eligible for return due to their nature, hygiene considerations, use, or other applicable conditions.</p>
+
+                <h2>Refunds</h2>
+                <p>If a refund is approved, it will generally be processed through the original payment method or another applicable method.<br>The time taken for the refund to appear in your account may depend on your payment provider or bank.</p>
+
+                <h2>Non-Returnable Products</h2>
+                <p>Products that have been opened, used, damaged after delivery, or otherwise fall outside the applicable return conditions may not be eligible for return or replacement.</p>
+                <p>Product-specific return conditions, where applicable, will be communicated on the product page.</p>
+
+                <h2>Important</h2>
+                <p>We reserve the right to review each return or replacement request based on the condition of the product and the circumstances of the claim.</p>
+
+                <p><strong>For assistance, contact:</strong><br>
+                Email: <a href="mailto:tattvahd@gmail.com">tattvahd@gmail.com</a><br>
+                Phone / WhatsApp: 8287691093</p>
+
+                <p><em>Returns Policy last updated: 20-Sep-2026</em></p>
+            </div>
+        </div>
     </main>
 
     <?php get_footer(); ?>

@@ -1,8 +1,13 @@
 @import '../../scss-utilities/global';
 @import '../../scss-utilities/header';
-@import '../../scss-utilities/breakpoints';
 @import '../../scss-utilities/footer';
+@import '../../scss-utilities/breakpoints';
+@import '../../scss-utilities/policies';
 
-/* Scss for refundPolicy */
-
-
+:root {
+	--sl-maroon: #490000;
+	--sl-gold: #C89A3B;
+	--sl-text-heading: #490000;
+	--sl-text-body: #2c2523;
+	--sl-text-sub: #666666;
+}

@@ -30,7 +30,7 @@
 
             <!-- Links Column 2 -->
             <div class="sl-footer-links">
-                <h4>Shop</h4>
+                <h4>Products</h4>
                 <ul>
                     <li><a href="/products/">Agarbattis</a></li>
                     <li><a href="/products/">Dhoop & Cones</a></li>
@@ -40,13 +40,14 @@
             </div>
 
             <!-- Links Column 3 -->
-            <div class="sl-footer-newsletter">
-                <h4>Newsletter</h4>
-                <p>Subscribe for exclusive updates and offers.</p>
-                <form class="sl-newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit" aria-label="Subscribe">→</button>
-                </form>
+            <div class="sl-footer-links">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="/refund-policy/">Refund Policy</a></li>
+                    <li><a href="/shipping-policy/">Shipping Policy</a></li>
+                    <li><a href="/terms-and-conditions/">Terms of Service</a></li>
+                </ul>
             </div>
         </div>
 

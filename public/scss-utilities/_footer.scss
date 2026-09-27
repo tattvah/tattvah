@@ -47,7 +47,7 @@ body {
 
 .sl-footer-top {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr;
     gap: 40px;
     margin-bottom: 50px;
 
@@ -132,10 +132,9 @@ body {
 .sl-footer-links a {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 13.5px;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     transition: color 0.2s ease;
 }
 
@@ -143,50 +142,7 @@ body {
     color: var(--sl-gold-primary);
 }
 
-/* Newsletter Section */
-.sl-footer-newsletter p {
-    font-size: 13.5px;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 16px;
-    line-height: 1.5;
-}
 
-.sl-newsletter-form {
-    display: flex;
-    border: 1px solid rgba(200, 154, 59, 0.5);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.sl-newsletter-form input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: 10px 16px;
-    color: #ffffff;
-    font-size: 13px;
-    font-family: 'Mulish', sans-serif;
-}
-
-.sl-newsletter-form input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.sl-newsletter-form button {
-    background: var(--sl-gold-primary);
-    color: #ffffff;
-    border: none;
-    padding: 0 16px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.sl-newsletter-form button:hover {
-    background: var(--sl-gold-secondary);
-}
 
 /* Footer Bottom */
 .sl-footer-bottom {
