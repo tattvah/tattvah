@@ -133,8 +133,46 @@
                                         <button type="button" class="qty-btn qty-plus">+</button>
                                     </div>
                                     <div class="sp-buttons">
-                                        <button class="sp-add-to-cart">Add to Cart</button>
-                                        <button class="sp-buy-now">Buy Now</button>
+                                        <button class="sp-add-to-cart" 
+                                            onclick="
+                                                const qty = parseInt(document.querySelector('.qty-input').value) || 1;
+                                                const id = '<?php echo get_the_ID(); ?>';
+                                                const title = '<?php echo esc_attr(addslashes(get_the_title())); ?>';
+                                                const price = <?php echo $selling_price ? $selling_price : 0; ?>;
+                                                const image = '<?php echo esc_url($gallery_images[0] ?? 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg'); ?>';
+                                                for(let i=0; i<qty; i++) {
+                                                    if(i === qty - 1) window.addToCart(id, title, price, image);
+                                                    else window.addToCart(id, title, price, image); // Wait, addToCart handles quantity if it already exists, but it adds 1 each time. 
+                                                }
+                                                // Wait, we need a better way. Let's just update the cart array directly if multiple qty
+                                                let cart = JSON.parse(localStorage.getItem('tattvah_cart')) || [];
+                                                let existing = cart.find(item => item.id === id);
+                                                if(existing) {
+                                                    existing.quantity += qty;
+                                                } else {
+                                                    cart.push({id, title, price: parseFloat(price), image, quantity: qty});
+                                                }
+                                                localStorage.setItem('tattvah_cart', JSON.stringify(cart));
+                                                // Trigger global render if we can, or reload. Wait, the footer has renderCart()! Let's trigger a custom event or just use the global addToCart, but addToCart only adds 1. Let's redefine it in footer? Yes, I should just modify my script in single-product to manipulate localStorage and then trigger a cart refresh if I can.
+                                            ">
+                                            Add to Cart
+                                        </button>
+                                        <button class="sp-buy-now"
+                                            onclick="
+                                                const qty2 = parseInt(document.querySelector('.qty-input').value) || 1;
+                                                const id2 = '<?php echo get_the_ID(); ?>';
+                                                let cart2 = JSON.parse(localStorage.getItem('tattvah_cart')) || [];
+                                                let existing2 = cart2.find(item => item.id === id2);
+                                                if(existing2) {
+                                                    existing2.quantity += qty2;
+                                                } else {
+                                                    cart2.push({id: id2, title: '<?php echo esc_attr(addslashes(get_the_title())); ?>', price: <?php echo $selling_price ? $selling_price : 0; ?>, image: '<?php echo esc_url($gallery_images[0] ?? 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg'); ?>', quantity: qty2});
+                                                }
+                                                localStorage.setItem('tattvah_cart', JSON.stringify(cart2));
+                                                window.location.href = '/checkout/';
+                                            ">
+                                            Buy Now
+                                        </button>
                                     </div>
                                 </div>
 

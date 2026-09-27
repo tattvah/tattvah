@@ -139,6 +139,60 @@ function track_post_views()
     }
 }
 // Hook into wp to ensure it runs on single post pages
-add_action('wp', 'track_post_views');
+// Register Order CPT
+function tattvah_register_order_cpt() {
+    register_post_type('order', [
+        'labels' => [
+            'name' => 'Orders',
+            'singular_name' => 'Order'
+        ],
+        'public' => false,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'supports' => ['title', 'custom-fields'],
+        'menu_icon' => 'dashicons-cart'
+    ]);
+}
+add_action('init', 'tattvah_register_order_cpt');
 
+// Handle Place Order AJAX
+add_action('wp_ajax_place_order', 'tattvah_handle_place_order');
+add_action('wp_ajax_nopriv_place_order', 'tattvah_handle_place_order');
+
+function tattvah_handle_place_order() {
+    $name = sanitize_text_field($_POST['billing_name']);
+    $email = sanitize_email($_POST['billing_email']);
+    $phone = sanitize_text_field($_POST['billing_phone']);
+    $address = sanitize_textarea_field($_POST['billing_address']);
+    $cart = isset($_POST['cart']) ? json_decode(stripslashes($_POST['cart']), true) : [];
+    
+    if (empty($name) || empty($phone) || empty($cart)) {
+        wp_send_json_error(['message' => 'Invalid data. Please fill required fields.']);
+    }
+
+    $total = 0;
+    $order_items = '';
+    foreach ($cart as $item) {
+        $total += (floatval($item['price']) * intval($item['quantity']));
+        $order_items .= $item['title'] . ' (x' . $item['quantity'] . ') - Rs. ' . ($item['price'] * $item['quantity']) . "\n";
+    }
+
+    $post_id = wp_insert_post([
+        'post_title' => 'Order by ' . $name . ' (' . current_time('mysql') . ')',
+        'post_type' => 'order',
+        'post_status' => 'publish'
+    ]);
+
+    if ($post_id) {
+        update_post_meta($post_id, 'billing_name', $name);
+        update_post_meta($post_id, 'billing_email', $email);
+        update_post_meta($post_id, 'billing_phone', $phone);
+        update_post_meta($post_id, 'billing_address', $address);
+        update_post_meta($post_id, 'order_items', $order_items);
+        update_post_meta($post_id, 'order_total', $total);
+        wp_send_json_success(['message' => 'Order placed successfully!', 'order_id' => $post_id]);
+    } else {
+        wp_send_json_error(['message' => 'Failed to create order.']);
+    }
+}
 ?>

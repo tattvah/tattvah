@@ -100,7 +100,15 @@
                                     <?php endif; ?>
                                 </a>
                                 <div class="product-info">
-                                    <div class="product-rating">★★★★★</div>
+                                    <div class="product-rating">
+                                        <?php
+                                        $rating = get_field('average_rating', get_the_ID());
+                                        $rating = $rating ? floatval($rating) : 5;
+                                        $full_stars = round($rating);
+                                        $empty_stars = 5 - $full_stars;
+                                        echo str_repeat('★', $full_stars) . str_repeat('☆', $empty_stars);
+                                        ?>
+                                    </div>
                                     <h3 class="product-title">
                                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </h3>
@@ -111,7 +119,13 @@
                                         <span class="selling-price">Rs.
                                             <?php echo $selling_price ? number_format($selling_price) : '0'; ?></span>
                                     </div>
-                                    <a href="<?php the_permalink(); ?>" class="add-to-cart-btn">View Details</a>
+                                    <button class="add-to-cart-btn w-full py-3 mt-4 bg-transparent border-2 border-sugandhlok-maroon text-sugandhlok-maroon text-sm uppercase tracking-widest font-semibold hover:bg-sugandhlok-maroon hover:text-white transition-colors duration-300"
+                                        data-id="<?php echo get_the_ID(); ?>"
+                                        data-title="<?php echo esc_attr(get_the_title()); ?>"
+                                        data-price="<?php echo esc_attr($selling_price ? $selling_price : 0); ?>"
+                                        data-image="<?php echo esc_url($gallery_img_1 ? $gallery_img_1 : 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg'); ?>">
+                                        Quick Add
+                                    </button>
                                 </div>
                             </div>
                         <?php endwhile; ?>
