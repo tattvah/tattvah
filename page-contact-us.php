@@ -205,11 +205,8 @@
                             <div class="form-group sl-form-group">
                                 <label for="form-fullname" class="form-label">Name <span
                                         class="required">*</span></label>
-                                <input type="text" id="form-fullname" name="lfullname"
+                                <input type="text" id="form-fullname" name="Name"
                                     class="form-input sl-contact-input" placeholder="Your Name" required>
-                                <!-- Hidden input fields to preserve full compatibility with backend handlers -->
-                                <input type="hidden" id="form-firstname" name="lfirstname" value="">
-                                <input type="hidden" id="form-lastname" name="llastname" value="">
                             </div>
 
                             <!-- 2-Column: Email & Phone -->
@@ -217,12 +214,12 @@
                                 <div class="form-group sl-form-group">
                                     <label for="form-email" class="form-label">Email <span
                                             class="required">*</span></label>
-                                    <input type="email" id="form-email" name="lemail"
+                                    <input type="email" id="form-email" name="Email"
                                         class="form-input sl-contact-input" placeholder="Your Email Address" required>
                                 </div>
                                 <div class="form-group sl-form-group">
                                     <label for="form-git-phonenumber" class="form-label">Phone Number</label>
-                                    <input type="tel" id="form-git-phonenumber" name="lphone"
+                                    <input type="tel" id="form-git-phonenumber" name="Phone"
                                         class="form-input sl-contact-input" placeholder="Your Phone Number">
                                 </div>
                             </div>
@@ -231,7 +228,7 @@
                             <div class="form-group sl-form-group">
                                 <label for="form-message" class="form-label">Comment / Message <span
                                         class="required">*</span></label>
-                                <textarea id="form-message" name="Description" class="form-textarea sl-contact-textarea"
+                                <textarea id="form-message" name="Message" class="form-textarea sl-contact-textarea"
                                     placeholder="Write your message, question, or order details here..." rows="5"
                                     required></textarea>
                             </div>
@@ -259,37 +256,7 @@
     </main>
 
     <script>
-        // Form field synchronization & submission feedback helper
-        document.addEventListener('DOMContentLoaded', function () {
-            const fullNameInput = document.getElementById('form-fullname');
-            const firstNameInput = document.getElementById('form-firstname');
-            const lastNameInput = document.getElementById('form-lastname');
-            const contactForm = document.getElementById('needform');
-
-            function syncNameFields() {
-                if (!fullNameInput) return;
-                const trimmed = fullNameInput.value.trim();
-                const parts = trimmed.split(' ');
-                if (parts.length > 1) {
-                    if (firstNameInput) firstNameInput.value = parts[0];
-                    if (lastNameInput) lastNameInput.value = parts.slice(1).join(' ');
-                } else {
-                    if (firstNameInput) firstNameInput.value = trimmed;
-                    if (lastNameInput) lastNameInput.value = trimmed;
-                }
-            }
-
-            if (fullNameInput) {
-                fullNameInput.addEventListener('input', syncNameFields);
-                fullNameInput.addEventListener('change', syncNameFields);
-            }
-
-            if (contactForm) {
-                contactForm.addEventListener('submit', function () {
-                    syncNameFields();
-                });
-            }
-        });
+        // JS will be bundled
     </script>
 
     <?php get_footer(); ?>

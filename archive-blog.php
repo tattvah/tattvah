@@ -18,14 +18,11 @@
 
     <main class="main--container">
 
-        <section class="blog-header-section">
-            <div class="blog-img-text-container">
-                <img src="https://tattvah.com/wp-content/uploads/2025/01/home-banner-1.webp" alt="">
-                <div class="text-container">
-                    <p>I make it Simple,</p>
-                    <p> I make it Valuable,and</p>
-                    <p> I do it for the Long term.</p>
-                </div>
+		<section class="blog-header-section sl-archive-hero" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: #fbf7f4; padding: 60px 20px;">
+            <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up" data-aos-duration="1000">
+                <h1 style="font-family: 'Lora', 'Cinzel', serif; font-size: 48px; color: #490000; margin-bottom: 20px; font-weight: 600; letter-spacing: 1px;">Tattvah Journal</h1>
+                <div style="width: 80px; height: 3px; background: #C89A3B; margin: 0 auto 20px;" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"></div>
+                <p style="font-family: 'Mulish', sans-serif; font-size: 18px; color: #555; line-height: 1.8; margin-bottom: 0;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Discover spiritual insights, timeless rituals, and the natural elements that make our agarbattis truly divine. Immerse yourself in the ancient wisdom crafted for the modern soul.</p>
             </div>
         </section>
 
@@ -58,7 +55,7 @@
                             </div>
                         </div>
                         <div class="resource-img">
-                            <img src="<?php echo get_field("banner_image"); ?>" alt="">
+                            <img src="<?php echo get_field('listing_image') ?: get_field('banner_image'); ?>" alt="<?php echo esc_attr(get_field('listing_alt_text') ?: get_field('banner_alt_text') ?: get_the_title()); ?>">
                         </div>
                         <h5 class="resource-heading">
                             <?php the_title() ?>

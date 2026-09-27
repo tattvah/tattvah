@@ -2,7 +2,6 @@ import './blog.scss';
 import './../../src-utilities/header';
 import './../../src-utilities/footer';
 import './../../src-utilities/country';
-import { initZohoForm } from '../../src-utilities/formSubmission';
 
 //copy link to clipboard
 function fallbackCopyTextToClipboard(text) {

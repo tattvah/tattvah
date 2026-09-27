@@ -22,8 +22,7 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="/about-us/">About Tattvah</a></li>
-                    <li><a href="/blogs/">Tattvah Journal</a></li>
-                    <li><a href="/our-team/">Our Team</a></li>
+                    <li><a href="/blogs/">Our Blogs</a></li>
                     <li><a href="/contact-us/">Contact Us</a></li>
                 </ul>
             </div>
@@ -56,13 +55,6 @@
             <span class="sl-copyright">
                 &copy; <?php echo date('Y'); ?> Tattvah. All rights reserved.
             </span>
-            <div class="sl-legal">
-                <a href="/privacy-policy/">Privacy Policy</a>
-                <span class="sl-separator">|</span>
-                <a href="/refund-policy/">Refund Policy</a>
-                <span class="sl-separator">|</span>
-                <a href="/terms-and-conditions/">Terms of Service</a>
-            </div>
         </div>
     </div>
 </footer>
