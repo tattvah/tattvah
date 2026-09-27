@@ -1,120 +1,355 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href='/wp-content/themes/tattvah/build/aboutUs/aboutUs.css?v2'>
-	<script type="module" defer src='/wp-content/themes/tattvah/build/aboutUs/aboutUs.bundle.js?v2'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<?php
-	$homeUrl = get_home_url();
-	get_header();
-	?>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/aboutUs/aboutUs.css?v=<?php echo time(); ?>'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/aboutUs/aboutUs.bundle.js?v=<?php echo time(); ?>'></script>
 
-	<main class="pt-[140px] md:pt-[160px] w-full bg-sugandhlok-bg font-openSans text-gray-800">
+    <?php
+    $homeUrl = get_home_url();
+    get_header();
+    ?>
 
-		<!-- Hero Section -->
-		<section class="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-			<img src="https://sugandhlok.com/cdn/shop/files/Home_Page_Images-03.png" alt="About Tattvah"
-				class="absolute inset-0 w-full h-full object-cover">
-			<div class="absolute inset-0 bg-black/50"></div>
-			<div class="relative z-10 text-center px-4 max-w-3xl mx-auto" data-aos="fade-up">
-				<h1 class="text-4xl md:text-6xl font-lora text-white mb-4 uppercase tracking-widest">Our Story</h1>
-				<div class="w-16 h-1 bg-sugandhlok-peach mx-auto mb-6"></div>
-				<p class="text-lg md:text-xl text-white font-openSans font-light">Rooted in tradition, crafted with
-					utmost purity.</p>
-			</div>
-		</section>
+    <main class="tattvah-about-page">
+        <div class="about-container">
 
-		<!-- Brand Story -->
-		<section class="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-8">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-				<div data-aos="fade-right">
-					<img src="https://sugandhlok.com/cdn/shop/files/bulgarian-rose-3.jpg" alt="Our Heritage"
-						class="w-full h-auto rounded-md shadow-sm">
-				</div>
-				<div data-aos="fade-left">
-					<h2 class="text-3xl md:text-4xl font-lora text-sugandhlok-maroon mb-6 leading-tight">A Legacy of
-						Pure Devotion & Craftsmanship</h2>
-					<p class="mb-4 leading-relaxed text-gray-600">
-						Tattvah stands as a testament to India's rich heritage of agarbatti and dhoop making. Since our
-						inception, our mission has been to provide fragrances that are rooted in tradition and crafted
-						with utmost purity.
-					</p>
-					<p class="mb-6 leading-relaxed text-gray-600">
-						We believe in the power of nature. Every stick is lovingly hand-rolled using authentic,
-						time-honored methods. We source only the finest pure flora, essential oils, and sacred resins to
-						ensure a premium, long-lasting aroma that elevates your sacred spaces.
-					</p>
-					<a href="/products/"
-						class="inline-block px-8 py-3 border border-sugandhlok-maroon text-sugandhlok-maroon font-semibold uppercase tracking-widest text-sm hover:bg-sugandhlok-maroon hover:text-white transition-colors rounded-sm">Explore
-						Our Collection</a>
-				</div>
-			</div>
-		</section>
+            <!-- 1. Hero Header Section -->
+            <section class="about-hero-section" data-aos="fade-up">
+                <span class="hero-badge">OUR ESSENCE</span>
+                <h1 class="hero-title">About TATTVAH</h1>
+                <p class="hero-tagline">Rooted in Tradition. Inspired by Nature. Made for Today.</p>
+                <div class="header-divider" aria-hidden="true">
+                    <span class="divider-line"></span>
+                    <span class="divider-icon">✦</span>
+                    <span class="divider-line"></span>
+                </div>
+            </section>
 
-		<!-- Mission / Values -->
-		<section class="py-16 bg-white">
-			<div class="max-w-7xl mx-auto px-4 md:px-8">
-				<div class="text-center mb-16" data-aos="fade-up">
-					<h2 class="text-3xl md:text-4xl font-lora text-sugandhlok-maroon mb-4">Our Core Values</h2>
-					<div class="w-16 h-1 bg-sugandhlok-peach mx-auto"></div>
-				</div>
+            <!-- 2. Founding Story: From Friendship to TATTVAH -->
+            <section class="about-story-section" data-aos="fade-up">
+                <div class="story-grid">
+                    <!-- Left Column: Philosophical Spark Card -->
+                    <div class="story-quote-card">
+                        <div class="quote-emblem" aria-hidden="true">
+                            <svg viewBox="0 0 48 36" fill="currentColor">
+                                <path d="M24 2C24 2 20 12 20 22C20 26.5 21.8 30 24 30C26.2 30 28 26.5 28 22C28 12 24 2 24 2Z" fill="#C89A3B"/>
+                                <path d="M22 8C22 8 15 15 15 23C15 27 17.5 29.5 20.5 30C19.5 27.5 19.5 24 20.5 20C21.2 16.5 22 13 22 8Z" fill="#C89A3B" opacity="0.9"/>
+                                <path d="M26 8C26 8 33 15 33 23C33 27 30.5 29.5 27.5 30C28.5 27.5 28.5 24 27.5 20C26.8 16.5 26 13 26 8Z" fill="#C89A3B" opacity="0.9"/>
+                                <path d="M19 14C19 14 10 20 10 26C10 29 12.5 31 16 30.5C14.5 28.5 14.5 25.5 15.5 22.5C16.5 19 18 16 19 14Z" fill="#C89A3B" opacity="0.8"/>
+                                <path d="M29 14C29 14 38 20 38 26C38 29 35.5 31 32 30.5C33.5 28.5 33.5 25.5 32.5 22.5C31.5 19 30 16 29 14Z" fill="#C89A3B" opacity="0.8"/>
+                                <path d="M14 32C18 34 30 34 34 32C31 31.2 17 31.2 14 32Z" fill="#C89A3B"/>
+                            </svg>
+                        </div>
+                        <p class="quote-question">“Why are we moving so far away from the natural and traditional ways that have been part of our lives for generations?”</p>
+                        <span class="quote-note">The question that sparked our journey</span>
+                        <div class="milestone-tags">
+                            <span class="tag">Founded in 2023</span>
+                            <span class="tag">Two Friends, One Vision</span>
+                            <span class="tag">Indian Traditional Roots</span>
+                        </div>
+                    </div>
 
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-					<div data-aos="fade-up" data-aos-delay="0">
-						<div class="w-32 h-32 mx-auto rounded-full border-2 border-sugandhlok-peach p-2 mb-6">
-							<img src="https://sugandhlok.com/cdn/shop/files/Natural_2x_fb33f089-f8be-4d0b-bbeb-e24077e027d7.png"
-								alt="100% Natural" class="w-full h-full object-cover rounded-full">
-						</div>
-						<h3 class="font-lora text-xl text-gray-900 mb-3">100% Natural</h3>
-						<p class="text-gray-600 text-sm leading-relaxed">Sourced directly from nature, our ingredients
-							are completely free from synthetic chemicals, charcoal, and toxic fumes.</p>
-					</div>
+                    <!-- Right Column: Story Narrative Content -->
+                    <div class="story-content">
+                        <span class="section-eyebrow">OUR BEGINNING</span>
+                        <h2 class="section-title">From Friendship to TATTVAH</h2>
+                        <p class="story-paragraph story-highlight">
+                            TATTVAH started with two friends and a shared curiosity about something simple: why are we moving so far away from the natural and traditional ways that have been part of our lives for generations?
+                        </p>
+                        <p class="story-paragraph">
+                            Our journey began in 2023, through conversations, ideas, and a growing interest in India's traditional products and natural materials.
+                        </p>
+                        <p class="story-paragraph">
+                            We discovered that many of the simplest things around us carry a deeper connection to our homes, our rituals, our culture, and nature.
+                        </p>
+                        <p class="story-paragraph story-highlight">
+                            That thought became the beginning of TATTVAH.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-					<div data-aos="fade-up" data-aos-delay="100">
-						<div class="w-32 h-32 mx-auto rounded-full border-2 border-sugandhlok-peach p-2 mb-6">
-							<img src="https://sugandhlok.com/cdn/shop/files/Kind_2x_f40da00c-d95e-48f5-be6b-5d207c33038b.png"
-								alt="Hand Crafted" class="w-full h-full object-cover rounded-full">
-						</div>
-						<h3 class="font-lora text-xl text-gray-900 mb-3">Hand Crafted</h3>
-						<p class="text-gray-600 text-sm leading-relaxed">Each product is meticulously hand-rolled by
-							skilled artisans preserving generations of traditional Indian craftsmanship.</p>
-					</div>
+            <!-- 3. Philosophy Section: What We Believe -->
+            <section class="about-philosophy-section" data-aos="fade-up">
+                <div class="philosophy-banner">
+                    <span class="section-eyebrow">OUR PHILOSOPHY</span>
+                    <h2 class="section-title">What We Believe</h2>
+                    <p class="central-belief">
+                        “At TATTVAH, we believe that tradition doesn't have to stay in the past. <strong>It can become a meaningful part of modern life.</strong>”
+                    </p>
+                </div>
 
-					<div data-aos="fade-up" data-aos-delay="200">
-						<div class="w-32 h-32 mx-auto rounded-full border-2 border-sugandhlok-peach p-2 mb-6">
-							<img src="https://sugandhlok.com/cdn/shop/files/Responsible_2x_c956c29a-d632-4da0-b88a-2fd15962f1ec.png"
-								alt="Ethical & Eco-friendly" class="w-full h-full object-cover rounded-full">
-						</div>
-						<h3 class="font-lora text-xl text-gray-900 mb-3">Ethical & Eco-friendly</h3>
-						<p class="text-gray-600 text-sm leading-relaxed">We are deeply committed to sustainability and
-							women empowerment, providing livelihoods to rural women across India.</p>
-					</div>
-				</div>
-			</div>
-		</section>
+                <div class="philosophy-cards-grid">
+                    <!-- Philosophy Card 1 -->
+                    <div class="philosophy-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Nature & Conscious Living</h3>
+                        <p class="card-text">
+                            We explore products inspired by nature, Indian traditions, simplicity, and conscious living, and present them in a way that feels relevant to today's homes.
+                        </p>
+                    </div>
 
-		<!-- Newsletter -->
-		<section class="py-20 bg-sugandhlok-maroon text-white text-center">
-			<div class="max-w-2xl mx-auto px-4" data-aos="zoom-in">
-				<h2 class="text-3xl font-lora mb-4 text-sugandhlok-peach">Join Our Journey</h2>
-				<p class="mb-8 font-light text-white/80">Subscribe to our newsletter for exclusive updates, spiritual
-					insights, and special offers.</p>
-				<form
-					class="flex flex-col sm:flex-row gap-0 max-w-md mx-auto border border-sugandhlok-peach/30 rounded-sm overflow-hidden">
-					<input type="email" placeholder="Your Email Address" required
-						class="flex-1 bg-transparent px-4 py-3 text-white focus:outline-none placeholder-white/50 border-none">
-					<button type="submit"
-						class="bg-sugandhlok-peach text-sugandhlok-maroon font-bold px-6 py-3 hover:bg-white transition-colors">SUBSCRIBE</button>
-				</form>
-			</div>
-		</section>
+                    <!-- Philosophy Card 2 -->
+                    <div class="philosophy-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Purpose & A Meaningful Story</h3>
+                        <p class="card-text">
+                            From traditional essentials to natural everyday products, we focus on creating and bringing together products that have a purpose and a story behind them.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-	</main>
+            <!-- 4. Guiding Principles: Our Approach -->
+            <section class="about-approach-section" data-aos="fade-up">
+                <div class="section-header-center">
+                    <span class="section-eyebrow">GUIDING PRINCIPLES</span>
+                    <h2 class="section-title">Our Approach</h2>
+                    <p class="section-sub">We believe in conscious choices and respectful craftsmanship:</p>
+                </div>
 
-	<?php get_footer(); ?>
-	</body>
+                <div class="pillars-grid">
+                    <!-- Pillar 1 -->
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="50">
+                        <span class="pillar-num">01</span>
+                        <h3 class="pillar-title">Respecting traditional knowledge</h3>
+                        <p class="pillar-desc">Honoring centuries-old Indian ritual practices, heritage recipes, and time-tested wisdom.</p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="100">
+                        <span class="pillar-num">02</span>
+                        <h3 class="pillar-title">Choosing natural materials where possible</h3>
+                        <p class="pillar-desc">Prioritizing natural ingredients, botanical extracts, and authentic elements for everyday wellness.</p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="150">
+                        <span class="pillar-num">03</span>
+                        <h3 class="pillar-title">Keeping things simple and meaningful</h3>
+                        <p class="pillar-desc">Stripping away clutter to focus on pure purpose, serenity, and honest value for your home.</p>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="pillar-num">04</span>
+                        <h3 class="pillar-title">Paying attention to quality and details</h3>
+                        <p class="pillar-desc">Ensuring meticulous care in every blend, sensory profile, burn time, and packaging finish.</p>
+                    </div>
+
+                    <!-- Pillar 5 -->
+                    <div class="pillar-card" data-aos="fade-up" data-aos-delay="250">
+                        <span class="pillar-num">05</span>
+                        <h3 class="pillar-title">Creating products that fit naturally into modern lifestyles</h3>
+                        <p class="pillar-desc">Designing seamless, aesthetically elevated essentials tailored for contemporary living.</p>
+                    </div>
+                </div>
+
+                <!-- Core Mantra Box -->
+                <div class="approach-mantra-box" data-aos="fade-up" data-aos-delay="300">
+                    <p class="mantra-intro">TATTVAH is still at the beginning of its journey. But the thought behind it is simple:</p>
+                    <p class="mantra-highlight">“Go back to the essence. Choose thoughtfully. Live meaningfully.”</p>
+                </div>
+            </section>
+
+            <!-- 5. Our Promise & Brand Signature Banner -->
+            <section class="about-promise-banner" data-aos="fade-up">
+                <span class="promise-eyebrow">OUR COMMITMENT</span>
+                <h2 class="promise-title">Our Promise</h2>
+                <p class="promise-text">
+                    We aim to build TATTVAH with honesty, curiosity, and responsibility, one product at a time.
+                </p>
+                <div class="brand-closing-box">
+                    <svg class="lotus-icon" viewBox="0 0 48 36" fill="currentColor" aria-hidden="true">
+                        <path d="M24 2C24 2 20 12 20 22C20 26.5 21.8 30 24 30C26.2 30 28 26.5 28 22C28 12 24 2 24 2Z" fill="#C89A3B"/>
+                        <path d="M22 8C22 8 15 15 15 23C15 27 17.5 29.5 20.5 30C19.5 27.5 19.5 24 20.5 20C21.2 16.5 22 13 22 8Z" fill="#C89A3B" opacity="0.9"/>
+                        <path d="M26 8C26 8 33 15 33 23C33 27 30.5 29.5 27.5 30C28.5 27.5 28.5 24 27.5 20C26.8 16.5 26 13 26 8Z" fill="#C89A3B" opacity="0.9"/>
+                        <path d="M19 14C19 14 10 20 10 26C10 29 12.5 31 16 30.5C14.5 28.5 14.5 25.5 15.5 22.5C16.5 19 18 16 19 14Z" fill="#C89A3B" opacity="0.8"/>
+                        <path d="M29 14C29 14 38 20 38 26C38 29 35.5 31 32 30.5C33.5 28.5 33.5 25.5 32.5 22.5C31.5 19 30 16 29 14Z" fill="#C89A3B" opacity="0.8"/>
+                        <path d="M14 32C18 34 30 34 34 32C31 31.2 17 31.2 14 32Z" fill="#C89A3B"/>
+                    </svg>
+                    <h3 class="brand-name">TATTVAH</h3>
+                    <p class="brand-tagline">Rooted in Tradition. Inspired by Nature. Made for Today.</p>
+                    <div class="action-buttons">
+                        <a href="/products/" class="btn-gold">Explore Products</a>
+                        <a href="/contact-us/" class="btn-outline">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Frequently Asked Questions (FAQs) Accordion -->
+            <section class="about-faq-section" data-aos="fade-up">
+                <header class="faq-header">
+                    <span class="faq-badge">HAVE QUESTIONS?</span>
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+                    <p class="faq-subtitle">Clear answers to common questions about TATTVAH, our products, and orders.</p>
+                </header>
+
+                <div class="faq-accordion-list">
+                    <!-- FAQ 1 -->
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span>What is TATTVAH?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>TATTVAH is a brand inspired by nature, Indian traditions, and thoughtful living. We bring together products that connect traditional practices with modern lifestyles.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 2 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What kind of products does TATTVAH offer?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Our current collection includes products inspired by traditional Indian practices and natural living. You can explore our latest products through the <a href="/products/">Shop section</a> of our website.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 3 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Are TATTVAH products natural?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>We aim to use natural materials and ingredients where appropriate. The exact composition and material information may vary by product, so we recommend checking the individual product description and packaging before use.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 4 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Where are TATTVAH products made?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Our products may be sourced or manufactured through selected partners and suppliers. Product-specific information will be provided wherever applicable.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 5 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How can I place an order?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Simply browse our products, add your chosen items to the cart, and proceed to checkout.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 6 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How can I track my order?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Once your order has been shipped, you will receive the available tracking details through your registered contact information. You can also visit our <a href="/track-order/">Track Order</a> page for updates.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 7 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How long does delivery take?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Delivery times depend on your location, product availability, and the shipping partner. The estimated delivery timeline will be communicated during or after your order.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 8 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can I cancel my order?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Orders may be cancelled subject to our cancellation policy and the stage of order processing. Please contact us as soon as possible if you need to cancel an order.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 9 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Do you accept returns?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Returns are accepted only in situations covered by our Returns Policy. Please check our <a href="/refund-policy/">Returns & Refund Policy</a> page for complete details.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 10 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What if I receive a damaged or incorrect product?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Please contact us as soon as possible after delivery and share your order details along with clear photographs of the product and packaging. We will review the issue and assist you according to our policy.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 11 -->
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How can I contact TATTVAH?</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>You can reach us through our <a href="/contact-us/">Contact Us page</a> or email us directly at <a href="mailto:tattvahd@gmail.com">tattvahd@gmail.com</a>.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq-help-footer">
+                    <p>Have additional queries? We are here to help — visit our <a href="/contact-us/">Contact Us page</a> or reach out at <a href="mailto:tattvahd@gmail.com">tattvahd@gmail.com</a>.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <?php get_footer(); ?>
+</body>
 
 </html>

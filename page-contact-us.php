@@ -5,311 +5,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/contactUs/contactUs.css?v2'>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/contactUs/contactUs.bundle.js?v2'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/contactUs/contactUs.css?v=<?php echo time(); ?>'>
+    <script type="module" defer
+        src='/wp-content/themes/tattvah/build/contactUs/contactUs.bundle.js?v=<?php echo time(); ?>'></script>
 
     <?php
     $homeUrl = get_home_url();
     get_header();
     ?>
 
-<style id="sl-contact-styles">
-        /* ==============================================================
-           SUGANDH LOK CONTACT US DESIGN (PURE CSS - NO SQUISHED COLUMNS)
-           ============================================================== */
-        :root {
-            --sl-maroon: #490000;
-            --sl-maroon-hover: #330000;
-            --sl-gold: #C89A3B;
-            --sl-text-heading: #490000;
-            --sl-text-body: #2c2523;
-            --sl-text-sub: #666666;
-            --sl-border-input: #d4c5b9;
-        }
+    <main class="tattvah-contact-page sl-contact-page-wrapper">
+        <div class="tattvah-contact-container sl-contact-container">
 
-        /* Force full-width block display, breaking out of any .main--container grid restrictions */
-        .sl-contact-page-wrapper {
-            display: block !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            min-height: 70vh;
-            background-color: #ffffff !important;
-            padding: 55px 20px 90px 20px !important;
-            font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            box-sizing: border-box;
-        }
-
-        .sl-contact-page-wrapper * {
-            box-sizing: border-box;
-        }
-
-        .sl-contact-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* Header Title & Subtitle */
-        .sl-contact-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .sl-contact-title {
-            font-family: 'Lora', 'Cinzel', Georgia, serif;
-            font-size: 42px;
-            font-weight: 500;
-            color: var(--sl-text-heading);
-            margin: 0 0 14px 0;
-            line-height: 1.2;
-            letter-spacing: 0.5px;
-        }
-
-        .sl-contact-subtitle {
-            font-size: 15.5px;
-            color: var(--sl-text-sub);
-            margin: 0;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-
-        /* 3-Column Highlights Row */
-        .sl-contact-highlights {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            max-width: 820px;
-            margin: 0 auto 50px auto;
-            padding: 0 10px;
-            text-align: center;
-        }
-
-        .sl-highlight-item {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 12px;
-        }
-
-        .sl-highlight-title {
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--sl-text-body);
-            margin-bottom: 8px;
-        }
-
-        .sl-highlight-link {
-            font-size: 14.5px;
-            color: var(--sl-text-body);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: color 0.2s ease;
-        }
-
-        .sl-highlight-link:hover {
-            color: var(--sl-gold);
-        }
-
-        /* Form Container */
-        .sl-contact-form-box {
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .sl-contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        /* 2 Columns Row */
-        .sl-form-row-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .sl-form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Inputs & Textarea */
-        .sl-contact-input,
-        .sl-contact-textarea {
-            width: 100% !important;
-            padding: 13px 18px !important;
-            background-color: #ffffff !important;
-            border: 1px solid var(--sl-border-input) !important;
-            border-radius: 6px !important;
-            font-size: 14.5px !important;
-            font-family: 'Mulish', sans-serif !important;
-            color: var(--sl-text-body) !important;
-            outline: none !important;
-            box-shadow: none !important;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
-        }
-
-        .sl-contact-input::placeholder,
-        .sl-contact-textarea::placeholder {
-            color: #8c857f !important;
-            font-weight: 400 !important;
-            opacity: 1;
-        }
-
-        .sl-contact-input:focus,
-        .sl-contact-textarea:focus {
-            border-color: var(--sl-maroon) !important;
-            box-shadow: 0 0 0 2px rgba(73, 0, 0, 0.08) !important;
-        }
-
-        .sl-contact-textarea {
-            min-height: 120px !important;
-            resize: vertical !important;
-        }
-
-        /* Submit Button */
-        .sl-form-btn-row {
-            margin-top: 6px;
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        .sl-contact-send-btn {
-            background-color: var(--sl-maroon) !important;
-            color: #ffffff !important;
-            font-size: 15px !important;
-            font-weight: 600 !important;
-            font-family: 'Mulish', sans-serif !important;
-            padding: 12px 42px !important;
-            border: none !important;
-            border-radius: 5px !important;
-            cursor: pointer !important;
-            transition: background-color 0.2s ease, transform 0.1s ease !important;
-            box-shadow: 0 2px 6px rgba(73, 0, 0, 0.15) !important;
-            display: inline-block !important;
-            text-align: center !important;
-        }
-
-        .sl-contact-send-btn:hover {
-            background-color: var(--sl-maroon-hover) !important;
-        }
-
-        .sl-contact-send-btn:active {
-            transform: translateY(1px);
-        }
-
-        /* Feedback Message */
-        .sl-status-msg {
-            display: none;
-            padding: 14px 18px;
-            border-radius: 6px;
-            font-size: 14px;
-            margin-top: 14px;
-        }
-
-        .sl-status-msg.success {
-            display: block;
-            background-color: #f0fdf4;
-            color: #166534;
-            border: 1px solid #bbf7d0;
-        }
-
-        .sl-status-msg.error {
-            display: block;
-            background-color: #fef2f2;
-            color: #991b1b;
-            border: 1px solid #fecaca;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 680px) {
-            .sl-contact-page-wrapper {
-                padding: 40px 16px 60px 16px !important;
-            }
-
-            .sl-contact-title {
-                font-size: 32px;
-            }
-
-            .sl-contact-subtitle {
-                font-size: 14px;
-            }
-
-            .sl-contact-highlights {
-                flex-direction: column;
-                gap: 22px;
-                margin-bottom: 36px;
-            }
-
-            .sl-form-row-2col {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .sl-contact-send-btn {
-                width: 100% !important;
-            }
-        }
-    </style>
-
-    <main class="sl-contact-page-wrapper">
-        <div class="sl-contact-container">
-            <!-- Header Section -->
-            <div class="sl-contact-header" data-aos="fade-up">
-                <h1 class="sl-contact-title">Contact Us</h1>
-                <p class="sl-contact-subtitle">Tattvah's aim is customer satisfaction, always.</p>
-            </div>
-
-            <!-- 3-Column Highlights Row -->
-            <div class="sl-contact-highlights" data-aos="fade-up" data-aos-delay="100">
-                <div class="sl-highlight-item">
-                    <span class="sl-highlight-title">Call Us</span>
-                    <a href="tel:+9108042544254" class="sl-highlight-link">+91 080 4254 4254</a>
+            <!-- Hero Header Section -->
+            <div class="contact-hero-header sl-contact-header" data-aos="fade-up">
+                <span class="contact-badge">GET IN TOUCH</span>
+                <h1 class="contact-title sl-contact-title">We'd Love to Hear From You</h1>
+                <div class="contact-intro-text">
+                    <p class="intro-lead">Have a question about a product, your order, or TATTVAH? <strong>We're here to
+                            help.</strong></p>
+                    <p class="intro-sub sl-contact-subtitle">Whether you're looking for more information about our
+                        products, need assistance with an order, or simply want to share your experience, feel free to
+                        reach out.</p>
                 </div>
-                <div class="sl-highlight-item">
-                    <span class="sl-highlight-title">Email Us</span>
-                    <a href="mailto:care@tattvah.com" class="sl-highlight-link">care@tattvah.com</a>
-                </div>
-                <div class="sl-highlight-item">
-                    <span class="sl-highlight-title">Our Store</span>
-                    <a href="/products/" class="sl-highlight-link">Gandhi Bazaar</a>
+                <div class="header-divider" aria-hidden="true">
+                    <span class="divider-line"></span>
+                    <span class="divider-icon">✦</span>
+                    <span class="divider-line"></span>
                 </div>
             </div>
 
-            <!-- Contact Form Box -->
-            <div class="sl-contact-form-box" data-aos="fade-up" data-aos-delay="200">
-                <form id="needform" class="sl-contact-form" method="POST">
-                    <!-- Row 1: Name & Email -->
-                    <div class="sl-form-row-2col">
-                        <div class="sl-form-group">
-                            <input type="text" id="form-fullname" name="lfullname" class="sl-contact-input" placeholder="Name" required>
-                            <!-- Hidden input fields to preserve full compatibility with backend handlers -->
-                            <input type="hidden" id="form-firstname" name="lfirstname" value="">
-                            <input type="hidden" id="form-lastname" name="llastname" value="">
+            <!-- 2-Column Content Grid: Left Channels, Right Form -->
+            <div class="contact-main-grid">
+
+                <!-- Left Column: Information Cards & Brand Note -->
+                <div class="contact-info-col" data-aos="fade-up" data-aos-delay="100">
+
+                    <!-- Card 1: Customer Support -->
+                    <div class="info-card customer-support-card">
+                        <div class="card-header">
+                            <div class="card-icon-wrap" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="card-title-group">
+                                <span class="card-eyebrow">Assistance & Inquiries</span>
+                                <h2 class="card-title">Customer Support</h2>
+                            </div>
                         </div>
-                        <div class="sl-form-group">
-                            <input type="email" id="form-email" name="lemail" class="sl-contact-input" placeholder="Email *" required>
+
+                        <div class="card-body">
+                            <!-- Email -->
+                            <div class="contact-detail-row">
+                                <div class="detail-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Email</span>
+                                    <a href="mailto:tattvahd@gmail.com"
+                                        class="detail-value link-highlight">tattvahd@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Phone / WhatsApp -->
+                            <div class="contact-detail-row">
+                                <div class="detail-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Phone / WhatsApp</span>
+                                    <div class="phone-links-group">
+                                        <a href="tel:8287691093" class="detail-value link-highlight">8287691093</a>
+                                        <a href="https://wa.me/918287691093?text=Hello%20Tattvah%20Team%2C%20I%20have%20an%20enquiry"
+                                            target="_blank" rel="noopener noreferrer" class="whatsapp-badge">
+                                            <svg viewBox="0 0 24 24">
+                                                <path
+                                                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.991.56 1.787.873 2.8.874h.005c3.181 0 5.767-2.586 5.768-5.766 0-1.54-.599-2.988-1.688-4.077-1.09-1.088-2.538-1.684-4.089-1.684zm6.852 5.765c-.001 3.774-3.072 6.845-6.848 6.845-.002 0-.003 0-.005 0-1.151 0-2.28-.31-3.268-.897l-3.642.955.972-3.548c-.643-1.033-.982-2.227-.98-3.355.001-3.774 3.072-6.845 6.849-6.845 1.83 0 3.55.713 4.843 2.007 1.294 1.294 2.008 3.014 2.008 4.846z" />
+                                            </svg>
+                                            Chat on WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Business Hours -->
+                            <div class="contact-detail-row">
+                                <div class="detail-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Business Hours</span>
+                                    <span class="detail-value">Monday – Saturday, [10:00 AM – 9:00 PM IST]</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Row 2: Phone Number -->
-                    <div class="sl-form-group">
-                        <input type="tel" id="form-git-phonenumber" name="lphone" class="sl-contact-input" placeholder="Phone number">
+                    <!-- Card 2: For Business & Partnerships -->
+                    <div class="info-card business-card">
+                        <div class="card-header">
+                            <div class="card-icon-wrap" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="8.5" cy="7.5" r="4"></circle>
+                                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                                </svg>
+                            </div>
+                            <div class="card-title-group">
+                                <span class="card-eyebrow">Collaborate With Us</span>
+                                <h2 class="card-title">For Business & Partnerships</h2>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="business-prompt">Interested in working with TATTVAH?</p>
+                            <p class="business-desc">For wholesale, retail, distribution, collaborations, or other
+                                business enquiries:</p>
+
+                            <div class="contact-detail-row">
+                                <div class="detail-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Email</span>
+                                    <a href="mailto:tattvahd@gmail.com?subject=Business%20%26%20Partnership%20Enquiry%20-%20Tattvah"
+                                        class="detail-value link-highlight">tattvahd@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Row 3: Comment -->
-                    <div class="sl-form-group">
-                        <textarea id="form-message" name="Description" class="sl-contact-textarea" placeholder="Comment" rows="5" required></textarea>
+                    <!-- Card 3: Brand Manifesto Sign-off -->
+                    <div class="info-card brand-manifesto-card">
+                        <div class="manifesto-decor" aria-hidden="true">
+                            <svg class="lotus-emblem" viewBox="0 0 48 36" fill="currentColor">
+                                <path
+                                    d="M24 2C24 2 20 12 20 22C20 26.5 21.8 30 24 30C26.2 30 28 26.5 28 22C28 12 24 2 24 2Z"
+                                    fill="#C89A3B" />
+                                <path
+                                    d="M22 8C22 8 15 15 15 23C15 27 17.5 29.5 20.5 30C19.5 27.5 19.5 24 20.5 20C21.2 16.5 22 13 22 8Z"
+                                    fill="#C89A3B" opacity="0.9" />
+                                <path
+                                    d="M26 8C26 8 33 15 33 23C33 27 30.5 29.5 27.5 30C28.5 27.5 28.5 24 27.5 20C26.8 16.5 26 13 26 8Z"
+                                    fill="#C89A3B" opacity="0.9" />
+                                <path
+                                    d="M19 14C19 14 10 20 10 26C10 29 12.5 31 16 30.5C14.5 28.5 14.5 25.5 15.5 22.5C16.5 19 18 16 19 14Z"
+                                    fill="#C89A3B" opacity="0.8" />
+                                <path
+                                    d="M29 14C29 14 38 20 38 26C38 29 35.5 31 32 30.5C33.5 28.5 33.5 25.5 32.5 22.5C31.5 19 30 16 29 14Z"
+                                    fill="#C89A3B" opacity="0.8" />
+                                <path d="M14 32C18 34 30 34 34 32C31 31.2 17 31.2 14 32Z" fill="#C89A3B" />
+                            </svg>
+                        </div>
+                        <p class="manifesto-lead">We look forward to hearing from you.</p>
+                        <h3 class="manifesto-brand">TATTVAH</h3>
+                        <p class="manifesto-tagline">Rooted in Tradition. Inspired by Nature. Made for Today.</p>
                     </div>
 
-                    <!-- Row 4: Send Button -->
-                    <div class="sl-form-btn-row">
-                        <button type="submit" id="contact-submit-btn" class="sl-contact-send-btn">Send</button>
-                    </div>
+                </div>
 
-                    <div id="contact-status-msg" class="sl-status-msg"></div>
-                </form>
+                <!-- Right Column: The Contact Form -->
+                <div class="contact-form-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="form-card-container sl-contact-form-box">
+                        <div class="form-header">
+                            <h2 class="form-title">Send a Message</h2>
+                            <p class="form-subtitle">Have a question or request? Fill in your details below and we'll
+                                reply promptly.</p>
+                        </div>
+
+                        <form id="needform" class="contact-form sl-contact-form" method="POST">
+                            <!-- Full Name -->
+                            <div class="form-group sl-form-group">
+                                <label for="form-fullname" class="form-label">Name <span
+                                        class="required">*</span></label>
+                                <input type="text" id="form-fullname" name="lfullname"
+                                    class="form-input sl-contact-input" placeholder="Your Name" required>
+                                <!-- Hidden input fields to preserve full compatibility with backend handlers -->
+                                <input type="hidden" id="form-firstname" name="lfirstname" value="">
+                                <input type="hidden" id="form-lastname" name="llastname" value="">
+                            </div>
+
+                            <!-- 2-Column: Email & Phone -->
+                            <div class="form-row-2col sl-form-row-2col">
+                                <div class="form-group sl-form-group">
+                                    <label for="form-email" class="form-label">Email <span
+                                            class="required">*</span></label>
+                                    <input type="email" id="form-email" name="lemail"
+                                        class="form-input sl-contact-input" placeholder="Your Email Address" required>
+                                </div>
+                                <div class="form-group sl-form-group">
+                                    <label for="form-git-phonenumber" class="form-label">Phone Number</label>
+                                    <input type="tel" id="form-git-phonenumber" name="lphone"
+                                        class="form-input sl-contact-input" placeholder="Your Phone Number">
+                                </div>
+                            </div>
+
+                            <!-- Comment / Message -->
+                            <div class="form-group sl-form-group">
+                                <label for="form-message" class="form-label">Comment / Message <span
+                                        class="required">*</span></label>
+                                <textarea id="form-message" name="Description" class="form-textarea sl-contact-textarea"
+                                    placeholder="Write your message, question, or order details here..." rows="5"
+                                    required></textarea>
+                            </div>
+
+                            <!-- Send Button -->
+                            <div class="form-submit-row sl-form-btn-row">
+                                <button type="submit" id="contact-submit-btn"
+                                    class="tattvah-submit-btn sl-contact-send-btn">
+                                    <span>Send Message</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div id="contact-status-msg" class="contact-status-msg sl-status-msg"></div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>

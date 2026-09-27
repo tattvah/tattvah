@@ -6,9 +6,25 @@ import 'aos/dist/aos.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS (Animate on Scroll)
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 750,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    }
+
+    // Interactive Accordion for FAQs
+    const faqDetails = document.querySelectorAll('.tattvah-about-page details.faq-item');
+    faqDetails.forEach((targetDetail) => {
+        targetDetail.addEventListener('toggle', () => {
+            if (targetDetail.open) {
+                faqDetails.forEach((detail) => {
+                    if (detail !== targetDetail && detail.open) {
+                        detail.removeAttribute('open');
+                    }
+                });
+            }
+        });
     });
 });
