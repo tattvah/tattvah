@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blog/blog.css?v2'>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/blog/blog.bundle.js?v2'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blog/blog.css?v5'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/blog/blog.bundle.js?v5'></script>
 
     <?php
     $homeUrl = get_home_url();
@@ -26,7 +26,8 @@
                     <?php if (get_field("read_time")): ?>
                         <span class="sl-meta-dot">•</span>
                         <span class="sl-meta-read">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="6" cy="6" r="5"></circle>
                                 <polyline points="6 3 6 6 8 8"></polyline>
                             </svg>
@@ -37,10 +38,11 @@
 
                 <h1 class="sl-blog-title"><?php the_title(); ?></h1>
 
-                <div class="sl-blog-author-share" style="justify-content: center; margin-top: 10px;">
+                <div class="sl-blog-author-share">
                     <div class="sl-share-wrapper">
                         <button data-link="<?php echo get_permalink(); ?>" id="copylink" class="sl-share-btn copylink">
-                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
                                 <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"></path>
                             </svg>
                             Share
@@ -66,7 +68,8 @@
                             </svg>
                         </button>
                         <button class="control-btn mute-btn" aria-label="Mute">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <path d="M11 5L6 9H2v6h4l5 4V5z" />
                                 <path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07" />
                             </svg>

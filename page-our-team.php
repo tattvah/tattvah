@@ -1,17 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/ourTeam/ourTeam.css?v2'>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/ourTeam/ourTeam.bundle.js?v2'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/ourTeam/ourTeam.css?v5'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/ourTeam/ourTeam.bundle.js?v5'></script>
     <?php
     $homeUrl = get_home_url();
     get_header();
     ?>
 
-    <main class="main--container bg-sugandhlok-bg font-openSans text-gray-800" style="min-height: 60vh;">
+    <main class="main--container bg-sugandhlok-bg font-openSans text-gray-800 min-h-[60vh]">
         <!-- Page Header -->
         <section class="pt-16 md:pt-24 pb-12 max-w-7xl mx-auto px-4 md:px-8 text-center" data-aos="fade-up">
             <h1 class="text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-4"><?php the_title(); ?></h1>

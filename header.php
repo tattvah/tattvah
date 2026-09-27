@@ -47,18 +47,7 @@ if (is_front_page()) {
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-<script>
-    function loadJS(FILE_URL, defer = true) {
-        let scriptEle = document.createElement("script");
-        scriptEle.setAttribute("src", FILE_URL);
-        scriptEle.setAttribute("type", "text/javascript");
-        scriptEle.setAttribute("defer", defer);
-        document.head.appendChild(scriptEle);
-        scriptEle.addEventListener("error", (ev) => {
-            console.log("Error on loading file", ev);
-        });
-    }
-</script>
+
 
 
 </head>
@@ -84,22 +73,26 @@ if (is_front_page()) {
                 <div class="sl-header-left">
                     <button id="toggle-btn" class="sl-icon-btn sl-hamburger" aria-label="Open Navigation Menu">
                         <span id="toggle-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <path d="M3 12H21M3 6H21M3 18H21" />
                             </svg>
                         </span>
                     </button>
                     <div class="sl-search-inline-wrapper">
                         <button id="sl-search-toggle" class="sl-icon-btn" aria-label="Search">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
                         </button>
                         <form action="/products/" method="GET" class="sl-search-inline-form" id="sl-search-panel">
-                            <input type="text" name="s" class="sl-search-inline-input" placeholder="Search..." autocomplete="off">
+                            <input type="text" name="s" class="sl-search-inline-input" placeholder="Search..."
+                                autocomplete="off">
                             <button type="submit" class="sl-search-inline-btn" aria-label="Submit Search">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
@@ -112,13 +105,24 @@ if (is_front_page()) {
                 <div class="sl-header-center">
                     <a href="/" class="sl-brand-link tattvah-home" aria-label="Tattvah Home">
                         <!-- Divine Golden Lotus Emblem -->
-                        <svg class="sl-lotus-icon" viewBox="0 0 48 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24 2C24 2 20 12 20 22C20 26.5 21.8 30 24 30C26.2 30 28 26.5 28 22C28 12 24 2 24 2Z" fill="#C89A3B"/>
-                            <path d="M22 8C22 8 15 15 15 23C15 27 17.5 29.5 20.5 30C19.5 27.5 19.5 24 20.5 20C21.2 16.5 22 13 22 8Z" fill="#C89A3B" opacity="0.9"/>
-                            <path d="M26 8C26 8 33 15 33 23C33 27 30.5 29.5 27.5 30C28.5 27.5 28.5 24 27.5 20C26.8 16.5 26 13 26 8Z" fill="#C89A3B" opacity="0.9"/>
-                            <path d="M19 14C19 14 10 20 10 26C10 29 12.5 31 16 30.5C14.5 28.5 14.5 25.5 15.5 22.5C16.5 19 18 16 19 14Z" fill="#C89A3B" opacity="0.8"/>
-                            <path d="M29 14C29 14 38 20 38 26C38 29 35.5 31 32 30.5C33.5 28.5 33.5 25.5 32.5 22.5C31.5 19 30 16 29 14Z" fill="#C89A3B" opacity="0.8"/>
-                            <path d="M14 32C18 34 30 34 34 32C31 31.2 17 31.2 14 32Z" fill="#C89A3B"/>
+                        <svg class="sl-lotus-icon" viewBox="0 0 48 36" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 2C24 2 20 12 20 22C20 26.5 21.8 30 24 30C26.2 30 28 26.5 28 22C28 12 24 2 24 2Z"
+                                fill="#C89A3B" />
+                            <path
+                                d="M22 8C22 8 15 15 15 23C15 27 17.5 29.5 20.5 30C19.5 27.5 19.5 24 20.5 20C21.2 16.5 22 13 22 8Z"
+                                fill="#C89A3B" opacity="0.9" />
+                            <path
+                                d="M26 8C26 8 33 15 33 23C33 27 30.5 29.5 27.5 30C28.5 27.5 28.5 24 27.5 20C26.8 16.5 26 13 26 8Z"
+                                fill="#C89A3B" opacity="0.9" />
+                            <path
+                                d="M19 14C19 14 10 20 10 26C10 29 12.5 31 16 30.5C14.5 28.5 14.5 25.5 15.5 22.5C16.5 19 18 16 19 14Z"
+                                fill="#C89A3B" opacity="0.8" />
+                            <path
+                                d="M29 14C29 14 38 20 38 26C38 29 35.5 31 32 30.5C33.5 28.5 33.5 25.5 32.5 22.5C31.5 19 30 16 29 14Z"
+                                fill="#C89A3B" opacity="0.8" />
+                            <path d="M14 32C18 34 30 34 34 32C31 31.2 17 31.2 14 32Z" fill="#C89A3B" />
                         </svg>
                         <span class="sl-brand-title">TATTVAH<sup>&reg;</sup></span>
                         <span class="sl-brand-tagline">NATURALLY DIVINE + AGARBATTIS</span>
@@ -128,7 +132,8 @@ if (is_front_page()) {
                 <!-- Right: Cart Icon -->
                 <div class="sl-header-right">
                     <a href="/products/" class="sl-icon-btn sl-cart-wrapper" aria-label="Shopping Bag">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <path d="M16 10a4 4 0 0 1-8 0"></path>
@@ -144,101 +149,53 @@ if (is_front_page()) {
         <nav class="sl-nav-bar">
             <div class="sl-nav-container">
                 <ul class="sl-nav-list">
-                    <!-- 1. Agarbattis with Dropdown -->
+                    <li class="sl-nav-item"><a href="/" class="sl-nav-link">Home</a></li>
+                    <li class="sl-nav-item"><a href="/about-us/" class="sl-nav-link">About Us</a></li>
+
                     <li class="sl-nav-item">
                         <a href="/products/" class="sl-nav-link">
-                            Agarbattis
-                            <svg class="sl-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M1 1L5 5L9 1"/>
+                            Shop
+                            <svg class="sl-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M1 1L5 5L9 1" />
                             </svg>
                         </a>
                         <div class="sl-dropdown-menu">
-                            <a href="/products/" class="sl-dropdown-link">All Agarbattis</a>
-                            <a href="/products/" class="sl-dropdown-link">Flora Batti</a>
-                            <a href="/products/" class="sl-dropdown-link">Masala Agarbatti</a>
-                            <a href="/products/" class="sl-dropdown-link">Dry Agarbatti</a>
+                            <?php
+                            $post_types = ['product', 'products'];
+                            $tax_objects = [];
+                            foreach ($post_types as $pt) {
+                                $taxs = get_object_taxonomies($pt, 'objects');
+                                if (!empty($taxs)) {
+                                    $tax_objects = $taxs;
+                                    break;
+                                }
+                            }
+                            $target_tax = '';
+                            foreach ($tax_objects as $slug => $tax) {
+                                if (stripos($tax->label, 'tag') !== false || $slug === 'product_tag' || $slug === 'product-tag') {
+                                    $target_tax = $slug;
+                                    break;
+                                }
+                            }
+
+                            if ($target_tax) {
+                                $header_tags = get_terms([
+                                    'taxonomy' => $target_tax,
+                                    'hide_empty' => false,
+                                ]);
+                                if (!empty($header_tags) && !is_wp_error($header_tags)) {
+                                    foreach ($header_tags as $htag) {
+                                        echo '<a href="/products/?filter_tag=' . esc_attr($htag->slug) . '" class="sl-dropdown-link">' . esc_html($htag->name) . '</a>';
+                                    }
+                                }
+                            }
+                            ?>
                         </div>
                     </li>
 
-                    <!-- 2. Dhoop with Dropdown -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">
-                            Dhoop
-                            <svg class="sl-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M1 1L5 5L9 1"/>
-                            </svg>
-                        </a>
-                        <div class="sl-dropdown-menu">
-                            <a href="/products/" class="sl-dropdown-link">All Dhoop</a>
-                            <a href="/products/" class="sl-dropdown-link">Dhoop Sticks</a>
-                            <a href="/products/" class="sl-dropdown-link">Wet Dhoop</a>
-                            <a href="/products/" class="sl-dropdown-link">Cow Dung Dhoop</a>
-                        </div>
-                    </li>
-
-                    <!-- 3. Cones -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">Cones</a>
-                    </li>
-
-                    <!-- 4. Havan Cups -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">Havan Cups</a>
-                    </li>
-
-                    <!-- 5. Shop by Fragrance with Dropdown -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">
-                            Shop by Fragrance
-                            <svg class="sl-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M1 1L5 5L9 1"/>
-                            </svg>
-                        </a>
-                        <div class="sl-dropdown-menu">
-                            <a href="/products/" class="sl-dropdown-link">Sandalwood (Chandan)</a>
-                            <a href="/products/" class="sl-dropdown-link">Rose (Gulab)</a>
-                            <a href="/products/" class="sl-dropdown-link">Jasmine (Mogra)</a>
-                            <a href="/products/" class="sl-dropdown-link">Lavender</a>
-                            <a href="/products/" class="sl-dropdown-link">Loban & Sambrani</a>
-                            <a href="/products/" class="sl-dropdown-link">Oudh & Kasturi</a>
-                        </div>
-                    </li>
-
-                    <!-- 6. Shop by Ritual with Dropdown -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">
-                            Shop by Ritual
-                            <svg class="sl-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M1 1L5 5L9 1"/>
-                            </svg>
-                        </a>
-                        <div class="sl-dropdown-menu">
-                            <a href="/products/" class="sl-dropdown-link">Daily Pooja</a>
-                            <a href="/products/" class="sl-dropdown-link">Meditation & Yoga</a>
-                            <a href="/products/" class="sl-dropdown-link">Festive Celebrations</a>
-                            <a href="/products/" class="sl-dropdown-link">Home Purification</a>
-                        </div>
-                    </li>
-
-                    <!-- 7. Combo -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">Combo</a>
-                    </li>
-
-                    <!-- 8. Holders -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">Holders</a>
-                    </li>
-
-                    <!-- 9. Best Sellers -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">Best Sellers</a>
-                    </li>
-
-                    <!-- 10. New Arrivals -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">New Arrivals</a>
-                    </li>
+                    <li class="sl-nav-item"><a href="/contact-us/" class="sl-nav-link">Contact Us</a></li>
+                    <li class="sl-nav-item"><a href="/shipping-policy/" class="sl-nav-link">Shipping Policy</a></li>
                 </ul>
             </div>
         </nav>
@@ -249,15 +206,17 @@ if (is_front_page()) {
         <!-- Mobile Sidebar Drawer -->
         <div id="side-navbar" class="sl-mobile-sidebar">
             <div class="sl-drawer-header">
-                <span style="font-family:'Cinzel', serif; font-weight:700; color:#C89A3B; font-size:18px;">TATTVAH</span>
+                <span class="tattvah-logo-text">TATTVAH</span>
                 <button id="sl-drawer-close-btn" class="sl-drawer-close" aria-label="Close Menu">&times;</button>
             </div>
-            
+
             <div class="sl-drawer-search">
                 <form action="/products/" method="GET" class="sl-drawer-search-form">
-                    <input type="text" name="s" class="sl-drawer-search-input" placeholder="Search for products..." autocomplete="off">
+                    <input type="text" name="s" class="sl-drawer-search-input" placeholder="Search for products..."
+                        autocomplete="off">
                     <button type="submit" class="sl-drawer-search-btn" aria-label="Submit Search">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
@@ -266,18 +225,17 @@ if (is_front_page()) {
             </div>
             <ul class="sl-drawer-nav">
                 <li><a href="/" class="sl-drawer-link">Home</a></li>
-                <li><a href="/products/" class="sl-drawer-link">Agarbattis</a></li>
-                <li><a href="/products/" class="sl-drawer-link">Dhoop</a></li>
-                <li><a href="/products/" class="sl-drawer-link">Cones</a></li>
-                <li><a href="/products/" class="sl-drawer-link">Havan Cups</a></li>
-                <li><a href="/products/" class="sl-drawer-link">Shop by Fragrance</a></li>
-                <li><a href="/products/" class="sl-drawer-link">Shop by Ritual</a></li>
-                <li><a href="/products/" class="sl-drawer-link">Best Sellers</a></li>
-                <li><a href="/about-us/" class="sl-drawer-link">About Tattvah</a></li>
-                <li><a href="/blogs/" class="sl-drawer-link">Blogs</a></li>
-                <li><a href="/our-team/" class="sl-drawer-link">Our Team</a></li>
+                <li><a href="/about-us/" class="sl-drawer-link">About Us</a></li>
+                <li><a href="/products/" class="sl-drawer-link">Shop</a></li>
+                <?php
+                if (isset($header_tags) && !empty($header_tags) && !is_wp_error($header_tags)) {
+                    foreach ($header_tags as $htag) {
+                        echo '<li><a href="/products/?filter_tag=' . esc_attr($htag->slug) . '" class="sl-drawer-sublink">- ' . esc_html($htag->name) . '</a></li>';
+                    }
+                }
+                ?>
                 <li><a href="/contact-us/" class="sl-drawer-link">Contact Us</a></li>
+                <li><a href="/shipping-policy/" class="sl-drawer-link">Shipping Policy</a></li>
             </ul>
         </div>
     </header>
-

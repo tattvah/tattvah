@@ -10,8 +10,8 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:wght@400;500&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href='/wp-content/themes/tattvah/build/frontPage/frontPage.css?v2'>
-	<script type="module" defer src='/wp-content/themes/tattvah/build/frontPage/frontPage.bundle.js?v2'></script>
+	<link rel="stylesheet" href='/wp-content/themes/tattvah/build/frontPage/frontPage.css?v5'>
+	<script type="module" defer src='/wp-content/themes/tattvah/build/frontPage/frontPage.bundle.js?v5'></script>
 	<!-- Swiper CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -81,27 +81,7 @@
 
 		<!-- Swiper JS -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				var swiper = new Swiper(".heroSwiper", {
-					spaceBetween: 0,
-					effect: "fade",
-					loop: true,
-					autoplay: {
-						delay: 4000,
-						disableOnInteraction: false,
-					},
-					navigation: {
-						nextEl: ".swiper-button-next",
-						prevEl: ".swiper-button-prev",
-					},
-					pagination: {
-						el: ".swiper-pagination",
-						clickable: true,
-					},
-				});
-			});
-		</script>
+
 
 		<!-- 2. BESTSELLERS -->
 		<section class="bestsellers-section py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-8">
@@ -124,7 +104,6 @@
 						setup_postdata($post);
 						$selling_price = get_field('selling_price', $post->ID);
 						$mrp = get_field('mrp', $post->ID);
-						$qty = get_field('quantity', $post->ID) ?: '100g';
 						?>
 						<div class="product-card group" data-aos="fade-up">
 							<a href="<?php the_permalink(); ?>"
@@ -145,7 +124,6 @@
 									<a href="<?php the_permalink(); ?>"
 										class="hover:text-sugandhlok-maroon transition-colors"><?php the_title(); ?></a>
 								</h3>
-								<p class="product-qty text-gray-500 text-sm mb-3"><?php echo esc_html($qty); ?></p>
 								<div class="price-row mb-4">
 									<?php if ($mrp && $mrp > $selling_price): ?>
 										<span class="mrp text-gray-400 line-through text-sm mr-2">Rs.

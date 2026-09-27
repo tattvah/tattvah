@@ -3,9 +3,10 @@ import '../../src-utilities/header';
 import '../../src-utilities/footer';
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("Product JS Loaded");
     // 1. Initialize Swiper for Thumbnails
-    if (typeof Swiper !== 'undefined' && document.querySelector('.product-thumb-slider')) {
-        const thumbSlider = new Swiper('.product-thumb-slider', {
+    if (typeof Swiper !== 'undefined' && document.querySelector('.sp-thumb-slider')) {
+        const thumbSlider = new Swiper('.sp-thumb-slider', {
             spaceBetween: 12,
             slidesPerView: 4,
             freeMode: true,
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 2. Handle Thumbnail Click to change main image
         const mainImg = document.getElementById('mainProductImg');
-        const thumbs = document.querySelectorAll('.product-thumb-slider .swiper-slide img');
+        const thumbs = document.querySelectorAll('.sp-thumb-slider .swiper-slide img');
         
         thumbs.forEach(thumb => {
             thumb.addEventListener('click', function() {
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 // Active state styling
-                document.querySelectorAll('.product-thumb-slider .swiper-slide').forEach(s => {
+                document.querySelectorAll('.sp-thumb-slider .swiper-slide').forEach(s => {
                     s.style.opacity = '0.6';
                     s.style.borderColor = 'transparent';
                 });
@@ -65,6 +66,26 @@ document.addEventListener('DOMContentLoaded', () => {
         btnPlus.addEventListener('click', () => {
             let val = parseInt(qtyInput.value) || 1;
             qtyInput.value = val + 1;
+        });
+    }
+
+    // 4. Initialize Other Products Slider
+    if (typeof Swiper !== 'undefined' && document.querySelector('.other-products-slider')) {
+        const otherProdSlider = new Swiper('.other-products-slider', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.op-next',
+                prevEl: '.op-prev',
+            },
+            breakpoints: {
+                // Mobile
+                320: { slidesPerView: 1, spaceBetween: 20 },
+                // Tablet
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                // Desktop
+                1024: { slidesPerView: 4, spaceBetween: 30 }
+            }
         });
     }
 });

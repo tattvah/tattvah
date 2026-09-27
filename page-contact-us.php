@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/contactUs/contactUs.css?v=<?php echo time(); ?>'>
-    <script type="module" defer
-        src='/wp-content/themes/tattvah/build/contactUs/contactUs.bundle.js?v=<?php echo time(); ?>'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/contactUs/contactUs.css?v5'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/contactUs/contactUs.bundle.js?v5'></script>
 
     <?php
     $homeUrl = get_home_url();
@@ -205,8 +204,8 @@
                             <div class="form-group sl-form-group">
                                 <label for="form-fullname" class="form-label">Name <span
                                         class="required">*</span></label>
-                                <input type="text" id="form-fullname" name="Name"
-                                    class="form-input sl-contact-input" placeholder="Your Name" required>
+                                <input type="text" id="form-fullname" name="Name" class="form-input sl-contact-input"
+                                    placeholder="Your Name" required>
                             </div>
 
                             <!-- 2-Column: Email & Phone -->
@@ -214,8 +213,8 @@
                                 <div class="form-group sl-form-group">
                                     <label for="form-email" class="form-label">Email <span
                                             class="required">*</span></label>
-                                    <input type="email" id="form-email" name="Email"
-                                        class="form-input sl-contact-input" placeholder="Your Email Address" required>
+                                    <input type="email" id="form-email" name="Email" class="form-input sl-contact-input"
+                                        placeholder="Your Email Address" required>
                                 </div>
                                 <div class="form-group sl-form-group">
                                     <label for="form-git-phonenumber" class="form-label">Phone Number</label>
@@ -255,11 +254,8 @@
         </div>
     </main>
 
-    <script>
-        // JS will be bundled
-    </script>
-
     <?php get_footer(); ?>
+
     </body>
 
 </html>

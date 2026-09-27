@@ -1,29 +1,29 @@
 @import './breakpoints';
 
 body {
-	&.modal-active {
-		overflow: hidden;
-	}
+    &.modal-active {
+        overflow: hidden;
+    }
 }
 
 .loading-div {
-	display: none;
-	position: fixed;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	justify-content: center;
-	background: #0009;
-	z-index: 9999;
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background: #0009;
+    z-index: 9999;
 
-	img {
-		width: 350px;
-	}
+    img {
+        width: 350px;
+    }
 
-	&.active {
-		display: flex;
-		align-items: center;
-	}
+    &.active {
+        display: flex;
+        align-items: center;
+    }
 }
 
 /* ==============================================================

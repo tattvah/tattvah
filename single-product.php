@@ -1,29 +1,23 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/product/product.css?v2'>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/product/product.bundle.js?v2'></script>
-
-    <!-- Swiper JS -->
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/product/product.css?v5'>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/product/product.bundle.js?v5'></script>
 
     <?php
     $homeUrl = get_home_url();
     get_header();
     ?>
-
-    <main class="pt-[140px] md:pt-[160px] w-full single-product-page bg-sugandhlok-bg font-openSans"
-        style="min-height: 60vh;">
+    <main class="single-product-main sl-single-blog">
         <?php if (have_posts()):
             while (have_posts()):
                 the_post();
-                // Fetch ACF Fields
+                // Fetch ACF Fields cleanly without fallbacks
                 $alt_text = get_field('global_alt_text') ?: get_the_title();
                 $regular_price = get_field('regular_price');
                 $selling_price = get_field('selling_price');
@@ -31,8 +25,11 @@
                 $short_tagline = get_field('short_tagline');
                 $average_rating = get_field('average_rating');
                 $total_reviews = get_field('total_reviews');
+                $coupon_code = get_field('coupon_code');
+                $stock_status = get_field('stock_status');
+                $shipping_info = get_field('shipping_info');
+                $product_sku = get_field('product_sku');
 
-                // Collect Gallery Images from Text Fields
                 $gallery_images = [];
                 for ($i = 1; $i <= 5; $i++) {
                     $img = get_field('gallery_image_' . $i);
@@ -41,128 +38,171 @@
                     }
                 }
                 ?>
-                <section class="product-section py-8 md:py-16">
-                    <div class="max-w-[1300px] mx-auto px-5">
+                <section class="sp-section" data-aos="fade-up">
+                    <div class="sp-container">
                         <!-- Breadcrumbs -->
-                        <div class="text-[13px] text-gray-500 mb-8 font-openSans tracking-wide uppercase">
-                            <a href="/" class="hover:text-sugandhlok-maroon transition-colors">Home</a> <span
-                                class="mx-2">/</span>
-                            <a href="/products/" class="hover:text-sugandhlok-maroon transition-colors">Products</a> <span
-                                class="mx-2">/</span>
-                            <span class="text-sugandhlok-maroon font-semibold"><?php the_title(); ?></span>
+                        <div class="sp-breadcrumbs">
+                            <a href="/">Home</a> <span>/</span>
+                            <a href="/products/">Products</a> <span>/</span>
+                            <span class="current"><?php the_title(); ?></span>
                         </div>
 
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20">
-
+                        <div class="sp-layout">
                             <!-- LEFT COLUMN: MEDIA -->
-                            <div class="product-media-col flex flex-col gap-4">
-                                <!-- Main Display Image -->
-                                <div
-                                    class="main-image-box border border-gray-100 rounded-md overflow-hidden relative bg-white shadow-sm">
-                                    <?php if (has_post_thumbnail()): ?>
-                                        <?php the_post_thumbnail('full', ['class' => 'w-full h-auto object-cover', 'id' => 'mainProductImg', 'alt' => $alt_text]); ?>
-                                    <?php else: ?>
-                                        <img src="https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg"
-                                            id="mainProductImg" class="w-full h-auto object-cover" alt="Placeholder">
-                                    <?php endif; ?>
-
-                                    <?php if ($discount_badge): ?>
-                                        <span
-                                            class="absolute top-4 left-4 bg-sugandhlok-maroon text-white text-[12px] font-bold px-3 py-1 tracking-widest uppercase rounded-sm shadow-sm"><?php echo esc_html($discount_badge); ?></span>
-                                    <?php endif; ?>
-                                </div>
-
-                                <!-- Thumbnails Slider -->
+                            <div class="sp-media">
                                 <?php if (!empty($gallery_images)): ?>
-                                    <div class="swiper product-thumb-slider w-full h-[100px] relative mt-2">
-                                        <div class="swiper-wrapper">
-                                            <?php foreach ($gallery_images as $index => $img_url): ?>
-                                                <div
-                                                    class="swiper-slide cursor-pointer border border-transparent rounded-md overflow-hidden opacity-70 hover:opacity-100 transition-all bg-white shadow-sm">
-                                                    <img src="<?php echo esc_url($img_url); ?>" alt="Gallery Image"
-                                                        class="w-full h-full object-cover">
-                                                </div>
-                                            <?php endforeach; ?>
-                                        </div>
-                                        <!-- Swiper Nav -->
-                                        <div
-                                            class="swiper-button-next !text-sugandhlok-maroon !w-8 !h-8 bg-white rounded-full shadow-md hover:bg-gray-50 after:!text-sm">
-                                        </div>
-                                        <div
-                                            class="swiper-button-prev !text-sugandhlok-maroon !w-8 !h-8 bg-white rounded-full shadow-md hover:bg-gray-50 after:!text-sm">
-                                        </div>
+                                    <div class="sp-main-image-wrapper">
+                                        <img src="<?php echo esc_url($gallery_images[0]); ?>" id="mainProductImg"
+                                            alt="<?php echo esc_attr($alt_text); ?>">
+                                        <?php if ($discount_badge): ?>
+                                            <span class="sp-badge"><?php echo esc_html($discount_badge); ?></span>
+                                        <?php endif; ?>
                                     </div>
+
+                                    <?php if (count($gallery_images) > 1): ?>
+                                        <div class="swiper sp-thumb-slider">
+                                            <div class="swiper-wrapper">
+                                                <?php foreach ($gallery_images as $img_url): ?>
+                                                    <div class="swiper-slide sp-thumb-item">
+                                                        <img src="<?php echo esc_url($img_url); ?>" alt="Thumbnail">
+                                                    </div>
+                                                <?php endforeach; ?>
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    <?php endif; ?>
                                 <?php endif; ?>
                             </div>
 
                             <!-- RIGHT COLUMN: PRODUCT INFO -->
-                            <div class="product-info-col pt-2 bg-white p-8 md:p-10 rounded-md shadow-sm border border-gray-100">
-                                <h1 class="text-[32px] md:text-[38px] text-gray-900 mb-3 font-lora leading-[1.2]">
-                                    <?php the_title(); ?></h1>
+                            <div class="sp-details">
+                                <h1 class="sp-title"><?php the_title(); ?></h1>
+
+                                <?php if ($product_sku): ?>
+                                    <p class="sp-sku">SKU: <?php echo esc_html($product_sku); ?></p>
+                                <?php endif; ?>
 
                                 <!-- Reviews -->
-                                <div class="flex items-center gap-2 mb-6">
-                                    <div class="text-sugandhlok-peach text-[18px] tracking-widest">
-                                        ★★★★★
+                                <?php if ($average_rating || $total_reviews): ?>
+                                    <div class="sp-reviews">
+                                        <div class="stars">
+                                            <?php
+                                            $rating = floatval($average_rating);
+                                            for ($i = 1; $i <= 5; $i++) {
+                                                if ($i <= $rating) {
+                                                    echo '★';
+                                                } else {
+                                                    echo '☆';
+                                                }
+                                            }
+                                            ?>
+                                        </div>
+                                        <?php if ($total_reviews): ?>
+                                            <span class="review-count">(<?php echo esc_html($total_reviews); ?> reviews)</span>
+                                        <?php endif; ?>
                                     </div>
-                                    <span
-                                        class="text-sm text-gray-500 font-openSans"><?php echo ($total_reviews) ? esc_html($total_reviews) . ' reviews' : 'No reviews yet'; ?></span>
-                                </div>
+                                <?php endif; ?>
 
-                                <!-- Pricing -->
-                                <div class="price-box flex items-end gap-3 mb-1">
-                                    <?php if ($regular_price): ?>
-                                        <span class="text-gray-400 line-through text-[18px] font-openSans">Rs.
-                                            <?php echo number_format($regular_price); ?></span>
+                                <!-- Price -->
+                                <div class="sp-price-box">
+                                    <?php if ($regular_price && $regular_price > $selling_price): ?>
+                                        <span class="sp-mrp">Rs. <?php echo number_format($regular_price); ?></span>
                                     <?php endif; ?>
-
-                                    <?php if ($selling_price): ?>
-                                        <span class="text-[28px] font-bold text-gray-900 font-openSans">Rs.
-                                            <?php echo number_format($selling_price); ?></span>
-                                    <?php endif; ?>
+                                    <span class="sp-selling-price">Rs.
+                                        <?php echo $selling_price ? number_format($selling_price) : '0'; ?></span>
                                 </div>
-                                <p class="text-[13px] text-gray-500 mb-8 font-openSans uppercase tracking-wider">(incl. of all
-                                    taxes)</p>
+                                <div class="sp-tax-info">(INCL. OF ALL TAXES)</div>
 
-                                <!-- Actions -->
-                                <div class="action-box flex flex-col sm:flex-row gap-4 mb-10">
-                                    <!-- Quantity -->
-                                    <div
-                                        class="flex items-center border border-gray-300 rounded-sm overflow-hidden bg-white w-fit h-[50px]">
-                                        <button type="button"
-                                            class="w-12 h-full text-xl text-gray-500 hover:bg-gray-50 transition-colors qty-minus">-</button>
-                                        <input type="number" value="1" min="1"
-                                            class="w-14 h-full text-center border-none focus:ring-0 text-[16px] p-0 font-semibold text-gray-900 bg-transparent"
-                                            readonly>
-                                        <button type="button"
-                                            class="w-12 h-full text-xl text-gray-500 hover:bg-gray-50 transition-colors qty-plus">+</button>
+                                <?php if ($coupon_code): ?>
+                                    <div class="sp-coupon">
+                                        Use code <strong><?php echo esc_html($coupon_code); ?></strong> at checkout
                                     </div>
+                                <?php endif; ?>
 
-                                    <!-- Buttons -->
-                                    <div class="flex-1 flex gap-3 h-[50px]">
-                                        <button
-                                            class="flex-1 bg-transparent border border-sugandhlok-maroon text-sugandhlok-maroon font-semibold text-[13px] tracking-widest uppercase hover:bg-sugandhlok-maroon hover:text-white transition-colors rounded-sm">Add
-                                            to Cart</button>
-                                        <button
-                                            class="flex-1 bg-sugandhlok-maroon text-white font-semibold text-[13px] tracking-widest uppercase hover:bg-red-900 transition-colors rounded-sm flex items-center justify-center gap-2">Buy
-                                            Now</button>
+                                <?php if ($stock_status): ?>
+                                    <div class="sp-stock-status <?php echo strtolower(str_replace(' ', '-', $stock_status)); ?>">
+                                        <?php echo esc_html($stock_status); ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <div class="sp-actions">
+                                    <div class="sp-qty-selector">
+                                        <button type="button" class="qty-btn qty-minus">-</button>
+                                        <input type="number" class="qty-input" value="1" min="1">
+                                        <button type="button" class="qty-btn qty-plus">+</button>
+                                    </div>
+                                    <div class="sp-buttons">
+                                        <button class="sp-add-to-cart">Add to Cart</button>
+                                        <button class="sp-buy-now">Buy Now</button>
                                     </div>
                                 </div>
 
-                                <!-- Content & Tagline -->
-                                <div class="product-content-area">
+                                <?php if ($shipping_info): ?>
+                                    <div class="sp-shipping-info">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <path d="M1 3h15v13H1z"></path>
+                                            <path d="M16 8h4l3 3v5h-7V8z"></path>
+                                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                        </svg>
+                                        <span><?php echo esc_html($shipping_info); ?></span>
+                                    </div>
+                                <?php endif; ?>
+
+                                <div class="sp-content-area">
                                     <?php if ($short_tagline): ?>
-                                        <p
-                                            class="text-[17px] font-lora italic text-sugandhlok-maroon mb-6 leading-relaxed border-t border-gray-100 pt-8">
-                                            <?php echo esc_html($short_tagline); ?></p>
+                                        <p class="sp-tagline"><?php echo esc_html($short_tagline); ?></p>
                                     <?php endif; ?>
-
-                                    <div class="wp-content text-[15px] text-gray-600 leading-[1.8] space-y-4 font-openSans">
+                                    <div class="wp-content">
                                         <?php the_content(); ?>
                                     </div>
                                 </div>
                             </div>
-
+                        </div>
+                    </div>
+                </section>
+                <section class="other-products-section" data-aos="fade-up">
+                    <div class="sp-container">
+                        <div class="op-header">
+                            <h2>Other Products</h2>
+                            <div class="header-divider"></div>
+                        </div>
+                        <div class="swiper other-products-slider">
+                            <div class="swiper-wrapper">
+                                <?php
+                                $post_type = get_post_type();
+                                $other_prods = new WP_Query([
+                                    'post_type' => $post_type,
+                                    'posts_per_page' => 8,
+                                    'post__not_in' => [get_the_ID()],
+                                ]);
+                                if ($other_prods->have_posts()):
+                                    while ($other_prods->have_posts()):
+                                        $other_prods->the_post();
+                                        $s_price = get_field('selling_price');
+                                        $img = get_field('gallery_image_1');
+                                        ?>
+                                        <div class="swiper-slide op-card">
+                                            <a href="<?php the_permalink(); ?>" class="op-img-wrapper">
+                                                <?php if ($img): ?><img src="<?php echo esc_url($img); ?>"
+                                                        alt="<?php the_title_attribute(); ?>"><?php endif; ?>
+                                            </a>
+                                            <div class="op-info">
+                                                <h3 class="op-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                                <?php if ($s_price): ?>
+                                                    <div class="op-price">Rs. <?php echo number_format($s_price); ?></div><?php endif; ?>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                endif;
+                                ?>
+                            </div>
+                            <div class="swiper-button-next op-next"></div>
+                            <div class="swiper-button-prev op-prev"></div>
                         </div>
                     </div>
                 </section>
@@ -170,6 +210,3 @@
     </main>
 
     <?php get_footer(); ?>
-    </body>
-
-</html>

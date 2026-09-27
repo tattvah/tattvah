@@ -9,8 +9,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blogs/blogs.css?v2'>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/blogs/blogs.bundle.js?v2'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blogs/blogs.css?v5'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/blogs/blogs.bundle.js?v5'></script>
     <?php
     $homeUrl = get_home_url();
     get_header();
@@ -18,11 +18,13 @@
 
     <main class="main--container">
 
-		<section class="blog-header-section sl-archive-hero" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: #fbf7f4; padding: 60px 20px;">
-            <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up" data-aos-duration="1000">
-                <h1 style="font-family: 'Lora', 'Cinzel', serif; font-size: 48px; color: #490000; margin-bottom: 20px; font-weight: 600; letter-spacing: 1px;">Tattvah Journal</h1>
-                <div style="width: 80px; height: 3px; background: #C89A3B; margin: 0 auto 20px;" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"></div>
-                <p style="font-family: 'Mulish', sans-serif; font-size: 18px; color: #555; line-height: 1.8; margin-bottom: 0;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Discover spiritual insights, timeless rituals, and the natural elements that make our agarbattis truly divine. Immerse yourself in the ancient wisdom crafted for the modern soul.</p>
+        <section class="blog-header-section sl-archive-hero">
+            <div class="hero-inner" data-aos="fade-up" data-aos-duration="1000">
+                <h1>Tattvah Journal</h1>
+                <div class="hero-divider" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"></div>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Discover spiritual insights,
+                    timeless rituals, and the natural elements that make our agarbattis truly divine. Immerse yourself
+                    in the ancient wisdom crafted for the modern soul.</p>
             </div>
         </section>
 
@@ -55,7 +57,8 @@
                             </div>
                         </div>
                         <div class="resource-img">
-                            <img src="<?php echo get_field('listing_image') ?: get_field('banner_image'); ?>" alt="<?php echo esc_attr(get_field('listing_alt_text') ?: get_field('banner_alt_text') ?: get_the_title()); ?>">
+                            <img src="<?php echo get_field('listing_image') ?: get_field('banner_image'); ?>"
+                                alt="<?php echo esc_attr(get_field('listing_alt_text') ?: get_field('banner_alt_text') ?: get_the_title()); ?>">
                         </div>
                         <h5 class="resource-heading">
                             <?php the_title() ?>

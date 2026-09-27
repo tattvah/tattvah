@@ -10,6 +10,45 @@
 .blog-header-section {
 	grid-column: full-start/full-end;
 	width: 100%;
+
+	&.sl-archive-hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background: #fbf7f4;
+		padding: 60px 20px;
+
+		.hero-inner {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			font-family: 'Lora', 'Cinzel', serif;
+			font-size: 48px;
+			color: #490000;
+			margin-bottom: 20px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+
+		.hero-divider {
+			width: 80px;
+			height: 3px;
+			background: #C89A3B;
+			margin: 0 auto 20px;
+		}
+
+		p {
+			font-family: 'Mulish', sans-serif;
+			font-size: 18px;
+			color: #555;
+			line-height: 1.8;
+			margin-bottom: 0;
+		}
+	}
 }
 
 /********** Blog listing Section  **********/

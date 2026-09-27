@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href=<?php echo get_theme_file_uri('/build/notFound/notFound.css'); ?>>
-    <script type="module" defer src=<?php echo get_theme_file_uri('/build/success/success.bundle.js'); ?>></script>
+    <link rel="stylesheet" href=<?php echo get_theme_file_uri('/build/notFound/notFound.css?v5'); ?>>
+    <script type="module" defer src=<?php echo get_theme_file_uri('/build/success/success.bundle.js?v5'); ?>></script>
     <?php get_header(); ?>
 
     <main class="main--container bg-sugandhlok-bg font-openSans flex items-center justify-center min-h-[70vh]">
