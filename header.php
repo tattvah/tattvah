@@ -60,536 +60,20 @@ if (is_front_page()) {
     }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FL8K2XF8TR"></script>
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-FL8K2XF8TR');
-</script>
-<!-- Google tag (gtag.js) -->
-
-<style id="sl-custom-header-styles">
-    /* ==============================================================
-       SUGANDH LOK HEADER STYLES (PURE CSS - NO EXTERNAL DEPENDENCY)
-       ============================================================== */
-    :root {
-        --sl-gold-primary: #C89A3B;
-        --sl-gold-secondary: #B58428;
-        --sl-maroon: #490000;
-        --sl-maroon-dark: #330000;
-        --sl-text-dark: #2A2421;
-        --sl-text-muted: #666666;
-        --sl-border: #ECE6DD;
-        --header-height: 0px; /* Prevents unwanted double margin on main container */
-    }
-
-    .sl-header-container,
-    .sl-header-container * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    .sl-header-container {
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-        width: 100%;
-        background-color: #ffffff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-
-    /* Top Announcement Bar 1: Primary Gold Bar */
-    .sl-announcement-bar-top {
-        background-color: var(--sl-gold-primary);
-        color: #ffffff;
-        text-align: center;
-        padding: 8px 16px;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        line-height: 1.4;
-    }
-
-    /* Top Announcement Bar 2: Secondary Navratri Promo Ticker */
-    .sl-announcement-bar-promo {
-        background-color: var(--sl-gold-secondary);
-        color: #ffffff;
-        text-align: center;
-        padding: 7px 16px;
-        font-size: 12.5px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        line-height: 1.4;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .sl-promo-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-    }
-
-    .sl-promo-star {
-        font-size: 11px;
-        color: #ffffff;
-        opacity: 0.9;
-    }
-
-    /* Main Branding Header Bar */
-    .sl-main-header {
-        background-color: #ffffff;
-        border-bottom: 1px solid var(--sl-border);
-    }
-
-    .sl-main-header-inner {
-        max-width: 1380px;
-        margin: 0 auto;
-        padding: 12px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-    }
-
-    /* Left: Mobile Toggle & Search */
-    .sl-header-left {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        flex: 1;
-    }
-
-    .sl-icon-btn {
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        color: var(--sl-text-dark);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 6px;
-        border-radius: 50%;
-        transition: color 0.2s ease;
-        text-decoration: none;
-        outline: none;
-    }
-
-    .sl-icon-btn:hover {
-        color: var(--sl-gold-primary);
-    }
-
-    .sl-hamburger {
-        display: none;
-    }
-
-    /* Center: Sugandh Lok Style Logo */
-    .sl-header-center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    .sl-brand-link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-    }
-
-    .sl-lotus-icon {
-        width: 38px;
-        height: 26px;
-        margin-bottom: 2px;
-        color: var(--sl-gold-primary);
-    }
-
-    .sl-brand-title {
-        font-family: 'Cinzel', 'Lora', Georgia, serif;
-        font-size: 27px;
-        font-weight: 700;
-        letter-spacing: 5px;
-        color: var(--sl-gold-primary);
-        line-height: 1.1;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    .sl-brand-title sup {
-        font-size: 11px;
-        font-family: sans-serif;
-        letter-spacing: 0;
-        margin-left: 2px;
-        font-weight: 400;
-        color: var(--sl-gold-primary);
-    }
-
-    .sl-brand-tagline {
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: var(--sl-gold-primary);
-        margin-top: 3px;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    /* Right: Account & Cart */
-    .sl-header-right {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 16px;
-        flex: 1;
-    }
-
-    .sl-cart-wrapper {
-        position: relative;
-    }
-
-    .sl-cart-badge {
-        position: absolute;
-        top: -1px;
-        right: -3px;
-        background-color: var(--sl-maroon);
-        color: #ffffff;
-        font-size: 10px;
-        font-weight: 700;
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 1;
-    }
-
-    /* Category Navigation Bar */
-    .sl-nav-bar {
-        background-color: #ffffff;
-        border-bottom: 1px solid var(--sl-border);
-    }
-
-    .sl-nav-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 16px;
-    }
-
-    .sl-nav-list {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding: 10px 0;
-        flex-wrap: wrap;
-    }
-
-    .sl-nav-item {
-        position: relative;
-    }
-
-    .sl-nav-link {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        font-size: 13.5px;
-        font-weight: 500;
-        color: var(--sl-text-dark);
-        text-decoration: none;
-        white-space: nowrap;
-        transition: color 0.2s ease;
-        padding: 5px 2px;
-    }
-
-    .sl-nav-link:hover {
-        color: var(--sl-gold-primary);
-    }
-
-    .sl-chevron {
-        width: 9px;
-        height: 9px;
-        transition: transform 0.2s ease;
-        opacity: 0.7;
-    }
-
-    .sl-nav-item:hover .sl-chevron {
-        transform: rotate(180deg);
-        opacity: 1;
-    }
-
-    /* Pill Badges */
-    .sl-pill-gift {
-        background-color: var(--sl-maroon) !important;
-        color: #ffffff !important;
-        padding: 4px 14px !important;
-        border-radius: 20px !important;
-        font-weight: 600 !important;
-        font-size: 13px !important;
-        transition: background-color 0.2s ease, transform 0.1s ease !important;
-    }
-
-    .sl-pill-gift:hover {
-        background-color: var(--sl-maroon-dark) !important;
-        color: #ffffff !important;
-    }
-
-    .sl-pill-corporate {
-        border: 1px solid var(--sl-text-dark) !important;
-        color: var(--sl-text-dark) !important;
-        padding: 4px 14px !important;
-        border-radius: 20px !important;
-        font-weight: 500 !important;
-        font-size: 13px !important;
-        background: transparent !important;
-        transition: all 0.2s ease !important;
-    }
-
-    .sl-pill-corporate:hover {
-        border-color: var(--sl-gold-primary) !important;
-        color: var(--sl-gold-primary) !important;
-    }
-
-    /* Dropdown Menus */
-    .sl-dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%) translateY(8px);
-        background: #ffffff;
-        min-width: 190px;
-        border: 1px solid var(--sl-border);
-        border-radius: 6px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        padding: 8px 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.2s ease;
-        z-index: 1001;
-    }
-
-    .sl-nav-item:hover .sl-dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) translateY(0);
-    }
-
-    .sl-dropdown-link {
-        display: block;
-        padding: 8px 18px;
-        font-size: 13px;
-        color: var(--sl-text-dark);
-        text-decoration: none;
-        transition: background-color 0.15s ease, color 0.15s ease;
-        text-align: left;
-    }
-
-    .sl-dropdown-link:hover {
-        background-color: #FAF8F5;
-        color: var(--sl-gold-primary);
-    }
-
-    /* Search Dropdown Panel */
-    .sl-search-bar-panel {
-        display: none;
-        background: #ffffff;
-        border-bottom: 1px solid var(--sl-border);
-        padding: 16px 24px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    .sl-search-bar-panel.open {
-        display: block;
-    }
-
-    .sl-search-form {
-        max-width: 600px;
-        margin: 0 auto;
-        display: flex;
-        border: 1px solid #d4c5b9;
-        border-radius: 6px;
-        overflow: hidden;
-    }
-
-    .sl-search-input {
-        flex: 1;
-        padding: 12px 18px;
-        border: none;
-        outline: none;
-        font-size: 14px;
-        font-family: inherit;
-    }
-
-    .sl-search-btn {
-        background-color: var(--sl-maroon);
-        color: #ffffff;
-        border: none;
-        padding: 0 24px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-    }
-
-    .sl-search-btn:hover {
-        background-color: var(--sl-maroon-dark);
-    }
-
-    /* Mobile Sidebar Drawer */
-    .sl-mobile-sidebar {
-        position: fixed;
-        top: 0;
-        left: -320px;
-        width: 300px;
-        height: 100vh;
-        background: #ffffff;
-        z-index: 10000;
-        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
-        overflow-y: auto;
-        padding: 24px 20px;
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sl-mobile-sidebar.open {
-        left: 0;
-    }
-
-    .sl-drawer-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.45);
-        z-index: 9999;
-    }
-
-    .sl-drawer-overlay.open {
-        display: block;
-    }
-
-    .sl-drawer-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 24px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid var(--sl-border);
-    }
-
-    .sl-drawer-close {
-        background: transparent;
-        border: none;
-        font-size: 26px;
-        line-height: 1;
-        color: var(--sl-text-dark);
-        cursor: pointer;
-    }
-
-    .sl-drawer-nav {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .sl-drawer-link {
-        font-size: 15px;
-        font-weight: 600;
-        color: var(--sl-text-dark);
-        text-decoration: none;
-        display: block;
-        padding: 8px 0;
-        border-bottom: 1px solid #f6f3ee;
-        transition: color 0.2s ease;
-    }
-
-    .sl-drawer-link:hover {
-        color: var(--sl-gold-primary);
-    }
-
-    /* Responsive Queries */
-    @media (max-width: 1100px) {
-        .sl-nav-list {
-            gap: 14px;
-        }
-        .sl-nav-link {
-            font-size: 12.5px;
-        }
-    }
-
-    @media (max-width: 900px) {
-        .sl-hamburger {
-            display: flex;
-        }
-        .sl-nav-bar {
-            display: none;
-        }
-        .sl-header-right .sl-account-btn {
-            display: none;
-        }
-        .sl-brand-title {
-            font-size: 21px;
-            letter-spacing: 3px;
-        }
-        .sl-lotus-icon {
-            width: 30px;
-            height: 22px;
-        }
-        .sl-brand-tagline {
-            font-size: 8px;
-            letter-spacing: 2px;
-        }
-        .sl-announcement-bar-top {
-            font-size: 12px;
-            padding: 6px 12px;
-        }
-        .sl-announcement-bar-promo {
-            font-size: 11.5px;
-            padding: 5px 10px;
-        }
-        .sl-promo-hide-mobile {
-            display: none;
-        }
-    }
-</style>
 
 </head>
 
 <body class="font-openSans text-gray-800 bg-sugandhlok-bg">
 
     <header class="header sl-header-container">
-        <!-- Top Announcement Bar 1: Primary Gold Bar -->
-        <div class="sl-announcement-bar-top">
-            <span>Free shipping for orders over Rs.600</span>
-        </div>
-
-        <!-- Top Announcement Bar 2: Navratri Promo Ticker -->
-        <div class="sl-announcement-bar-promo">
+        <!-- Unified Top Announcement Bar -->
+        <div id="sl-top-bar" class="sl-announcement-bar-unified">
             <div class="sl-promo-content">
-                <span class="sl-promo-star">✦</span>
+                <span>Free shipping for orders over Rs.600</span>
+                <span class="sl-promo-star sl-promo-hide-mobile">✦</span>
                 <span class="sl-promo-hide-mobile">Celebrate Navratri with our New Gift Set!</span>
                 <span class="sl-promo-star sl-promo-hide-mobile">✦</span>
-                <span>Get 10% off on your first order use code "TATTVAH10"</span>
+                <span class="sl-promo-hide-mobile">Get 10% off on your first order with code "TATTVAH10"</span>
             </div>
         </div>
 
@@ -605,12 +89,23 @@ if (is_front_page()) {
                             </svg>
                         </span>
                     </button>
-                    <button id="sl-search-toggle" class="sl-icon-btn" aria-label="Search">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </button>
+                    <div class="sl-search-inline-wrapper">
+                        <button id="sl-search-toggle" class="sl-icon-btn" aria-label="Search">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                        <form action="/products/" method="GET" class="sl-search-inline-form" id="sl-search-panel">
+                            <input type="text" name="s" class="sl-search-inline-input" placeholder="Search..." autocomplete="off">
+                            <button type="submit" class="sl-search-inline-btn" aria-label="Submit Search">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
                 </div>
 
                 <!-- Center: Sugandh Lok Styled Divine Brand Logo -->
@@ -630,16 +125,10 @@ if (is_front_page()) {
                     </a>
                 </div>
 
-                <!-- Right: Profile & Cart Icon -->
+                <!-- Right: Cart Icon -->
                 <div class="sl-header-right">
-                    <a href="/about-us/" class="sl-icon-btn sl-account-btn" aria-label="About Tattvah">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </a>
                     <a href="/products/" class="sl-icon-btn sl-cart-wrapper" aria-label="Shopping Bag">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <path d="M16 10a4 4 0 0 1-8 0"></path>
@@ -649,13 +138,6 @@ if (is_front_page()) {
                 </div>
             </div>
 
-            <!-- Search Dropdown Panel -->
-            <div id="sl-search-panel" class="sl-search-bar-panel">
-                <form action="/products/" method="GET" class="sl-search-form">
-                    <input type="text" name="s" class="sl-search-input" placeholder="Search for pure agarbattis, dhoop, cones..." autocomplete="off">
-                    <button type="submit" class="sl-search-btn">Search</button>
-                </form>
-            </div>
         </div>
 
         <!-- Primary Category Navigation Bar (Desktop) -->
@@ -757,21 +239,6 @@ if (is_front_page()) {
                     <li class="sl-nav-item">
                         <a href="/products/" class="sl-nav-link">New Arrivals</a>
                     </li>
-
-                    <!-- 11. Gift Sets (Pill Button) -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link sl-pill-gift">+ Gift Sets</a>
-                    </li>
-
-                    <!-- 12. All Collections -->
-                    <li class="sl-nav-item">
-                        <a href="/products/" class="sl-nav-link">All Collections</a>
-                    </li>
-
-                    <!-- 13. Corporate Gifting (Outline Pill Button) -->
-                    <li class="sl-nav-item">
-                        <a href="/contact-us/" class="sl-nav-link sl-pill-corporate">Corporate Gifting</a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -785,6 +252,18 @@ if (is_front_page()) {
                 <span style="font-family:'Cinzel', serif; font-weight:700; color:#C89A3B; font-size:18px;">TATTVAH</span>
                 <button id="sl-drawer-close-btn" class="sl-drawer-close" aria-label="Close Menu">&times;</button>
             </div>
+            
+            <div class="sl-drawer-search">
+                <form action="/products/" method="GET" class="sl-drawer-search-form">
+                    <input type="text" name="s" class="sl-drawer-search-input" placeholder="Search for products..." autocomplete="off">
+                    <button type="submit" class="sl-drawer-search-btn" aria-label="Submit Search">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
             <ul class="sl-drawer-nav">
                 <li><a href="/" class="sl-drawer-link">Home</a></li>
                 <li><a href="/products/" class="sl-drawer-link">Agarbattis</a></li>
@@ -794,58 +273,11 @@ if (is_front_page()) {
                 <li><a href="/products/" class="sl-drawer-link">Shop by Fragrance</a></li>
                 <li><a href="/products/" class="sl-drawer-link">Shop by Ritual</a></li>
                 <li><a href="/products/" class="sl-drawer-link">Best Sellers</a></li>
-                <li><a href="/products/" class="sl-drawer-link" style="color:#490000; font-weight:700;">+ Gift Sets</a></li>
                 <li><a href="/about-us/" class="sl-drawer-link">About Tattvah</a></li>
                 <li><a href="/blogs/" class="sl-drawer-link">Blogs</a></li>
                 <li><a href="/our-team/" class="sl-drawer-link">Our Team</a></li>
-                <li><a href="/contact-us/" class="sl-drawer-link">Corporate Gifting</a></li>
                 <li><a href="/contact-us/" class="sl-drawer-link">Contact Us</a></li>
             </ul>
         </div>
     </header>
 
-    <script>
-        // Header Interactive Logic: Search Toggle & Mobile Drawer Support
-        document.addEventListener('DOMContentLoaded', function () {
-            const searchToggle = document.getElementById('sl-search-toggle');
-            const searchPanel = document.getElementById('sl-search-panel');
-            const hamburgerBtn = document.getElementById('toggle-btn');
-            const drawerCloseBtn = document.getElementById('sl-drawer-close-btn');
-            const mobileDrawer = document.getElementById('side-navbar');
-            const drawerOverlay = document.getElementById('sl-drawer-backdrop');
-
-            // Toggle Search Dropdown
-            if (searchToggle && searchPanel) {
-                searchToggle.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    searchPanel.classList.toggle('open');
-                    if (searchPanel.classList.contains('open')) {
-                        const input = searchPanel.querySelector('input');
-                        if (input) input.focus();
-                    }
-                });
-            }
-
-            // Mobile Drawer Open
-            if (hamburgerBtn && mobileDrawer) {
-                hamburgerBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    mobileDrawer.classList.add('open');
-                    if (drawerOverlay) drawerOverlay.classList.add('open');
-                });
-            }
-
-            // Mobile Drawer Close
-            function closeDrawer() {
-                if (mobileDrawer) mobileDrawer.classList.remove('open');
-                if (drawerOverlay) drawerOverlay.classList.remove('open');
-            }
-
-            if (drawerCloseBtn) {
-                drawerCloseBtn.addEventListener('click', closeDrawer);
-            }
-            if (drawerOverlay) {
-                drawerOverlay.addEventListener('click', closeDrawer);
-            }
-        });
-    </script>
