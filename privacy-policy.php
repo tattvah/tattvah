@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,117 +11,67 @@
     get_header();
     ?>
 
-    <main class="main--container bg-sugandhlok-bg font-openSans text-gray-800" style="min-height: 60vh;">
-        <!-- Page Header -->
-        <section class="pt-16 md:pt-24 pb-12 max-w-7xl mx-auto px-4 md:px-8 text-center" data-aos="fade-up">
-            <h1 class="text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-4">Privacy Policy</h1>
-            <div class="w-16 h-1 bg-sugandhlok-peach mx-auto mb-6"></div>
-        </section>
-
-        <!-- Content -->
-        <section class="pb-24 max-w-4xl mx-auto px-4 md:px-8">
-            <div
-                class="bg-white p-8 md:p-12 rounded-md shadow-sm border border-gray-100 prose prose-lg prose-headings:font-lora prose-headings:text-sugandhlok-maroon prose-a:text-sugandhlok-peach max-w-none text-gray-600 leading-relaxed font-openSans">
-                <p>
-                    At Tattvah, we are committed to ensuring your personal information is protected at all times, and
-                    this privacy policy outlines what data Tattvah collects, uses, and processes about you. It also
-                    explains your data rights and how you can contact us if you have any queries. We hold the right to
-                    alter
-                    this privacy policy statement at our discretion and encourage you to check this page from time to
-                    time
-                    to be aware of any changes.
-                </p>
-
-                <h2>To Whom Does This Policy Apply?</h2>
-                <p>
-                    This privacy policy statement applies to all the individuals who interact with our website,
-                    subscribe to
-                    any of our services or products, request information or use the chat support.
-                </p>
-
-                <h2>How Do We Collect Data?</h2>
-                <ul>
-                    <li>
-                        <strong>When you register to use our website:</strong>
-                        This will include your name, email address, and phone number. We may ask you to provide
-                        additional information about your business and preferences when you fill out online forms,
-                        use the chat support or download newsletters or other publications.
-                    </li>
-                    <li>
-                        <strong>Cookies:</strong>
-                        Cookies are small files placed on your device when you first visit our website. It helps to
-                        analyze web traffic and track you across the internet. This data is collected based on
-                        “implied consent,” i.e. we assume that you agree to our terms of usage of the information
-                        unless you are explicitly opt-out. You can do so by changing your browser settings not to
-                        accept cookies, browsing in private mode.
-                    </li>
-                    <li>
-                        <strong>Google Analytics:</strong>
-                        It collects data related to the device/browser, IP address and your activities on the
-                        website to measure and report statistics about your interactions on the web. It is used to
-                        enhance the user experience and track data related to digital marketing. Know more about
-                        their privacy policy.
-                    </li>
-                    <li>
-                        <strong>Zoho:</strong>
-                        We use Zoho to anonymously track usage of our website, including your cursor hovers, clicks,
-                        scroll depth and more. We may also record some sessions to anonymously track your behavior
-                        on our website to improve the user experience. The mails we send are monitored to find out
-                        the traffic they bring, the click rates, whether the mail is opened by the recipient to
-                        improve engagement. You may read their privacy policy to find out more.
-                    </li>
-                    <li>
-                        <strong>External and Third-party links:</strong>
-                        We have linked third party websites/pages on our website to provide more information and
-                        clarity to the user. When you click on any of the links to visit the third-party website,
-                        they collect/use data as per their privacy policies. We encourage you to go through their
-                        privacy policies.
-                    </li>
-                    <li>
-                        <strong>Social Plugins:</strong>
-                        We have linked social media platforms on our website for more engagement and visibility of
-                        our content. When you click on any of the links to visit the platforms, they collect/use
-                        data as per their privacy policies. You can check them out: Facebook, Twitter, Instagram,
-                        LinkedIn, YouTube, and GitHub.
-                    </li>
-                </ul>
-
-                <h2>Why Do We Collect Data?</h2>
-                <p>
-                    The data we collect can be personally identifiable or anonymous. We collect this data for:
-                </p>
-                <ul>
-                    <li>Offer personalized service</li>
-                    <li>Create a secure platform</li>
-                    <li>Improve performance and user experience</li>
-                    <li>Statistical Analysis</li>
-                    <li>Marketing Purposes</li>
-                    <li>Internal Research</li>
-                    <li>Fraud Detection</li>
-                </ul>
-
-                <h2>How Do We Secure Your Data?</h2>
-                <p>
-                    The protection of your data is important to us; hence we maintain appropriate technical and
-                    organizational measures to protect your data against any unauthorized or unlawful processing,
-                    accidental
-                    loss, alteration, disclosure, or accidental/unlawful destruction/damage. In case we discover a data
-                    breach, we will immediately inform the concerned authorities and affected users.
-                </p>
-
-                <h2>What Are Your Rights?</h2>
-                <p>
-                    You have the right to access your data, as well as request rectification/ removal of your data.
-                    Furthermore, you have the right to object to the processing of your data. You can opt-out from the
-                    mailing list by unsubscribing.
-                </p>
-                <p>
-                    You can contact <a href="mailto:namaste@tattvah.com">namaste@tattvah.com</a> to request your
-                    personal information, or in case you have any
-                    questions regarding our privacy policy.
-                </p>
+<main class="sl-policy-page-wrapper">
+        <div class="sl-policy-container">
+            <div class="sl-policy-header" data-aos="fade-up">
+                <h1 class="sl-policy-title">Privacy Policy</h1>
             </div>
-        </section>
+            <div class="sl-policy-content" data-aos="fade-up" data-aos-delay="100">
+                <p><strong>Effective Date:</strong> 20-Sep-2026</p>
+                <p>TATTVAH ("we", "us", or "our") respects your privacy and is committed to protecting the information you share with us.<br>This Privacy Policy explains how we may collect, use, and protect information when you visit or use our website.</p>
+
+                <h2>Information We Collect</h2>
+                <p>Depending on how you use our website, we may collect information such as:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Phone number</li>
+                    <li>Email address</li>
+                    <li>Billing and shipping address</li>
+                    <li>Order information</li>
+                    <li>Payment-related information required to process your order</li>
+                    <li>Information you provide when contacting us</li>
+                    <li>Website usage and technical information</li>
+                </ul>
+
+                <h2>How We Use Your Information</h2>
+                <p>We may use your information to:</p>
+                <ul>
+                    <li>Process and fulfil orders</li>
+                    <li>Deliver products</li>
+                    <li>Provide customer support</li>
+                    <li>Communicate about your orders</li>
+                    <li>Respond to enquiries</li>
+                    <li>Improve our website and services</li>
+                    <li>Prevent fraud or misuse</li>
+                    <li>Meet applicable legal and regulatory requirements</li>
+                </ul>
+
+                <h2>Payment Information</h2>
+                <p>Payments may be processed through third-party payment service providers.</p>
+                <p>TATTVAH generally does not directly store complete payment credentials such as your full card number or payment PIN. Payment information is handled according to the applicable payment provider's policies and security practices.</p>
+
+                <h2>Cookies</h2>
+                <p>Our website may use cookies or similar technologies to improve website functionality, understand website usage, and provide a better user experience.</p>
+                <p>You may be able to manage cookies through your browser settings.</p>
+
+                <h2>Sharing of Information</h2>
+                <p>We may share necessary information with trusted service providers, such as payment processors, logistics partners, technology providers, and other service providers who help us operate our business.</p>
+                <p>We may also disclose information where required by applicable law.</p>
+
+                <h2>Data Security</h2>
+                <p>We take reasonable measures to protect information against unauthorized access, misuse, alteration, or disclosure.<br>However, no method of electronic transmission or storage can be guaranteed to be completely secure.</p>
+
+                <h2>Your Information</h2>
+                <p>Depending on applicable law, you may have rights relating to your personal information, including rights to access, correct, or request deletion of certain information.</p>
+                <p>For privacy-related requests, contact:<br>
+                <strong>Email:</strong> <a href="mailto:tattvahd@gmail.com">tattvahd@gmail.com</a></p>
+
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Any updated version will be published on this page with the revised effective date.</p>
+
+                <p><em>Privacy Policy last updated: 20-Sep-2026</em></p>
+            </div>
+        </div>
     </main>
 
     <?php get_footer(); ?>
