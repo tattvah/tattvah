@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,149 +13,340 @@
     get_header();
     ?>
 
-    <main class="main--container bg-sugandhlok-bg font-openSans text-gray-800" style="min-height: 60vh;">
+<style id="sl-contact-styles">
+        /* ==============================================================
+           SUGANDH LOK CONTACT US DESIGN (PURE CSS - NO SQUISHED COLUMNS)
+           ============================================================== */
+        :root {
+            --sl-maroon: #490000;
+            --sl-maroon-hover: #330000;
+            --sl-gold: #C89A3B;
+            --sl-text-heading: #490000;
+            --sl-text-body: #2c2523;
+            --sl-text-sub: #666666;
+            --sl-border-input: #d4c5b9;
+        }
 
-        <!-- Page Header -->
-        <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-8 text-center" data-aos="fade-up">
-            <h1 class="text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-4">Contact Us</h1>
-            <div class="w-16 h-1 bg-sugandhlok-peach mx-auto mb-6"></div>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">We would love to hear from you. Reach out to us for any
-                inquiries about our natural agarbattis, corporate gifting, or just to say hello.</p>
-        </section>
+        /* Force full-width block display, breaking out of any .main--container grid restrictions */
+        .sl-contact-page-wrapper {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-height: 70vh;
+            background-color: #ffffff !important;
+            padding: 55px 20px 90px 20px !important;
+            font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            box-sizing: border-box;
+        }
 
-        <!-- Contact Section -->
-        <section class="pb-24 max-w-7xl mx-auto px-4 md:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        .sl-contact-page-wrapper * {
+            box-sizing: border-box;
+        }
 
-                <!-- Contact Details -->
-                <div class="contact-info bg-white p-8 md:p-12 rounded-md shadow-sm border border-gray-100"
-                    data-aos="fade-right">
-                    <h2 class="text-2xl font-lora text-gray-900 mb-8">Get In Touch</h2>
+        .sl-contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-                    <div class="flex items-start gap-4 mb-8">
-                        <div
-                            class="w-10 h-10 rounded-full bg-sugandhlok-bg flex items-center justify-center text-sugandhlok-maroon flex-shrink-0">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-lora text-lg text-gray-900 mb-1">Our Store</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">123 Heritage Marg,<br>Industrial Area,
-                                Jaipur<br>Rajasthan 302001, India</p>
-                        </div>
-                    </div>
+        /* Header Title & Subtitle */
+        .sl-contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-                    <div class="flex items-start gap-4 mb-8">
-                        <div
-                            class="w-10 h-10 rounded-full bg-sugandhlok-bg flex items-center justify-center text-sugandhlok-maroon flex-shrink-0">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-lora text-lg text-gray-900 mb-1">Email Us</h3>
-                            <a href="mailto:namaste@tattvah.com"
-                                class="text-gray-600 text-sm hover:text-sugandhlok-maroon transition-colors">namaste@tattvah.com</a>
-                        </div>
-                    </div>
+        .sl-contact-title {
+            font-family: 'Lora', 'Cinzel', Georgia, serif;
+            font-size: 42px;
+            font-weight: 500;
+            color: var(--sl-text-heading);
+            margin: 0 0 14px 0;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
 
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-sugandhlok-bg flex items-center justify-center text-sugandhlok-maroon flex-shrink-0">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-lora text-lg text-gray-900 mb-1">Call Us</h3>
-                            <p class="text-gray-600 text-sm">+91 98765 43210</p>
-                            <p class="text-gray-400 text-xs mt-1">Mon-Sat, 9AM-6PM IST</p>
-                        </div>
-                    </div>
+        .sl-contact-subtitle {
+            font-size: 15.5px;
+            color: var(--sl-text-sub);
+            margin: 0;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* 3-Column Highlights Row */
+        .sl-contact-highlights {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 820px;
+            margin: 0 auto 50px auto;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .sl-highlight-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 12px;
+        }
+
+        .sl-highlight-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--sl-text-body);
+            margin-bottom: 8px;
+        }
+
+        .sl-highlight-link {
+            font-size: 14.5px;
+            color: var(--sl-text-body);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease;
+        }
+
+        .sl-highlight-link:hover {
+            color: var(--sl-gold);
+        }
+
+        /* Form Container */
+        .sl-contact-form-box {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .sl-contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* 2 Columns Row */
+        .sl-form-row-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .sl-form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Inputs & Textarea */
+        .sl-contact-input,
+        .sl-contact-textarea {
+            width: 100% !important;
+            padding: 13px 18px !important;
+            background-color: #ffffff !important;
+            border: 1px solid var(--sl-border-input) !important;
+            border-radius: 6px !important;
+            font-size: 14.5px !important;
+            font-family: 'Mulish', sans-serif !important;
+            color: var(--sl-text-body) !important;
+            outline: none !important;
+            box-shadow: none !important;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+        }
+
+        .sl-contact-input::placeholder,
+        .sl-contact-textarea::placeholder {
+            color: #8c857f !important;
+            font-weight: 400 !important;
+            opacity: 1;
+        }
+
+        .sl-contact-input:focus,
+        .sl-contact-textarea:focus {
+            border-color: var(--sl-maroon) !important;
+            box-shadow: 0 0 0 2px rgba(73, 0, 0, 0.08) !important;
+        }
+
+        .sl-contact-textarea {
+            min-height: 120px !important;
+            resize: vertical !important;
+        }
+
+        /* Submit Button */
+        .sl-form-btn-row {
+            margin-top: 6px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .sl-contact-send-btn {
+            background-color: var(--sl-maroon) !important;
+            color: #ffffff !important;
+            font-size: 15px !important;
+            font-weight: 600 !important;
+            font-family: 'Mulish', sans-serif !important;
+            padding: 12px 42px !important;
+            border: none !important;
+            border-radius: 5px !important;
+            cursor: pointer !important;
+            transition: background-color 0.2s ease, transform 0.1s ease !important;
+            box-shadow: 0 2px 6px rgba(73, 0, 0, 0.15) !important;
+            display: inline-block !important;
+            text-align: center !important;
+        }
+
+        .sl-contact-send-btn:hover {
+            background-color: var(--sl-maroon-hover) !important;
+        }
+
+        .sl-contact-send-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Feedback Message */
+        .sl-status-msg {
+            display: none;
+            padding: 14px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-top: 14px;
+        }
+
+        .sl-status-msg.success {
+            display: block;
+            background-color: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+
+        .sl-status-msg.error {
+            display: block;
+            background-color: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 680px) {
+            .sl-contact-page-wrapper {
+                padding: 40px 16px 60px 16px !important;
+            }
+
+            .sl-contact-title {
+                font-size: 32px;
+            }
+
+            .sl-contact-subtitle {
+                font-size: 14px;
+            }
+
+            .sl-contact-highlights {
+                flex-direction: column;
+                gap: 22px;
+                margin-bottom: 36px;
+            }
+
+            .sl-form-row-2col {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .sl-contact-send-btn {
+                width: 100% !important;
+            }
+        }
+    </style>
+
+    <main class="sl-contact-page-wrapper">
+        <div class="sl-contact-container">
+            <!-- Header Section -->
+            <div class="sl-contact-header" data-aos="fade-up">
+                <h1 class="sl-contact-title">Contact Us</h1>
+                <p class="sl-contact-subtitle">Tattvah's aim is customer satisfaction, always.</p>
+            </div>
+
+            <!-- 3-Column Highlights Row -->
+            <div class="sl-contact-highlights" data-aos="fade-up" data-aos-delay="100">
+                <div class="sl-highlight-item">
+                    <span class="sl-highlight-title">Call Us</span>
+                    <a href="tel:+9108042544254" class="sl-highlight-link">+91 080 4254 4254</a>
                 </div>
-
-                <!-- Contact Form -->
-                <div class="contact-form-wrapper" data-aos="fade-left">
-                    <form id="needform"
-                        class="bg-white p-8 md:p-12 rounded-md shadow-sm border border-gray-100 flex flex-col gap-6">
-                        <h2 class="text-2xl font-lora text-gray-900 mb-2">Send a Message</h2>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="form-group flex flex-col gap-2">
-                                <label for="form-firstname"
-                                    class="text-xs font-semibold text-gray-700 tracking-wider uppercase">First Name
-                                    <span class="text-red-500">*</span></label>
-                                <input type="text" id="form-firstname" name="lfirstname" required
-                                    class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-sugandhlok-peach focus:border-sugandhlok-peach transition-colors">
-                            </div>
-                            <div class="form-group flex flex-col gap-2">
-                                <label for="form-lastname"
-                                    class="text-xs font-semibold text-gray-700 tracking-wider uppercase">Last
-                                    Name</label>
-                                <input type="text" id="form-lastname" name="llastname"
-                                    class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-sugandhlok-peach focus:border-sugandhlok-peach transition-colors">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="form-group flex flex-col gap-2">
-                                <label for="form-email"
-                                    class="text-xs font-semibold text-gray-700 tracking-wider uppercase">Email <span
-                                        class="text-red-500">*</span></label>
-                                <input type="email" id="form-email" name="lemail" required
-                                    class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-sugandhlok-peach focus:border-sugandhlok-peach transition-colors">
-                            </div>
-                            <div class="form-group flex flex-col gap-2">
-                                <label for="form-git-phonenumber"
-                                    class="text-xs font-semibold text-gray-700 tracking-wider uppercase">Phone <span
-                                        class="text-red-500">*</span></label>
-                                <input type="tel" id="form-git-phonenumber" name="lphone" required
-                                    class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-sugandhlok-peach focus:border-sugandhlok-peach transition-colors">
-                            </div>
-                        </div>
-
-                        <div class="form-group flex flex-col gap-2">
-                            <label for="course"
-                                class="text-xs font-semibold text-gray-700 tracking-wider uppercase">Subject <span
-                                    class="text-red-500">*</span></label>
-                            <select name="preffered-subject" id="course" required
-                                class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-sugandhlok-peach focus:border-sugandhlok-peach transition-colors bg-white">
-                                <option value="" disabled selected>Select Preferred Subject of Contact</option>
-                                <option value="General Inquiry">General Inquiry</option>
-                                <option value="Order Tracking">Order Tracking</option>
-                                <option value="Corporate Gifting">Corporate Gifting</option>
-                                <option value="Partnership">Partnership</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group flex flex-col gap-2">
-                            <label for="form-message"
-                                class="text-xs font-semibold text-gray-700 tracking-wider uppercase">Message <span
-                                    class="text-red-500">*</span></label>
-                            <textarea id="form-message" name="Description" rows="4" required
-                                class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-sugandhlok-peach focus:border-sugandhlok-peach transition-colors resize-y"></textarea>
-                        </div>
-
-                        <div class="submit-btn-container mt-4">
-                            <button type="submit"
-                                class="w-full bg-sugandhlok-maroon text-white font-semibold py-4 rounded-sm hover:bg-red-900 transition-colors uppercase tracking-widest text-sm shadow-sm">Send
-                                Message</button>
-                        </div>
-                    </form>
+                <div class="sl-highlight-item">
+                    <span class="sl-highlight-title">Email Us</span>
+                    <a href="mailto:care@tattvah.com" class="sl-highlight-link">care@tattvah.com</a>
+                </div>
+                <div class="sl-highlight-item">
+                    <span class="sl-highlight-title">Our Store</span>
+                    <a href="/products/" class="sl-highlight-link">Gandhi Bazaar</a>
                 </div>
             </div>
-        </section>
 
+            <!-- Contact Form Box -->
+            <div class="sl-contact-form-box" data-aos="fade-up" data-aos-delay="200">
+                <form id="needform" class="sl-contact-form" method="POST">
+                    <!-- Row 1: Name & Email -->
+                    <div class="sl-form-row-2col">
+                        <div class="sl-form-group">
+                            <input type="text" id="form-fullname" name="lfullname" class="sl-contact-input" placeholder="Name" required>
+                            <!-- Hidden input fields to preserve full compatibility with backend handlers -->
+                            <input type="hidden" id="form-firstname" name="lfirstname" value="">
+                            <input type="hidden" id="form-lastname" name="llastname" value="">
+                        </div>
+                        <div class="sl-form-group">
+                            <input type="email" id="form-email" name="lemail" class="sl-contact-input" placeholder="Email *" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Phone Number -->
+                    <div class="sl-form-group">
+                        <input type="tel" id="form-git-phonenumber" name="lphone" class="sl-contact-input" placeholder="Phone number">
+                    </div>
+
+                    <!-- Row 3: Comment -->
+                    <div class="sl-form-group">
+                        <textarea id="form-message" name="Description" class="sl-contact-textarea" placeholder="Comment" rows="5" required></textarea>
+                    </div>
+
+                    <!-- Row 4: Send Button -->
+                    <div class="sl-form-btn-row">
+                        <button type="submit" id="contact-submit-btn" class="sl-contact-send-btn">Send</button>
+                    </div>
+
+                    <div id="contact-status-msg" class="sl-status-msg"></div>
+                </form>
+            </div>
+        </div>
     </main>
+
+    <script>
+        // Form field synchronization & submission feedback helper
+        document.addEventListener('DOMContentLoaded', function () {
+            const fullNameInput = document.getElementById('form-fullname');
+            const firstNameInput = document.getElementById('form-firstname');
+            const lastNameInput = document.getElementById('form-lastname');
+            const contactForm = document.getElementById('needform');
+
+            function syncNameFields() {
+                if (!fullNameInput) return;
+                const trimmed = fullNameInput.value.trim();
+                const parts = trimmed.split(' ');
+                if (parts.length > 1) {
+                    if (firstNameInput) firstNameInput.value = parts[0];
+                    if (lastNameInput) lastNameInput.value = parts.slice(1).join(' ');
+                } else {
+                    if (firstNameInput) firstNameInput.value = trimmed;
+                    if (lastNameInput) lastNameInput.value = trimmed;
+                }
+            }
+
+            if (fullNameInput) {
+                fullNameInput.addEventListener('input', syncNameFields);
+                fullNameInput.addEventListener('change', syncNameFields);
+            }
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function () {
+                    syncNameFields();
+                });
+            }
+        });
+    </script>
 
     <?php get_footer(); ?>
     </body>
