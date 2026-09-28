@@ -153,7 +153,7 @@
                                         data-id="<?php echo get_the_ID(); ?>"
                                         data-title="<?php echo esc_attr(get_the_title()); ?>"
                                         data-price="<?php echo esc_attr($selling_price ? $selling_price : 0); ?>"
-                                        data-image="<?php echo esc_url($gallery_img_1 ? $gallery_img_1 : 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg'); ?>">
+                                        data-image="<?php echo esc_url($gallery_img_1 ? $gallery_img_1 : ''); ?>">
                                         Quick Add
                                     </button>
                                 </div>

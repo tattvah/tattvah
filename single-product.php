@@ -138,7 +138,7 @@
                                                 const id = '<?php echo get_the_ID(); ?>';
                                                 const title = '<?php echo esc_attr(addslashes(get_the_title())); ?>';
                                                 const price = <?php echo $selling_price ? $selling_price : 0; ?>;
-                                                const image = '<?php echo esc_url($gallery_images[0] ?? 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg'); ?>';
+                                                const image = '<?php echo esc_url($gallery_images[0] ?? ''); ?>';
                                                 for(let i=0; i<qty; i++) {
                                                     if(i === qty - 1) window.addToCart(id, title, price, image);
                                                     else window.addToCart(id, title, price, image); // Wait, addToCart handles quantity if it already exists, but it adds 1 each time. 
@@ -164,7 +164,7 @@
                                                 if(existing2) {
                                                     existing2.quantity += qty2;
                                                 } else {
-                                                    cart2.push({id: id2, title: '<?php echo esc_attr(addslashes(get_the_title())); ?>', price: <?php echo $selling_price ? $selling_price : 0; ?>, image: '<?php echo esc_url($gallery_images[0] ?? 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg'); ?>', quantity: qty2});
+                                                    cart2.push({id: id2, title: '<?php echo esc_attr(addslashes(get_the_title())); ?>', price: <?php echo $selling_price ? $selling_price : 0; ?>, image: '<?php echo esc_url($gallery_images[0] ?? ''); ?>', quantity: qty2});
                                                 }
                                                 localStorage.setItem('tattvah_cart', JSON.stringify(cart2));
                                                 window.location.href = '/checkout/';

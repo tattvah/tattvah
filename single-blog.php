@@ -81,7 +81,7 @@
 
             <!-- Featured Image -->
             <div class="sl-blog-banner">
-                <?php $img = get_field('banner_image') ?: 'https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png'; ?>
+                <?php $img = get_field('banner_image') ?: ''; ?>
                 <img fetchpriority="high" src="<?php echo esc_url($img); ?>"
                     alt="<?php echo esc_attr(get_field('banner_alt_text') ?: get_the_title()); ?>">
             </div>
@@ -92,11 +92,12 @@
             </div>
         </article>
 
-
     </main>
 
     <?php get_footer(); ?>
+
     <?php echo get_field('schema_code'); ?>
+
     </body>
 
 </html>
