@@ -108,5 +108,6 @@
             class="block w-full py-5 bg-sugandhlok-maroon text-white text-center uppercase tracking-widest text-xl font-bold rounded hover:bg-red-900 transition-colors">Checkout</a>
     </div>
 </div>
+
 <div id="sl-cart-backdrop"
     class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-[9998]"></div>

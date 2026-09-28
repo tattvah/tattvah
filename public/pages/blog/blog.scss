@@ -25,28 +25,31 @@ h4 {
 	}
 }
 
-p,
-ul,
-ol {
-	color: #4a4a4a;
-	font-family: 'Roboto';
-	font-weight: 400;
-	line-height: 1.6;
+.sl-blog-content {
 
-	* {
-		font-size: inherit;
-		color: inherit;
-		font-weight: inherit;
-	}
+	p,
+	ul,
+	ol {
+		color: #4a4a4a;
+		font-family: 'Roboto';
+		font-weight: 400;
+		line-height: 1.6;
 
-	a {
-		text-decoration: underline;
-		color: #0100C8;
-		transition: color 0.3s ease;
-	}
+		* {
+			font-size: inherit;
+			color: inherit;
+			font-weight: inherit;
+		}
 
-	strong {
-		font-weight: 500;
+		a {
+			text-decoration: underline;
+			color: #0100C8;
+			transition: color 0.3s ease;
+		}
+
+		strong {
+			font-weight: 500;
+		}
 	}
 }
 
