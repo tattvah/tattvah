@@ -159,3 +159,7 @@
     </style>
 
     <?php get_footer(); ?>
+
+    </body>
+
+</html>
