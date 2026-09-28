@@ -88,7 +88,7 @@ if (is_front_page()) {
                             </svg>
                         </button>
                         <form action="/products/" method="GET" class="sl-search-inline-form" id="sl-search-panel">
-                            <input type="text" name="s" class="sl-search-inline-input" placeholder="Search..."
+                            <input type="text" name="s" class="sl-search-inline-input" placeholder="Search products..."
                                 autocomplete="off">
                             <button type="submit" class="sl-search-inline-btn" aria-label="Submit Search">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -213,7 +213,7 @@ if (is_front_page()) {
 
             <div class="sl-drawer-search">
                 <form action="/products/" method="GET" class="sl-drawer-search-form">
-                    <input type="text" name="s" class="sl-drawer-search-input" placeholder="Search for products..."
+                    <input type="text" name="s" class="sl-drawer-search-input" placeholder="Search products..."
                         autocomplete="off">
                     <button type="submit" class="sl-drawer-search-btn" aria-label="Submit Search">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"

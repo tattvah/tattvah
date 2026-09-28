@@ -17,7 +17,9 @@
 
     <main class="products-archive-main">
         <div class="products-header" data-aos="fade-up">
-            <?php if (is_tax()): ?>
+            <?php if (isset($_GET['s']) && !empty($_GET['s'])): ?>
+                <h1 class="tax-title">Search Results for "<?php echo esc_html($_GET['s']); ?>"</h1>
+            <?php elseif (is_tax()): ?>
                 <h1 class="tax-title"><?php single_term_title(); ?></h1>
             <?php else: ?>
                 <h1>Our Products</h1>
@@ -119,7 +121,8 @@
                                         <span class="selling-price">Rs.
                                             <?php echo $selling_price ? number_format($selling_price) : '0'; ?></span>
                                     </div>
-                                    <button class="add-to-cart-btn w-full py-3 mt-4 bg-transparent border-2 border-sugandhlok-maroon text-sugandhlok-maroon text-sm uppercase tracking-widest font-semibold hover:bg-sugandhlok-maroon hover:text-white transition-colors duration-300"
+                                    <button
+                                        class="add-to-cart-btn w-full py-3 mt-4 bg-transparent border-2 border-sugandhlok-maroon text-sugandhlok-maroon text-sm uppercase tracking-widest font-semibold hover:bg-sugandhlok-maroon hover:text-white transition-colors duration-300"
                                         data-id="<?php echo get_the_ID(); ?>"
                                         data-title="<?php echo esc_attr(get_the_title()); ?>"
                                         data-price="<?php echo esc_attr($selling_price ? $selling_price : 0); ?>"
