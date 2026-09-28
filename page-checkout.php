@@ -12,174 +12,147 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/wp-content/themes/tattvah/build/frontPage/frontPage.css?v6">
+    <script type="module" defer src="/wp-content/themes/tattvah/build/checkout/checkout.bundle.js?v2"></script>
     <?php get_header(); ?>
-<div class="checkout-page-container max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-    <!-- Left Column: Billing Details -->
+<div class="checkout-page-container max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <!-- Left Column: Billing & Shipping Details -->
     <div class="checkout-billing">
-        <h2 class="text-3xl font-lora text-sugandhlok-maroon font-semibold mb-8">Billing Details</h2>
-        <form id="checkout-form" class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <h2 class="text-3xl font-lora text-sugandhlok-maroon font-semibold mb-8 border-b pb-4">Billing Details</h2>
+        <form id="checkout-form" class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <label class="block text-sm text-gray-600 mb-2">First Name *</label>
-                    <input type="text" name="billing_first_name" required class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-sugandhlok-maroon">
+                    <label class="block text-xl font-semibold text-gray-700 mb-2">First Name *</label>
+                    <input type="text" name="billing_first_name" required class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
                 </div>
                 <div>
-                    <label class="block text-sm text-gray-600 mb-2">Last Name *</label>
-                    <input type="text" name="billing_last_name" required class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-sugandhlok-maroon">
+                    <label class="block text-xl font-semibold text-gray-700 mb-2">Last Name *</label>
+                    <input type="text" name="billing_last_name" required class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
                 </div>
             </div>
             
             <div>
-                <label class="block text-sm text-gray-600 mb-2">Email Address *</label>
-                <input type="email" name="billing_email" required class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-sugandhlok-maroon">
+                <label class="block text-xl font-semibold text-gray-700 mb-2">Email Address *</label>
+                <input type="email" name="billing_email" required class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
             </div>
 
             <div>
-                <label class="block text-sm text-gray-600 mb-2">Phone Number *</label>
-                <input type="tel" name="billing_phone" required class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-sugandhlok-maroon">
+                <label class="block text-xl font-semibold text-gray-700 mb-2">Phone Number *</label>
+                <input type="tel" name="billing_phone" required class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
             </div>
 
             <div>
-                <label class="block text-sm text-gray-600 mb-2">Street Address *</label>
-                <textarea name="billing_address" required rows="3" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-sugandhlok-maroon"></textarea>
+                <label class="block text-xl font-semibold text-gray-700 mb-2">Street Address *</label>
+                <textarea name="billing_address" required rows="3" class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon"></textarea>
             </div>
             
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <label class="block text-sm text-gray-600 mb-2">Town / City *</label>
-                    <input type="text" name="billing_city" required class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-sugandhlok-maroon">
+                    <label class="block text-xl font-semibold text-gray-700 mb-2">Town / City *</label>
+                    <input type="text" name="billing_city" required class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
                 </div>
                 <div>
-                    <label class="block text-sm text-gray-600 mb-2">PIN Code *</label>
-                    <input type="text" name="billing_postcode" required class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-sugandhlok-maroon">
+                    <label class="block text-xl font-semibold text-gray-700 mb-2">PIN Code *</label>
+                    <input type="text" name="billing_postcode" required class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
                 </div>
+            </div>
+
+            <h2 class="text-3xl font-lora text-sugandhlok-maroon font-semibold mb-8 mt-12 border-b pb-4">Shipping Details</h2>
+            <label class="flex items-center gap-3 mb-6 cursor-pointer">
+                <input type="checkbox" id="ship_to_different" name="ship_to_different" class="w-5 h-5 accent-sugandhlok-maroon">
+                <span class="text-lg font-semibold text-gray-700">Ship to a different address?</span>
+            </label>
+
+            <div id="shipping_fields" class="space-y-8 hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xl font-semibold text-gray-700 mb-2">First Name</label>
+                        <input type="text" name="shipping_first_name" class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
+                    </div>
+                    <div>
+                        <label class="block text-xl font-semibold text-gray-700 mb-2">Last Name</label>
+                        <input type="text" name="shipping_last_name" class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xl font-semibold text-gray-700 mb-2">Street Address</label>
+                    <textarea name="shipping_address" rows="3" class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon"></textarea>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xl font-semibold text-gray-700 mb-2">Town / City</label>
+                        <input type="text" name="shipping_city" class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
+                    </div>
+                    <div>
+                        <label class="block text-xl font-semibold text-gray-700 mb-2">PIN Code</label>
+                        <input type="text" name="shipping_postcode" class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xl font-semibold text-gray-700 mb-2 mt-8">Order Notes (optional)</label>
+                <textarea name="order_notes" rows="4" placeholder="Notes about your order, e.g. special notes for delivery." class="w-full border border-solid border-gray-300 bg-white p-4 text-xl rounded-md focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon"></textarea>
             </div>
         </form>
     </div>
 
     <!-- Right Column: Order Summary -->
-    <div class="checkout-summary bg-[#faf9f8] p-8 rounded-lg shadow-sm border border-gray-200 self-start">
-        <h2 class="text-2xl font-lora text-gray-900 font-semibold mb-6">Your Order</h2>
+    <div class="checkout-summary bg-[#faf9f8] p-10 rounded-xl shadow-sm border border-gray-200 self-start">
+        <h2 class="text-3xl font-lora text-gray-900 font-semibold mb-8">Your Order</h2>
         
-        <div id="checkout-cart-items" class="space-y-4 mb-6">
+        <div id="checkout-cart-items" class="space-y-6 mb-8">
             <!-- Items injected by JS -->
         </div>
 
-        <div class="border-t border-gray-200 pt-4 space-y-3 mb-6">
-            <div class="flex justify-between text-gray-600">
+        <div class="border-t border-gray-200 pt-6 space-y-6 mb-8 text-xl">
+            <div class="flex justify-between text-gray-700">
                 <span>Subtotal</span>
-                <span id="checkout-subtotal">Rs. 0</span>
+                <span id="checkout-subtotal" class="font-semibold">Rs. 0</span>
             </div>
-            <div class="flex justify-between text-gray-600">
+            <div class="flex justify-between text-gray-700">
                 <span>Shipping</span>
-                <span>Free</span>
+                <span class="font-semibold text-green-700">Free</span>
             </div>
-            <div class="flex justify-between text-xl font-bold text-sugandhlok-maroon mt-4 pt-4 border-t border-gray-200">
+            <div class="flex justify-between text-3xl font-bold text-sugandhlok-maroon mt-6 pt-6 border-t border-gray-200">
                 <span>Total</span>
                 <span id="checkout-total">Rs. 0</span>
             </div>
         </div>
 
-        <div class="payment-methods mb-8 space-y-3">
-            <label class="flex items-center gap-3 cursor-pointer">
-                <input type="radio" name="payment_method" value="cod" checked class="accent-sugandhlok-maroon w-4 h-4">
-                <span class="text-gray-700 font-medium">Cash on Delivery</span>
+        <div class="payment-methods mb-10 space-y-6">
+            <h3 class="text-3xl font-lora font-semibold text-gray-800 mb-6">Payment Method</h3>
+            
+            <label class="flex flex-col gap-2 cursor-pointer border border-gray-300 p-5 rounded-md hover:border-sugandhlok-maroon transition-colors bg-white">
+                <div class="flex items-center gap-4">
+                    <input type="radio" name="payment_method" value="upi" class="accent-sugandhlok-maroon w-6 h-6">
+                    <span class="text-gray-800 font-semibold text-xl">UPI (GPay, PhonePe, Paytm)</span>
+                </div>
+                <div class="text-lg text-gray-500 pl-10">Pay securely via any UPI app.</div>
             </label>
-            <div class="text-sm text-gray-500 pl-7">Pay with cash upon delivery.</div>
+
+            <label class="flex flex-col gap-2 cursor-pointer border border-gray-300 p-5 rounded-md hover:border-sugandhlok-maroon transition-colors bg-white">
+                <div class="flex items-center gap-4">
+                    <input type="radio" name="payment_method" value="online" class="accent-sugandhlok-maroon w-6 h-6">
+                    <span class="text-gray-800 font-semibold text-xl">Credit / Debit Card / NetBanking</span>
+                </div>
+                <div class="text-lg text-gray-500 pl-10">Secure online payment gateway.</div>
+            </label>
+
+            <label class="flex flex-col gap-2 cursor-pointer border border-gray-300 p-5 rounded-md hover:border-sugandhlok-maroon transition-colors bg-white">
+                <div class="flex items-center gap-4">
+                    <input type="radio" name="payment_method" value="cod" checked class="accent-sugandhlok-maroon w-6 h-6">
+                    <span class="text-gray-800 font-semibold text-xl">Cash on Delivery</span>
+                </div>
+                <div class="text-lg text-gray-500 pl-10">Pay with cash when your order is delivered.</div>
+            </label>
         </div>
 
-        <button id="place-order-btn" class="w-full py-4 bg-sugandhlok-maroon text-white text-center uppercase tracking-widest font-semibold hover:bg-red-900 transition-colors">
+        <button id="place-order-btn" class="w-full py-5 rounded bg-sugandhlok-maroon text-white text-center uppercase tracking-widest font-bold text-xl hover:bg-red-900 transition-colors shadow-lg hover:shadow-xl">
             Place Order
         </button>
-        <div id="checkout-message" class="mt-4 text-center text-sm font-semibold hidden"></div>
+        <div id="checkout-message" class="mt-6 text-center text-lg font-semibold hidden"></div>
     </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const cart = JSON.parse(localStorage.getItem('tattvah_cart')) || [];
-    const itemsContainer = document.getElementById('checkout-cart-items');
-    const subtotalEl = document.getElementById('checkout-subtotal');
-    const totalEl = document.getElementById('checkout-total');
-    const placeOrderBtn = document.getElementById('place-order-btn');
-    const checkoutForm = document.getElementById('checkout-form');
-    const msgEl = document.getElementById('checkout-message');
-
-    if(cart.length === 0) {
-        itemsContainer.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
-        placeOrderBtn.disabled = true;
-        placeOrderBtn.classList.add('opacity-50', 'cursor-not-allowed');
-        return;
-    }
-
-    let total = 0;
-    cart.forEach(item => {
-        total += item.price * item.quantity;
-        itemsContainer.innerHTML += `
-            <div class="flex justify-between items-center text-sm">
-                <div class="flex items-center gap-3">
-                    <img src="${item.image}" class="w-12 h-12 object-cover rounded border border-gray-200">
-                    <span class="text-gray-800">${item.title} <strong class="text-gray-500">× ${item.quantity}</strong></span>
-                </div>
-                <span class="font-semibold text-gray-900">Rs. ${(item.price * item.quantity).toLocaleString()}</span>
-            </div>
-        `;
-    });
-
-    subtotalEl.innerText = 'Rs. ' + total.toLocaleString();
-    totalEl.innerText = 'Rs. ' + total.toLocaleString();
-
-    placeOrderBtn.addEventListener('click', async (e) => {
-        e.preventDefault();
-        
-        if(!checkoutForm.checkValidity()) {
-            checkoutForm.reportValidity();
-            return;
-        }
-
-        placeOrderBtn.innerText = 'Processing...';
-        placeOrderBtn.disabled = true;
-
-        const formData = new FormData(checkoutForm);
-        const name = formData.get('billing_first_name') + ' ' + formData.get('billing_last_name');
-        
-        const data = new URLSearchParams();
-        data.append('action', 'place_order');
-        data.append('billing_name', name);
-        data.append('billing_email', formData.get('billing_email'));
-        data.append('billing_phone', formData.get('billing_phone'));
-        data.append('billing_address', formData.get('billing_address') + ', ' + formData.get('billing_city') + ' - ' + formData.get('billing_postcode'));
-        data.append('cart', JSON.stringify(cart));
-
-        try {
-            const res = await fetch('/wp-admin/admin-ajax.php', {
-                method: 'POST',
-                body: data
-            });
-            const result = await res.json();
-            
-            if(result.success) {
-                localStorage.removeItem('tattvah_cart');
-                itemsContainer.innerHTML = '';
-                subtotalEl.innerText = 'Rs. 0';
-                totalEl.innerText = 'Rs. 0';
-                msgEl.innerText = 'Order Placed Successfully! Your Order ID is: #' + result.data.order_id;
-                msgEl.className = 'mt-4 text-center text-sm font-semibold text-green-600 block';
-                placeOrderBtn.innerText = 'Order Placed';
-            } else {
-                msgEl.innerText = result.data.message || 'Error placing order.';
-                msgEl.className = 'mt-4 text-center text-sm font-semibold text-red-600 block';
-                placeOrderBtn.innerText = 'Place Order';
-                placeOrderBtn.disabled = false;
-            }
-        } catch(err) {
-            msgEl.innerText = 'Network error. Please try again.';
-            msgEl.className = 'mt-4 text-center text-sm font-semibold text-red-600 block';
-            placeOrderBtn.innerText = 'Place Order';
-            placeOrderBtn.disabled = false;
-        }
-    });
-});
-</script>
 
 <?php get_footer(); ?>

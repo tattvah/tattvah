@@ -77,135 +77,26 @@
 </footer>
 
 <!-- Cart Drawer -->
-<div id="sl-cart-drawer" class="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col">
-    <div class="flex items-center justify-between p-4 border-b border-gray-200">
-        <h2 class="text-xl font-lora text-sugandhlok-maroon font-semibold">Your Cart</h2>
+<div id="sl-cart-drawer" class="fixed inset-y-0 right-0 w-full max-w-[34rem] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col">
+    <div class="flex items-center justify-between p-6 border-b border-gray-200">
+        <h2 class="text-3xl font-lora text-sugandhlok-maroon font-semibold">Your Cart</h2>
         <button id="sl-cart-close" class="text-gray-500 hover:text-red-600 transition-colors">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
     </div>
     
-    <div id="sl-cart-items" class="flex-grow p-4 overflow-y-auto space-y-4">
+    <div id="sl-cart-items" class="flex-grow p-6 overflow-y-auto space-y-6">
         <!-- Cart Items Injected Here -->
     </div>
     
-    <div class="p-4 border-t border-gray-200 bg-gray-50">
-        <div class="flex justify-between items-center mb-4 text-lg font-bold text-gray-800">
+    <div class="p-6 border-t border-gray-200 bg-gray-50">
+        <div class="flex justify-between items-center mb-4 text-2xl font-bold text-gray-800">
             <span>Subtotal</span>
             <span id="sl-cart-subtotal">Rs. 0</span>
         </div>
-        <p class="text-xs text-gray-500 mb-4 text-center">Taxes and shipping calculated at checkout.</p>
-        <a href="/checkout/" id="sl-checkout-btn" class="block w-full py-3 bg-sugandhlok-maroon text-white text-center uppercase tracking-widest font-semibold hover:bg-red-900 transition-colors">Checkout</a>
+        <p class="text-base text-gray-500 mb-6 text-center">Taxes and shipping calculated at checkout.</p>
+        <a href="/checkout/" id="sl-checkout-btn" class="block w-full py-5 bg-sugandhlok-maroon text-white text-center uppercase tracking-widest text-xl font-bold rounded hover:bg-red-900 transition-colors">Checkout</a>
     </div>
 </div>
 <div id="sl-cart-backdrop" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-[9998]"></div>
-
-<!-- Cart Logic -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const cartDrawer = document.getElementById('sl-cart-drawer');
-    const cartBackdrop = document.getElementById('sl-cart-backdrop');
-    const cartClose = document.getElementById('sl-cart-close');
-    const cartTriggers = document.querySelectorAll('.sl-cart-wrapper, [href="/cart"]');
-    const cartItemsContainer = document.getElementById('sl-cart-items');
-    const cartSubtotal = document.getElementById('sl-cart-subtotal');
-    const cartBadge = document.querySelector('.sl-cart-badge');
-
-    let cart = JSON.parse(localStorage.getItem('tattvah_cart')) || [];
-
-    const saveCart = () => {
-        localStorage.setItem('tattvah_cart', JSON.stringify(cart));
-        renderCart();
-    };
-
-    const toggleCart = (show = true) => {
-        if(show) {
-            cartDrawer.classList.remove('translate-x-full');
-            cartBackdrop.classList.remove('opacity-0', 'pointer-events-none');
-        } else {
-            cartDrawer.classList.add('translate-x-full');
-            cartBackdrop.classList.add('opacity-0', 'pointer-events-none');
-        }
-    };
-
-    cartTriggers.forEach(btn => btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        toggleCart(true);
-    }));
-    cartClose.addEventListener('click', () => toggleCart(false));
-    cartBackdrop.addEventListener('click', () => toggleCart(false));
-
-    window.addToCart = (id, title, price, image) => {
-        const existing = cart.find(i => i.id === id);
-        if(existing) {
-            existing.quantity += 1;
-        } else {
-            cart.push({id, title, price: parseFloat(price), image, quantity: 1});
-        }
-        saveCart();
-        toggleCart(true);
-    };
-
-    window.updateCartQty = (id, change) => {
-        const item = cart.find(i => i.id === id);
-        if(item) {
-            item.quantity += change;
-            if(item.quantity <= 0) {
-                cart = cart.filter(i => i.id !== id);
-            }
-            saveCart();
-        }
-    };
-
-    const renderCart = () => {
-        cartItemsContainer.innerHTML = '';
-        let total = 0;
-        let count = 0;
-
-        if(cart.length === 0) {
-            cartItemsContainer.innerHTML = '<div class="text-center text-gray-500 mt-10">Your cart is empty.</div>';
-            document.getElementById('sl-checkout-btn').classList.add('opacity-50', 'pointer-events-none');
-        } else {
-            document.getElementById('sl-checkout-btn').classList.remove('opacity-50', 'pointer-events-none');
-            cart.forEach(item => {
-                total += item.price * item.quantity;
-                count += item.quantity;
-                cartItemsContainer.innerHTML += `
-                    <div class="flex gap-4 items-center border-b border-gray-100 pb-4">
-                        <img src="${item.image}" alt="${item.title}" class="w-16 h-16 object-cover rounded">
-                        <div class="flex-grow">
-                            <h4 class="text-sm font-semibold text-gray-800">${item.title}</h4>
-                            <div class="text-sugandhlok-maroon text-sm font-bold">Rs. ${item.price}</div>
-                            <div class="flex items-center gap-3 mt-2">
-                                <button onclick="updateCartQty('${item.id}', -1)" class="w-6 h-6 flex items-center justify-center bg-gray-100 rounded text-gray-600 hover:bg-gray-200">-</button>
-                                <span class="text-sm">${item.quantity}</span>
-                                <button onclick="updateCartQty('${item.id}', 1)" class="w-6 h-6 flex items-center justify-center bg-gray-100 rounded text-gray-600 hover:bg-gray-200">+</button>
-                            </div>
-                        </div>
-                        <button onclick="updateCartQty('${item.id}', -999)" class="text-gray-400 hover:text-red-500">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                        </button>
-                    </div>
-                `;
-            });
-        }
-        cartSubtotal.innerText = 'Rs. ' + total.toLocaleString();
-        if(cartBadge) cartBadge.innerText = count;
-    };
-
-    // Global listener for dynamic "Add to Cart" buttons
-    document.body.addEventListener('click', (e) => {
-        const btn = e.target.closest('.add-to-cart-btn');
-        if(btn) {
-            e.preventDefault();
-            const id = btn.getAttribute('data-id');
-            const title = btn.getAttribute('data-title');
-            const price = btn.getAttribute('data-price');
-            const image = btn.getAttribute('data-image');
-            addToCart(id, title, price, image);
-        }
-    });
-
-    renderCart(); // Initial render
-});
-</script>
+

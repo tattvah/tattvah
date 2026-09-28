@@ -164,6 +164,7 @@ function tattvah_handle_place_order() {
     $email = sanitize_email($_POST['billing_email']);
     $phone = sanitize_text_field($_POST['billing_phone']);
     $address = sanitize_textarea_field($_POST['billing_address']);
+    $payment_method = sanitize_text_field($_POST['payment_method'] ?? 'cod');
     $cart = isset($_POST['cart']) ? json_decode(stripslashes($_POST['cart']), true) : [];
     
     if (empty($name) || empty($phone) || empty($cart)) {
@@ -188,6 +189,18 @@ function tattvah_handle_place_order() {
         update_post_meta($post_id, 'billing_email', $email);
         update_post_meta($post_id, 'billing_phone', $phone);
         update_post_meta($post_id, 'billing_address', $address);
+        
+        $shipping_address = sanitize_textarea_field($_POST['shipping_address'] ?? '');
+        $order_notes = sanitize_textarea_field($_POST['order_notes'] ?? '');
+        
+        if (!empty($shipping_address)) {
+            update_post_meta($post_id, 'shipping_address', $shipping_address);
+        }
+        if (!empty($order_notes)) {
+            update_post_meta($post_id, 'order_notes', $order_notes);
+        }
+
+        update_post_meta($post_id, 'payment_method', $payment_method);
         update_post_meta($post_id, 'order_items', $order_items);
         update_post_meta($post_id, 'order_total', $total);
         wp_send_json_success(['message' => 'Order placed successfully!', 'order_id' => $post_id]);

@@ -26,21 +26,21 @@
 			<div class="swiper heroSwiper w-full h-[85vh] md:h-screen">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide relative w-full h-full">
-						<img src="https://magicstudio.com/blog/content/images/2023/10/props-product-photography.webp"
+						<img src="https://m.media-amazon.com/images/I/61V5ueewtaL.jpg"
 							alt="Tattvah Hero 1" class="hero-bg-image w-full h-full object-cover" fetchpriority="high">
 						<div
 							class="hero-overlay absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
 						</div>
 					</div>
 					<div class="swiper-slide relative w-full h-full">
-						<img src="https://cdn.shopify.com/s/files/1/2303/2711/files/7_324422e0-fe83-4b3d-ae5c-641f4567b5ff.jpg?v=1617058709"
+						<img src="https://phool.co/cdn/shop/articles/denis-oliveira-_12PwFpWZZ0-unsplash_2048x.jpg?v=1682486317"
 							alt="Tattvah Hero 2" class="hero-bg-image w-full h-full object-cover">
 						<div
 							class="hero-overlay absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
 						</div>
 					</div>
 					<div class="swiper-slide relative w-full h-full">
-						<img src="https://cdn.shopify.com/s/files/1/2303/2711/files/How_to_Create_Scroll_Stopping_Product_Photos_for_Instagram_9.jpg?v=1622172162"
+						<img src="https://ecoensa.com/wp-content/uploads/2026/07/Cow-dung-diya.png"
 							alt="Tattvah Hero 3" class="hero-bg-image w-full h-full object-cover">
 						<div
 							class="hero-overlay absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">

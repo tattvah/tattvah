@@ -25,6 +25,7 @@ module.exports = {
 		ourTeam: './our-team/ourTeam.js',
 		product: './product/product.js',
 		products: './products/products.js',
+		checkout: './checkout/checkout.js',
 	},
 	devServer: {
 		static: './build',
