@@ -1,8 +1,3 @@
-<?php
-/**
- * The template for displaying search results pages
- */
-?>
 <!DOCTYPE html>
 <html lang="en">
 

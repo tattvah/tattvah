@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/build/products/products.css?v=<?php echo file_exists(get_template_directory() . '/build/products/products.css') ? filemtime(get_template_directory() . '/build/products/products.css') : '1'; ?>">
-    <script type="module" defer src="<?php echo get_template_directory_uri(); ?>/build/products/products.bundle.js?v=<?php echo file_exists(get_template_directory() . '/build/products/products.bundle.js') ? filemtime(get_template_directory() . '/build/products/products.bundle.js') : '1'; ?>"></script>
+
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/products/products.css?v6'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/products/products.bundle.js?v6'></script>
 
     <?php
     $homeUrl = get_home_url();
@@ -16,11 +17,11 @@
 
     // Query all products in one shot for instant real-time filtering without page reloads
     $query_args = [
-        'post_type'      => 'product',
+        'post_type' => 'product',
         'posts_per_page' => -1,
-        'post_status'    => 'publish',
-        'orderby'        => 'date',
-        'order'          => 'DESC',
+        'post_status' => 'publish',
+        'orderby' => 'date',
+        'order' => 'DESC',
     ];
 
     if (isset($_GET['s']) && !empty($_GET['s'])) {
@@ -31,8 +32,8 @@
             $query_args['tax_query'] = [
                 [
                     'taxonomy' => $current_term->taxonomy,
-                    'field'    => 'term_id',
-                    'terms'    => $current_term->term_id,
+                    'field' => 'term_id',
+                    'terms' => $current_term->term_id,
                 ]
             ];
         }
@@ -70,7 +71,7 @@
 
                 <?php foreach ($taxonomies as $tax_slug => $tax):
                     $terms = get_terms([
-                        'taxonomy'   => $tax_slug,
+                        'taxonomy' => $tax_slug,
                         'hide_empty' => true,
                     ]);
                     if (!empty($terms) && !is_wp_error($terms)):
@@ -157,7 +158,8 @@
                                     </button>
                                 </div>
                             </div>
-                        <?php endwhile; wp_reset_postdata(); ?>
+                        <?php endwhile;
+                        wp_reset_postdata(); ?>
                     </div>
                 <?php else: ?>
                     <div class="no-products">
@@ -168,6 +170,8 @@
         </div>
     </main>
 
-
-
     <?php get_footer(); ?>
+
+    </body>
+
+</html>

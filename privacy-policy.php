@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/privacyPolicy/privacyPolicy.css?v5'>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/privacyPolicy/privacyPolicy.css?v6'>
     <script type="module" defer
-        src='/wp-content/themes/tattvah/build/privacyPolicy/privacyPolicy.bundle.js?v5'></script>
+        src='/wp-content/themes/tattvah/build/privacyPolicy/privacyPolicy.bundle.js?v6'></script>
     <?php
     $homeUrl = get_home_url();
     get_header();
@@ -121,6 +121,7 @@
     </main>
 
     <?php get_footer(); ?>
+
     </body>
 
 </html>

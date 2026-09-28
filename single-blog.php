@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blog/blog.css?v5'>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/blog/blog.bundle.js?v5'></script>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/blog/blog.css?v6'>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/blog/blog.bundle.js?v6'></script>
 
     <?php
     $homeUrl = get_home_url();

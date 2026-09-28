@@ -9,15 +9,9 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
 		rel="stylesheet">
-	<?php
-	$front_css_file = get_template_directory() . '/build/frontPage/frontPage.css';
-	$front_js_file = get_template_directory() . '/build/frontPage/frontPage.bundle.js';
-	$front_css_ver = file_exists($front_css_file) ? filemtime($front_css_file) : time();
-	$front_js_ver = file_exists($front_js_file) ? filemtime($front_js_file) : time();
-	$theme_base_uri = get_template_directory_uri();
-	?>
-	<link rel="stylesheet" href="<?php echo esc_url($theme_base_uri . '/build/frontPage/frontPage.css?v=' . $front_css_ver); ?>">
-	<script type="module" defer src="<?php echo esc_url($theme_base_uri . '/build/frontPage/frontPage.bundle.js?v=' . $front_js_ver); ?>"></script>
+
+	<link rel="stylesheet" href='/wp-content/themes/tattvah/build/frontpage/frontpage.css?v6'>
+	<script type="module" defer src='/wp-content/themes/tattvah/build/frontpage/frontpage.bundle.js?v6'></script>
 
 	<?php
 	$homeUrl = get_home_url();
@@ -306,9 +300,7 @@
 							if (!$product_img && has_post_thumbnail($post->ID)) {
 								$product_img = get_the_post_thumbnail_url($post->ID, 'large');
 							}
-							if (!$product_img) {
-								$product_img = 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg';
-							}
+							// Fallback image removed per request
 							$rating = get_field('average_rating', $post->ID) ?: 5;
 							$full_stars = round(floatval($rating));
 							$empty_stars = 5 - $full_stars;
@@ -509,11 +501,14 @@
 					<!-- Pillar 1 -->
 					<div class="fp-essence-card feature-col">
 						<div class="fp-essence-emblem">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+								stroke-linecap="round" stroke-linejoin="round">
 								<path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
 								<path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
 								<path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
-								<path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+								<path
+									d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15">
+								</path>
 							</svg>
 						</div>
 						<h3 class="fp-essence-card__title">HAND CRAFTED</h3>
@@ -524,8 +519,10 @@
 					<!-- Pillar 2 -->
 					<div class="fp-essence-card feature-col">
 						<div class="fp-essence-emblem">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-								<path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z"></path>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+								stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z">
+								</path>
 								<path d="M12 6c-3.31 0-6 2.69-6 6 0 2.22 1.21 4.15 3 5.19"></path>
 								<path d="M12 6v6l4 2"></path>
 								<circle cx="12" cy="12" r="2" fill="currentColor"></circle>
@@ -539,7 +536,8 @@
 					<!-- Pillar 3 -->
 					<div class="fp-essence-card feature-col">
 						<div class="fp-essence-emblem">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+								stroke-linecap="round" stroke-linejoin="round">
 								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
 								<path d="M9 12l2 2 4-4"></path>
 							</svg>
@@ -583,7 +581,8 @@
 							<div class="fp-ritual-icon">🌅</div>
 							<h3>Dawn Devotion &amp; Puja</h3>
 							<p>Begin your morning by lighting natural champa and sandalwood incense. Awaken conscious
-								intention, align your chakra energies, and invite serene calm into your sacred altar.</p>
+								intention, align your chakra energies, and invite serene calm into your sacred altar.
+							</p>
 						</div>
 					</div>
 
@@ -597,7 +596,8 @@
 							<div class="fp-ritual-icon">✨</div>
 							<h3>Space Purification</h3>
 							<p>Dispel stagnant domestic energies with our charcoal-free Loban and Sambrani havan cups.
-								Ancient Vedic resins purify room air, creating an uplifting sanctuary of spiritual peace.
+								Ancient Vedic resins purify room air, creating an uplifting sanctuary of spiritual
+								peace.
 							</p>
 						</div>
 					</div>
@@ -611,8 +611,10 @@
 						<div class="fp-ritual-card__content">
 							<div class="fp-ritual-icon">🌙</div>
 							<h3>Dusk Serenity &amp; Sleep</h3>
-							<p>Quiet the mind after a demanding day. Ethereal botanical smoke releases gentle terpenes that
-								dissolve anxiety, calm the nervous system, and prepare the soul for restorative sleep.</p>
+							<p>Quiet the mind after a demanding day. Ethereal botanical smoke releases gentle terpenes
+								that
+								dissolve anxiety, calm the nervous system, and prepare the soul for restorative sleep.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -658,9 +660,7 @@
 							} elseif (is_numeric($banner)) {
 								$banner = wp_get_attachment_image_url($banner, 'large');
 							}
-							if (!$banner) {
-								$banner = 'https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png';
-							}
+							// Fallback image removed per request
 							$read_time = get_field('read_time', $post->ID) ?: '4 min read';
 							?>
 							<article class="fp-blog-card blog-card">
@@ -691,34 +691,7 @@
 						wp_reset_postdata();
 					}
 
-					// Curated fallback if catalog has only 1 blog post
-					if ($blog_count < 2) {
-						?>
-						<article class="fp-blog-card blog-card">
-							<a href="/blogs/" class="fp-blog-card__media">
-								<img src="https://phool.co/cdn/shop/articles/denis-oliveira-_12PwFpWZZ0-unsplash_2048x.jpg?v=1682486317"
-									alt="The Sacred Alchemy of Temple Flower Recycling" class="fp-blog-card__img" loading="lazy">
-							</a>
-							<div class="fp-blog-card__content">
-								<div class="fp-blog-card__meta">
-									<span>Sep 24, 2026</span>
-									<span class="meta-dot">&bull;</span>
-									<span>5 min read</span>
-								</div>
-								<h3 class="fp-blog-card__title">
-									<a href="/blogs/">The Sacred Alchemy of Temple Flower Recycling</a>
-								</h3>
-								<div class="fp-blog-card__excerpt">
-									<p>Every dawn, millions of sacred blossoms are offered in Indian temples. Discover how Tattvah gives these divine blooms an auspicious rebirth into pure, organic agarbattis.</p>
-								</div>
-								<a href="/blogs/" class="fp-blog-card__link">
-									<span>Read Full Article</span>
-									<span class="arrow">&rarr;</span>
-								</a>
-							</div>
-						</article>
-						<?php
-					}
+					// Fallbacks removed per request
 					?>
 				</div>
 

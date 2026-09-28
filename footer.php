@@ -57,15 +57,20 @@
                 &copy; <?php echo date('Y'); ?> Tattvah. All rights reserved.
             </span>
             <div class="sl-footer-social" style="display: flex; gap: 15px;">
-                <a href="https://www.instagram.com/tattvah.officia" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="https://www.instagram.com/tattvah.officia" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
                 </a>
-                <a href="https://www.linkedin.com/company/tattvah/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="https://www.linkedin.com/company/tattvah/about/?viewAsMember=true" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn"
+                    style="color: rgba(255,255,255,0.7); transition: color 0.3s;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
@@ -77,26 +82,31 @@
 </footer>
 
 <!-- Cart Drawer -->
-<div id="sl-cart-drawer" class="fixed inset-y-0 right-0 w-full max-w-[34rem] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col">
+<div id="sl-cart-drawer"
+    class="fixed inset-y-0 right-0 w-full max-w-[34rem] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col">
     <div class="flex items-center justify-between p-6 border-b border-gray-200">
         <h2 class="text-3xl font-lora text-sugandhlok-maroon font-semibold">Your Cart</h2>
         <button id="sl-cart-close" class="text-gray-500 hover:text-red-600 transition-colors">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
         </button>
     </div>
-    
+
     <div id="sl-cart-items" class="flex-grow p-6 overflow-y-auto space-y-6">
         <!-- Cart Items Injected Here -->
     </div>
-    
+
     <div class="p-6 border-t border-gray-200 bg-gray-50">
         <div class="flex justify-between items-center mb-4 text-2xl font-bold text-gray-800">
             <span>Subtotal</span>
             <span id="sl-cart-subtotal">Rs. 0</span>
         </div>
         <p class="text-base text-gray-500 mb-6 text-center">Taxes and shipping calculated at checkout.</p>
-        <a href="/checkout/" id="sl-checkout-btn" class="block w-full py-5 bg-sugandhlok-maroon text-white text-center uppercase tracking-widest text-xl font-bold rounded hover:bg-red-900 transition-colors">Checkout</a>
+        <a href="/checkout/" id="sl-checkout-btn"
+            class="block w-full py-5 bg-sugandhlok-maroon text-white text-center uppercase tracking-widest text-xl font-bold rounded hover:bg-red-900 transition-colors">Checkout</a>
     </div>
 </div>
-<div id="sl-cart-backdrop" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-[9998]"></div>
-
+<div id="sl-cart-backdrop"
+    class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-[9998]"></div>

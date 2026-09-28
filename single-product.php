@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/product/product.css?v5'>
+    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/product/product.css?v6'>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/product/product.bundle.js?v5'></script>
+    <script type="module" defer src='/wp-content/themes/tattvah/build/product/product.bundle.js?v6'></script>
 
     <?php
     $homeUrl = get_home_url();
@@ -133,8 +133,7 @@
                                         <button type="button" class="qty-btn qty-plus">+</button>
                                     </div>
                                     <div class="sp-buttons">
-                                        <button class="sp-add-to-cart" 
-                                            onclick="
+                                        <button class="sp-add-to-cart" onclick="
                                                 const qty = parseInt(document.querySelector('.qty-input').value) || 1;
                                                 const id = '<?php echo get_the_ID(); ?>';
                                                 const title = '<?php echo esc_attr(addslashes(get_the_title())); ?>';
@@ -157,8 +156,7 @@
                                             ">
                                             Add to Cart
                                         </button>
-                                        <button class="sp-buy-now"
-                                            onclick="
+                                        <button class="sp-buy-now" onclick="
                                                 const qty2 = parseInt(document.querySelector('.qty-input').value) || 1;
                                                 const id2 = '<?php echo get_the_ID(); ?>';
                                                 let cart2 = JSON.parse(localStorage.getItem('tattvah_cart')) || [];

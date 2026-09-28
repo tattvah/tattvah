@@ -47,9 +47,6 @@ if (is_front_page()) {
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-
-
-
 </head>
 
 <body class="font-openSans text-gray-800 bg-sugandhlok-bg">
