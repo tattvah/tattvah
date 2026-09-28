@@ -139,80 +139,36 @@ function track_post_views()
     }
 }
 // Hook into wp to ensure it runs on single post pages
-// Register Post Types and Taxonomies
-function tattvah_register_cpts_and_taxonomies() {
-    // Product Tag Taxonomy
-    if (!taxonomy_exists('product-tag')) {
-        register_taxonomy('product-tag', ['product'], [
-            'labels' => [
-                'name' => 'Product Tags',
-                'singular_name' => 'Product Tag',
-                'search_items' => 'Search Product Tags',
-                'all_items' => 'All Product Tags',
-                'edit_item' => 'Edit Product Tag',
-                'update_item' => 'Update Product Tag',
-                'add_new_item' => 'Add New Product Tag',
-                'new_item_name' => 'New Product Tag Name',
-                'menu_name' => 'Product Tags',
-            ],
-            'public' => true,
-            'hierarchical' => false,
-            'show_ui' => true,
-            'show_in_menu' => true,
-            'show_admin_column' => true,
-            'rewrite' => ['slug' => 'product-tag', 'with_front' => true],
-        ]);
-    }
-
-    // Product CPT
-    if (!post_type_exists('product')) {
-        register_post_type('product', [
-            'labels' => [
-                'name' => 'Products',
-                'singular_name' => 'Product',
-                'add_new' => 'Add New',
-                'add_new_item' => 'Add New Product',
-                'edit_item' => 'Edit Product',
-                'all_items' => 'All Products',
-            ],
-            'public' => true,
-            'has_archive' => 'products',
-            'rewrite' => ['slug' => 'product', 'with_front' => true],
-            'supports' => ['title', 'editor', 'thumbnail', 'custom-fields', 'excerpt'],
-            'taxonomies' => ['product-tag'],
-            'menu_icon' => 'dashicons-tag',
-        ]);
-    }
-
-    // Order CPT
-    if (!post_type_exists('order')) {
-        register_post_type('order', [
-            'labels' => [
-                'name' => 'Orders',
-                'singular_name' => 'Order'
-            ],
-            'public' => false,
-            'show_ui' => true,
-            'show_in_menu' => true,
-            'supports' => ['title', 'custom-fields'],
-            'menu_icon' => 'dashicons-cart'
-        ]);
-    }
+// Register Order CPT
+function tattvah_register_order_cpt()
+{
+    register_post_type('order', [
+        'labels' => [
+            'name' => 'Orders',
+            'singular_name' => 'Order'
+        ],
+        'public' => false,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'supports' => ['title', 'custom-fields'],
+        'menu_icon' => 'dashicons-cart'
+    ]);
 }
-add_action('init', 'tattvah_register_cpts_and_taxonomies');
+add_action('init', 'tattvah_register_order_cpt');
 
 // Handle Place Order AJAX
 add_action('wp_ajax_place_order', 'tattvah_handle_place_order');
 add_action('wp_ajax_nopriv_place_order', 'tattvah_handle_place_order');
 
-function tattvah_handle_place_order() {
+function tattvah_handle_place_order()
+{
     $name = sanitize_text_field($_POST['billing_name']);
     $email = sanitize_email($_POST['billing_email']);
     $phone = sanitize_text_field($_POST['billing_phone']);
     $address = sanitize_textarea_field($_POST['billing_address']);
     $payment_method = sanitize_text_field($_POST['payment_method'] ?? 'cod');
     $cart = isset($_POST['cart']) ? json_decode(stripslashes($_POST['cart']), true) : [];
-    
+
     if (empty($name) || empty($phone) || empty($cart)) {
         wp_send_json_error(['message' => 'Invalid data. Please fill required fields.']);
     }
@@ -235,10 +191,10 @@ function tattvah_handle_place_order() {
         update_post_meta($post_id, 'billing_email', $email);
         update_post_meta($post_id, 'billing_phone', $phone);
         update_post_meta($post_id, 'billing_address', $address);
-        
+
         $shipping_address = sanitize_textarea_field($_POST['shipping_address'] ?? '');
         $order_notes = sanitize_textarea_field($_POST['order_notes'] ?? '');
-        
+
         if (!empty($shipping_address)) {
             update_post_meta($post_id, 'shipping_address', $shipping_address);
         }
