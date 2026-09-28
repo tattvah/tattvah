@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='/wp-content/themes/tattvah/build/products/products.css?v5'>
-    <script type="module" defer src='/wp-content/themes/tattvah/build/products/products.bundle.js?v5'></script>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/build/products/products.css?v=<?php echo file_exists(get_template_directory() . '/build/products/products.css') ? filemtime(get_template_directory() . '/build/products/products.css') : '1'; ?>">
+    <script type="module" defer src="<?php echo get_template_directory_uri(); ?>/build/products/products.bundle.js?v=<?php echo file_exists(get_template_directory() . '/build/products/products.bundle.js') ? filemtime(get_template_directory() . '/build/products/products.bundle.js') : '1'; ?>"></script>
 
     <?php
     $homeUrl = get_home_url();
@@ -13,6 +13,32 @@
 
     // Get taxonomies for product
     $taxonomies = get_object_taxonomies('product', 'objects');
+
+    // Query all products in one shot for instant real-time filtering without page reloads
+    $query_args = [
+        'post_type'      => 'product',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    ];
+
+    if (isset($_GET['s']) && !empty($_GET['s'])) {
+        $query_args['s'] = sanitize_text_field($_GET['s']);
+    } elseif (is_tax()) {
+        $current_term = get_queried_object();
+        if ($current_term && isset($current_term->taxonomy)) {
+            $query_args['tax_query'] = [
+                [
+                    'taxonomy' => $current_term->taxonomy,
+                    'field'    => 'term_id',
+                    'terms'    => $current_term->term_id,
+                ]
+            ];
+        }
+    }
+
+    $all_products = new WP_Query($query_args);
     ?>
 
     <main class="products-archive-main">
@@ -44,8 +70,8 @@
 
                 <?php foreach ($taxonomies as $tax_slug => $tax):
                     $terms = get_terms([
-                        'taxonomy' => $tax_slug,
-                        'hide_empty' => false,
+                        'taxonomy'   => $tax_slug,
+                        'hide_empty' => true,
                     ]);
                     if (!empty($terms) && !is_wp_error($terms)):
                         ?>
@@ -69,10 +95,10 @@
 
             <!-- Products Grid -->
             <div class="products-grid-wrapper">
-                <?php if (have_posts()): ?>
+                <?php if ($all_products->have_posts()): ?>
                     <div class="products-grid">
-                        <?php while (have_posts()):
-                            the_post();
+                        <?php while ($all_products->have_posts()):
+                            $all_products->the_post();
                             $selling_price = get_field('selling_price', get_the_ID());
                             $regular_price = get_field('regular_price', get_the_ID());
                             $gallery_img_1 = get_field('gallery_image_1', get_the_ID());
@@ -131,17 +157,8 @@
                                     </button>
                                 </div>
                             </div>
-                        <?php endwhile; ?>
+                        <?php endwhile; wp_reset_postdata(); ?>
                     </div>
-
-                    <!-- Pagination -->
-                    <div class="pagination">
-                        <?php echo paginate_links([
-                            'prev_text' => '&laquo;',
-                            'next_text' => '&raquo;',
-                        ]); ?>
-                    </div>
-
                 <?php else: ?>
                     <div class="no-products">
                         <p>No products found.</p>

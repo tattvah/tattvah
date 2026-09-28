@@ -7,252 +7,756 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Open+Sans:wght@300;400;500;600&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href='/wp-content/themes/tattvah/build/frontPage/frontPage.css?v6'>
-	<script type="module" defer src='/wp-content/themes/tattvah/build/frontPage/frontPage.bundle.js?v6'></script>
-	<!-- Swiper CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<?php
+	$front_css_file = get_template_directory() . '/build/frontPage/frontPage.css';
+	$front_js_file = get_template_directory() . '/build/frontPage/frontPage.bundle.js';
+	$front_css_ver = file_exists($front_css_file) ? filemtime($front_css_file) : time();
+	$front_js_ver = file_exists($front_js_file) ? filemtime($front_js_file) : time();
+	$theme_base_uri = get_template_directory_uri();
+	?>
+	<link rel="stylesheet" href="<?php echo esc_url($theme_base_uri . '/build/frontPage/frontPage.css?v=' . $front_css_ver); ?>">
+	<script type="module" defer src="<?php echo esc_url($theme_base_uri . '/build/frontPage/frontPage.bundle.js?v=' . $front_js_ver); ?>"></script>
 
 	<?php
 	$homeUrl = get_home_url();
 	get_header();
 	?>
 
-	<main class="main--container tattvah-home-page bg-[#faf9f8] overflow-hidden">
+	<main class="tattvah-home-page">
 
-		<!-- 1. HERO SECTION (SWIPER SLIDER) -->
-		<section class="hero-section relative w-full overflow-hidden">
-			<div class="swiper heroSwiper w-full h-[85vh] md:h-screen">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide relative w-full h-full">
-						<img src="https://m.media-amazon.com/images/I/61V5ueewtaL.jpg"
-							alt="Tattvah Hero 1" class="hero-bg-image w-full h-full object-cover" fetchpriority="high">
-						<div
-							class="hero-overlay absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
-						</div>
+		<!-- ==============================================================
+			 1. HERO SECTION: EDITORIAL SPLIT LUXURY HERO (NO SLIDER)
+			 ============================================================== -->
+		<section class="fp-hero">
+			<div class="fp-hero__container">
+				<!-- Left Column: Manifesto & Conversion Gateway -->
+				<div class="fp-hero__content">
+					<div class="fp-badge">
+						<span class="fp-badge__icon">✦</span>
+						100% Pure &amp; Charcoal-Free Botanicals
 					</div>
-					<div class="swiper-slide relative w-full h-full">
-						<img src="https://phool.co/cdn/shop/articles/denis-oliveira-_12PwFpWZZ0-unsplash_2048x.jpg?v=1682486317"
-							alt="Tattvah Hero 2" class="hero-bg-image w-full h-full object-cover">
-						<div
-							class="hero-overlay absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
-						</div>
+					<h1 class="fp-hero__title">
+						Sacred Rituals.<br>
+						<span class="fp-hero__title-accent">Naturally Reimagined.</span>
+					</h1>
+					<p class="fp-hero__lead">
+						Handcrafted from sacred temple flowers, pure natural resins, and therapeutic botanical oils.
+						Zero charcoal, zero toxic fumes — born to sanctify your living spaces with pure devotion.
+					</p>
+
+					<div class="fp-hero__actions">
+						<a href="#bestsellers" class="fp-btn fp-btn--primary">
+							<span>Shop Bestsellers</span>
+							<svg class="fp-btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<line x1="5" y1="12" x2="19" y2="12"></line>
+								<polyline points="12 5 19 12 12 19"></polyline>
+							</svg>
+						</a>
+						<a href="/about-us/" class="fp-btn fp-btn--outline">
+							<span>Our Sacred Story</span>
+						</a>
 					</div>
-					<div class="swiper-slide relative w-full h-full">
-						<img src="https://ecoensa.com/wp-content/uploads/2026/07/Cow-dung-diya.png"
-							alt="Tattvah Hero 3" class="hero-bg-image w-full h-full object-cover">
-						<div
-							class="hero-overlay absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
+
+					<div class="fp-hero__pillars">
+						<div class="fp-pillar-item">
+							<div class="fp-pillar-icon">🌿</div>
+							<div class="fp-pillar-text">
+								<strong>100% Flora</strong>
+								<span>Temple flowers &amp; herbs</span>
+							</div>
+						</div>
+						<div class="fp-pillar-item">
+							<div class="fp-pillar-icon">✨</div>
+							<div class="fp-pillar-text">
+								<strong>0% Charcoal</strong>
+								<span>Clean, soot-free burn</span>
+							</div>
+						</div>
+						<div class="fp-pillar-item">
+							<div class="fp-pillar-icon">👐</div>
+							<div class="fp-pillar-text">
+								<strong>Artisanal</strong>
+								<span>Hand-rolled by women</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- Swiper Pagination & Navigation -->
-				<div class="swiper-pagination"></div>
-				<div class="swiper-button-next text-white/70 hover:text-white transition-colors"></div>
-				<div class="swiper-button-prev text-white/70 hover:text-white transition-colors"></div>
+
+				<!-- Right Column: Framed Editorial Visual Showcase -->
+				<div class="fp-hero__visual">
+					<!-- Floating Glassmorphic Badges -->
+					<div class="fp-hero__float fp-hero__float--top">
+						<span class="fp-float-icon">✦</span>
+						<div class="fp-float-text">
+							<strong>Sacred Temple Blooms</strong>
+							<span>100% Ethically Reclaimed</span>
+						</div>
+					</div>
+
+					<div class="fp-hero__float fp-hero__float--bottom">
+						<div class="fp-float-stars">★★★★★</div>
+						<div class="fp-float-text">
+							<strong>4.9 / 5 Rating</strong>
+							<span>Loved by 10,000+ homes</span>
+						</div>
+					</div>
+
+					<div class="fp-hero__frame">
+						<img src="https://m.media-amazon.com/images/I/61V5ueewtaL.jpg"
+							alt="Pure Handcrafted Dhoop Cones and Sacred Rituals" class="fp-hero__main-img"
+							fetchpriority="high">
+						<div class="fp-slide-overlay">
+							<p class="fp-slide-caption">
+								<span>Sacred Fragrance &bull; Handcrafted</span>
+								Pure Botanical Dhoop Cones &amp; Agarbatti
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<!-- Swiper JS -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- ==============================================================
+			 2. TRUST & PURITY BAR ("THE TATTVAH STANDARD")
+			 ============================================================== -->
+		<section class="fp-trust">
+			<div class="fp-trust__container">
+				<div class="fp-trust__item">
+					<div class="fp-trust__icon-box">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+							stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+						</svg>
+					</div>
+					<div class="fp-trust__details">
+						<h4>100% Charcoal-Free</h4>
+						<p>Pure soothing aroma with zero black smoke, toxic soot, or headache-inducing fumes.</p>
+					</div>
+				</div>
 
-		<!-- 2. BESTSELLERS -->
-		<section class="bestsellers-section py-20 md:py-28 max-w-7xl mx-auto px-4 md:px-8 bg-[#faf9f8]">
-			<div class="section-header text-center mb-16">
-				<h2 class="section-title text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-6">Our Bestsellers
-				</h2>
-				<div class="w-24 h-[1px] bg-sugandhlok-maroon mx-auto opacity-50"></div>
+				<div class="fp-trust__item">
+					<div class="fp-trust__icon-box">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+							stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 2C6.5 2 2 6.5 2 12c0 6 5 10 10 10s10-4 10-10c0-5.5-4.5-10-10-10z"></path>
+							<path d="M12 6v6l4 2"></path>
+						</svg>
+					</div>
+					<div class="fp-trust__details">
+						<h4>Sacred Temple Blooms</h4>
+						<p>Ethically gathered temple flowers granted an auspicious and divine second life.</p>
+					</div>
+				</div>
+
+				<div class="fp-trust__item">
+					<div class="fp-trust__icon-box">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+							stroke-linecap="round" stroke-linejoin="round">
+							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+							<circle cx="9" cy="7" r="4"></circle>
+							<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+							<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+						</svg>
+					</div>
+					<div class="fp-trust__details">
+						<h4>Handcrafted by Artisans</h4>
+						<p>Lovingly hand-rolled by empowered rural women craftspeople across India.</p>
+					</div>
+				</div>
+
+				<div class="fp-trust__item">
+					<div class="fp-trust__icon-box">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+							stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+						</svg>
+					</div>
+					<div class="fp-trust__details">
+						<h4>Pure Therapeutic Oils</h4>
+						<p>Infused with rare Ayurvedic gums, pure essential oils, and sacred botanical resins.</p>
+					</div>
+				</div>
 			</div>
+		</section>
 
-			<div class="products-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
-				<?php
-				$product_args = [
-					'post_type' => 'product',
-					'posts_per_page' => 8,
-				];
-				$bestsellers = get_posts($product_args);
+		<!-- ==============================================================
+			 3. CURATED COLLECTIONS ("SHOP BY RITUAL")
+			 ============================================================== -->
+		<section class="fp-collections">
+			<div class="fp-collections__container">
+				<div class="fp-section-header">
+					<div class="fp-badge">
+						<span class="fp-badge__icon">✦</span>
+						Sacred Essentials
+					</div>
+					<h2 class="fp-section-title">Curated Collections</h2>
+					<p class="fp-section-subtitle">Explore handcrafted fragrances thoughtfully created for daily
+						prayers, meditation, and mindful living.</p>
+					<div class="fp-divider">
+						<span class="fp-divider__line"></span>
+						<span class="fp-divider__icon">✦</span>
+						<span class="fp-divider__line"></span>
+					</div>
+				</div>
 
-				if ($bestsellers) {
-					foreach ($bestsellers as $post) {
-						setup_postdata($post);
-						$selling_price = get_field('selling_price', $post->ID);
-						$mrp = get_field('mrp', $post->ID);
-						?>
-						<div
-							class="product-card group flex flex-col bg-white border border-gray-100 hover:shadow-xl hover:border-transparent transition-all duration-500 rounded-sm overflow-hidden">
-							<a href="<?php the_permalink(); ?>"
-								class="product-img-wrapper block overflow-hidden relative aspect-[4/5] bg-gray-50">
-								<?php
-								$product_img = get_field('gallery_image_1', $post->ID);
-								if ($product_img): ?>
-									<img src="<?php echo esc_url($product_img); ?>" alt="<?php the_title(); ?>"
-										class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
-								<?php elseif (has_post_thumbnail()): ?>
-									<?php the_post_thumbnail('medium_large', ['class' => 'w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out']); ?>
-								<?php else: ?>
-									<img src="https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg"
-										alt="Product"
-										class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
-								<?php endif; ?>
-
-								<!-- Quick Add Overlay -->
-								<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-									<button
-										class="add-to-cart-btn w-full py-4 bg-white/95 backdrop-blur-sm text-sugandhlok-maroon text-xs uppercase tracking-[0.2em] font-semibold hover:bg-sugandhlok-maroon hover:text-white transition-colors duration-300 shadow-lg"
-										data-id="<?php echo $post->ID; ?>"
-										data-title="<?php echo esc_attr(get_the_title()); ?>"
-										data-price="<?php echo esc_attr($selling_price ? $selling_price : 0); ?>"
-										data-image="<?php echo esc_url($product_img ? $product_img : (has_post_thumbnail() ? get_the_post_thumbnail_url($post->ID, 'medium_large') : 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg')); ?>">Quick
-										Add</button>
-								</div>
+				<div class="fp-collections__grid">
+					<!-- Category 1: Agarbattis -->
+					<div class="fp-category-card">
+						<img src="https://phool.co/cdn/shop/articles/denis-oliveira-_12PwFpWZZ0-unsplash_2048x.jpg?v=1682486317"
+							alt="Hand-Rolled Agarbattis" class="fp-category-card__bg">
+						<div class="fp-category-card__overlay">
+							<h3 class="fp-category-card__title">Sacred Agarbattis</h3>
+							<p class="fp-category-card__desc">Long-burning flora incense sticks for daily prayers and
+								serene living.</p>
+							<a href="/products/" class="fp-category-card__link">
+								Explore Collection <span class="arrow">&rarr;</span>
 							</a>
-							<div class="product-info text-center flex-grow flex flex-col justify-between p-6">
-								<div>
-									<h3 class="product-title font-lora text-xl text-gray-900 mb-2">
-										<a href="<?php the_permalink(); ?>"
-											class="hover:text-sugandhlok-maroon transition-colors"><?php the_title(); ?></a>
-									</h3>
-									<div class="product-rating text-sugandhlok-peach text-xs mb-3 tracking-[0.2em]">
-										<?php
-										$rating = get_field('average_rating', $post->ID);
-										$rating = $rating ? floatval($rating) : 5;
-										$full_stars = round($rating);
-										$empty_stars = 5 - $full_stars;
-										echo str_repeat('★', $full_stars) . str_repeat('☆', $empty_stars);
-										?>
+						</div>
+					</div>
+
+					<!-- Category 2: Dhoop & Cones -->
+					<div class="fp-category-card">
+						<img src="https://m.media-amazon.com/images/I/61V5ueewtaL.jpg" alt="Botanical Dhoop Batti"
+							class="fp-category-card__bg">
+						<div class="fp-category-card__overlay">
+							<h3 class="fp-category-card__title">Botanical Dhoop</h3>
+							<p class="fp-category-card__desc">Dense, sacred herbal dhoop infused with pure loban,
+								guggul, and sacred herbs.</p>
+							<a href="/products/" class="fp-category-card__link">
+								Explore Collection <span class="arrow">&rarr;</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Category 3: Sambrani & Cups -->
+					<div class="fp-category-card">
+						<img src="https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png"
+							alt="Sambrani & Havan Cups" class="fp-category-card__bg">
+						<div class="fp-category-card__overlay">
+							<h3 class="fp-category-card__title">Sambrani Cups</h3>
+							<p class="fp-category-card__desc">Traditional charcoal-free cups releasing pure purifying
+								resin smoke.</p>
+							<a href="/products/" class="fp-category-card__link">
+								Explore Collection <span class="arrow">&rarr;</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Category 4: Festive Gift Sets -->
+					<div class="fp-category-card">
+						<img src="https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg"
+							alt="Artisanal Gift Sets" class="fp-category-card__bg">
+						<div class="fp-category-card__overlay">
+							<h3 class="fp-category-card__title">Artisan Gift Sets</h3>
+							<p class="fp-category-card__desc">Consciously curated luxury boxes for festive occasions and
+								warm gifting.</p>
+							<a href="/products/" class="fp-category-card__link">
+								Explore Collection <span class="arrow">&rarr;</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==============================================================
+			 4. OUR BESTSELLERS SECTION
+			 ============================================================== -->
+		<section id="bestsellers" class="fp-bestsellers">
+			<div class="fp-bestsellers__container">
+				<div class="fp-section-header">
+					<div class="fp-badge">
+						<span class="fp-badge__icon">✦</span>
+						Most Revered Rituals
+					</div>
+					<h2 class="fp-section-title">Our Bestsellers</h2>
+					<p class="fp-section-subtitle">Crafted in small batches with unbroken tradition, pure devotion, and
+						botanical integrity.</p>
+					<div class="fp-divider">
+						<span class="fp-divider__line"></span>
+						<span class="fp-divider__icon">✦</span>
+						<span class="fp-divider__line"></span>
+					</div>
+				</div>
+
+				<div class="fp-products-grid">
+					<?php
+					$product_args = [
+						'post_type' => 'product',
+						'posts_per_page' => 8,
+					];
+					$bestsellers = get_posts($product_args);
+					$rendered_count = 0;
+
+					if ($bestsellers) {
+						foreach ($bestsellers as $post) {
+							setup_postdata($post);
+							$rendered_count++;
+							$selling_price = get_field('selling_price', $post->ID);
+							$mrp = get_field('regular_price', $post->ID) ?: get_field('mrp', $post->ID);
+							$product_img = get_field('gallery_image_1', $post->ID);
+							if (is_array($product_img) && isset($product_img['url'])) {
+								$product_img = $product_img['url'];
+							} elseif (is_numeric($product_img)) {
+								$product_img = wp_get_attachment_image_url($product_img, 'large');
+							}
+							if (!$product_img && has_post_thumbnail($post->ID)) {
+								$product_img = get_the_post_thumbnail_url($post->ID, 'large');
+							}
+							if (!$product_img) {
+								$product_img = 'https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg';
+							}
+							$rating = get_field('average_rating', $post->ID) ?: 5;
+							$full_stars = round(floatval($rating));
+							$empty_stars = 5 - $full_stars;
+							?>
+							<div class="fp-product-card product-card">
+								<a href="<?php the_permalink(); ?>" class="fp-product-card__media">
+									<img src="<?php echo esc_url($product_img); ?>" alt="<?php the_title(); ?>"
+										class="fp-product-card__img" loading="lazy">
+									<span class="fp-product-card__badge">100% Flora</span>
+
+									<!-- Quick Add Overlay (Triggers global cart drawer) -->
+									<div class="fp-product-card__quick-add">
+										<button class="add-to-cart-btn" data-id="<?php echo $post->ID; ?>"
+											data-title="<?php echo esc_attr(get_the_title()); ?>"
+											data-price="<?php echo esc_attr($selling_price ? $selling_price : 0); ?>"
+											data-image="<?php echo esc_url($product_img); ?>">
+											Quick Add &bull; Rs.
+											<?php echo $selling_price ? number_format($selling_price) : '0'; ?>
+										</button>
+									</div>
+								</a>
+
+								<div class="fp-product-card__info">
+									<div>
+										<div class="fp-product-card__rating">
+											<?php echo str_repeat('★', $full_stars) . str_repeat('☆', $empty_stars); ?>
+										</div>
+										<h3 class="fp-product-card__title">
+											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+										</h3>
+									</div>
+
+									<div class="fp-product-card__price-row">
+										<?php if ($mrp && $mrp > $selling_price): ?>
+											<span class="mrp">Rs. <?php echo number_format($mrp); ?></span>
+										<?php endif; ?>
+										<span class="selling-price">Rs.
+											<?php echo $selling_price ? number_format($selling_price) : '0'; ?></span>
 									</div>
 								</div>
-								<div class="price-row mt-3">
-									<?php if ($mrp && $mrp > $selling_price): ?>
-										<span class="mrp text-gray-400 line-through text-sm mr-3 font-light">Rs.
-											<?php echo number_format($mrp); ?></span>
-									<?php endif; ?>
-									<span class="selling-price font-semibold text-sugandhlok-maroon text-lg">Rs.
-										<?php echo $selling_price ? number_format($selling_price) : '0'; ?></span>
-								</div>
 							</div>
-						</div>
-						<?php
+							<?php
+						}
+						wp_reset_postdata();
 					}
-					wp_reset_postdata();
-				}
-				?>
-			</div>
+					?>
+				</div>
 
-			<div class="view-all-wrapper text-center mt-16">
-				<a href="/products/"
-					class="inline-block px-12 py-4 bg-transparent border-2 border-sugandhlok-maroon text-sugandhlok-maroon font-semibold rounded-none hover:bg-sugandhlok-maroon hover:text-white transition-all duration-300 uppercase tracking-[0.2em] text-sm">View
-					All Products</a>
+				<div class="fp-bestsellers__action">
+					<a href="/products/" class="fp-btn fp-btn--primary">
+						<span>View All Products</span>
+						<svg class="fp-btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+				</div>
 			</div>
 		</section>
 
-		<!-- 3. HISTORY & CRAFTSMANSHIP -->
-		<section class="history-section py-20 md:py-28 bg-[#3d1519]">
-			<div class="max-w-4xl mx-auto px-4 text-center mb-20">
-				<h2 class="history-title text-4xl md:text-5xl font-lora text-[#c9a764] mb-6">The Essence of
-					Tattvah</h2>
-				<div class="w-24 h-[1px] bg-[#c9a764] mx-auto opacity-50 mb-8"></div>
-				<p
-					class="history-desc text-white/80 leading-relaxed text-lg md:text-xl font-openSans font-light max-w-3xl mx-auto">
-					Tattvah stands as a
-					testament to India's rich heritage of agarbatti and dhoop
-					making. Since our inception, our mission has been to provide fragrances that are rooted in tradition
-					and crafted with utmost purity. With a commitment to ethical sourcing and women empowerment, every
-					stick is a promise of quality and devotion.</p>
+		<!-- ==============================================================
+			 5. THE TATTVAH DIFFERENCE (CONSCIOUS CHOICE VS CONVENTIONAL)
+			 ============================================================== -->
+		<section class="fp-difference">
+			<div class="fp-difference__container">
+				<div class="fp-section-header">
+					<div class="fp-badge">
+						<span class="fp-badge__icon">✦</span>
+						Conscious Devotion
+					</div>
+					<h2 class="fp-section-title">The Tattvah Difference</h2>
+					<p class="fp-section-subtitle">Experience the contrast between mass-manufactured chemical incense
+						and pure botanical craft.</p>
+					<div class="fp-divider">
+						<span class="fp-divider__line"></span>
+						<span class="fp-divider__icon">✦</span>
+						<span class="fp-divider__line"></span>
+					</div>
+				</div>
+
+				<div class="fp-difference__grid">
+					<!-- Card 1: Conventional Incense -->
+					<div class="fp-diff-card fp-diff-card--conventional">
+						<span class="fp-diff-card__badge">Conventional Incense</span>
+						<h3 class="fp-diff-card__title">Mass Chemical Sticks</h3>
+						<ul class="fp-diff-card__list">
+							<li class="fp-diff-item">
+								<div class="fp-diff-icon">&times;</div>
+								<div class="fp-diff-text">
+									<strong>Toxic Charcoal &amp; Sawdust Base</strong>
+									<p>Uses industrial black coal powder and harsh binding chemicals that create heavy
+										soot.</p>
+								</div>
+							</li>
+							<li class="fp-diff-item">
+								<div class="fp-diff-icon">&times;</div>
+								<div class="fp-diff-text">
+									<strong>Synthetic Chemical Fragrance Oils</strong>
+									<p>Dipped in petroleum-derived scents, synthetic fixatives, and artificial
+										aromachemicals.</p>
+								</div>
+							</li>
+							<li class="fp-diff-item">
+								<div class="fp-diff-icon">&times;</div>
+								<div class="fp-diff-text">
+									<strong>Causes Coughing &amp; Dark Residue</strong>
+									<p>Heavy smoke clogs indoor room air and irritates respiratory health in children
+										and elders.</p>
+								</div>
+							</li>
+							<li class="fp-diff-item">
+								<div class="fp-diff-icon">&times;</div>
+								<div class="fp-diff-text">
+									<strong>Soulless Machine Production</strong>
+									<p>Extruded rapidly by automated factory machines with no cultural or spiritual
+										devotion.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Card 2: Tattvah Divine Agarbatti -->
+					<div class="fp-diff-card fp-diff-card--tattvah">
+						<span class="fp-diff-card__badge">Tattvah Sacred Flora</span>
+						<h3 class="fp-diff-card__title">Pure Earth-Born Incense</h3>
+						<ul class="fp-diff-card__list">
+							<li class="fp-diff-item">
+								<div class="fp-diff-icon">&#10003;</div>
+								<div class="fp-diff-text">
+									<strong>100% Charcoal-Free Temple Flower Base</strong>
+									<p>Crafted exclusively from dried sacred temple flowers, tree gums, and rare Indian
+										resins.</p>
+								</div>
+							</li>
+							<li class="fp-diff-item">
+								<div class="fp-diff-icon">&#10003;</div>
+								<div class="fp-diff-text">
+									<strong>Therapeutic Essential Oils &amp; Resins</strong>
+									<p>Enriched with authentic Ayurvedic botanical extracts, pure loban, guggul, and
+										sacred herbs.</p>
+								</div>
+							</li>
+							<li class="fp-diff-item">
+								<div class="fp-diff-icon">&#10003;</div>
+								<div class="fp-diff-text">
+									<strong>Clean, Soot-Free &amp; Pure Air</strong>
+									<p>Releases gentle, calming therapeutic aroma safe for indoor living, babies, and
+										beloved pets.</p>
+								</div>
+							</li>
+							<li class="fp-diff-item">
+								<div class="fp-diff-icon">&#10003;</div>
+								<div class="fp-diff-text">
+									<strong>Hand-Rolled by Rural Women Artisans</strong>
+									<p>Each stick is infused with conscious care, providing fair dignified livelihood to
+										rural craftswomen.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
+		</section>
 
-			<div class="features-image-grid max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-				<div class="feature-col flex flex-col items-center text-center">
-					<div class="feature-img-wrapper mb-8 w-full max-w-sm">
-						<img src="https://sugandhlok.com/cdn/shop/files/Natural_2x_fb33f089-f8be-4d0b-bbeb-e24077e027d7.png"
-							alt="Hand Crafted"
-							class="w-full h-auto object-contain rounded-md">
+		<!-- ==============================================================
+			 6. THE ESSENCE OF TATTVAH (SACRED HERITAGE & PILLARS)
+			 ============================================================== -->
+		<section class="fp-essence">
+			<div class="fp-essence__container">
+				<div class="fp-section-header fp-section-header--light">
+					<div class="fp-badge">
+						<span class="fp-badge__icon">✦</span>
+						Our Sacred Roots
 					</div>
-					<h3 class="feature-col-title text-xl font-lora text-[#c9a764] mb-4 tracking-wide">HAND CRAFTED</h3>
-					<p class="text-white/70 text-sm leading-relaxed font-light">Every Tattvah product is lovingly
-						hand-rolled using
-						authentic, time-honored methods to ensure
-						premium quality.</p>
+					<h2 class="fp-section-title">The Essence of Tattvah</h2>
+					<div class="fp-divider">
+						<span class="fp-divider__line"></span>
+						<span class="fp-divider__icon">✦</span>
+						<span class="fp-divider__line"></span>
+					</div>
 				</div>
 
-				<div class="feature-col flex flex-col items-center text-center">
-					<div class="feature-img-wrapper mb-8 w-full max-w-sm">
-						<img src="https://sugandhlok.com/cdn/shop/files/Kind_2x_f40da00c-d95e-48f5-be6b-5d207c33038b.png"
-							alt="100% Natural"
-							class="w-full h-auto object-contain rounded-md">
-					</div>
-					<h3 class="feature-col-title text-xl font-lora text-[#c9a764] mb-4 tracking-wide">100% NATURAL</h3>
-					<p class="text-white/70 text-sm leading-relaxed font-light">Crafted from pure flora, essential oils,
-						and sacred
-						resins. Completely free of charcoal and toxic
-						fumes.</p>
-				</div>
-
-				<div class="feature-col flex flex-col items-center text-center">
-					<div class="feature-img-wrapper mb-8 w-full max-w-sm">
-						<img src="https://sugandhlok.com/cdn/shop/files/Responsible_2x_c956c29a-d632-4da0-b88a-2fd15962f1ec.png"
-							alt="Ethical & Eco-friendly"
-							class="w-full h-auto object-contain rounded-md">
-					</div>
-					<h3 class="feature-col-title text-xl font-lora text-[#c9a764] mb-4 tracking-wide">ETHICAL & ECO</h3>
-					<p class="text-white/70 text-sm leading-relaxed font-light">Eco-safe, biodegradable, and
-						cruelty-free. We
-						proudly empower rural women artisans across India.
+				<div class="fp-essence__quote-box">
+					<blockquote class="fp-essence__quote">
+						“At Tattvah, we believe rituals are sacred, and the elements we use should be pure. When you
+						light an agarbatti, you invite divine stillness into your home.”
+					</blockquote>
+					<p class="fp-essence__story">
+						Tattvah stands as a testament to India's rich heritage of agarbatti and dhoop making. Since our
+						inception, our mission has been to provide fragrances that are rooted in tradition and crafted
+						with utmost purity. With a commitment to ethical sourcing and women empowerment, every stick is
+						a promise of quality and devotion.
 					</p>
 				</div>
+
+				<div class="fp-essence__grid">
+					<!-- Pillar 1 -->
+					<div class="fp-essence-card feature-col">
+						<div class="fp-essence-emblem">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+								<path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+								<path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+								<path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+							</svg>
+						</div>
+						<h3 class="fp-essence-card__title">HAND CRAFTED</h3>
+						<p class="fp-essence-card__desc">Every Tattvah product is lovingly hand-rolled using authentic,
+							time-honored methods to ensure premium quality.</p>
+					</div>
+
+					<!-- Pillar 2 -->
+					<div class="fp-essence-card feature-col">
+						<div class="fp-essence-emblem">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z"></path>
+								<path d="M12 6c-3.31 0-6 2.69-6 6 0 2.22 1.21 4.15 3 5.19"></path>
+								<path d="M12 6v6l4 2"></path>
+								<circle cx="12" cy="12" r="2" fill="currentColor"></circle>
+							</svg>
+						</div>
+						<h3 class="fp-essence-card__title">100% NATURAL</h3>
+						<p class="fp-essence-card__desc">Crafted from pure flora, essential oils, and sacred resins.
+							Completely free of charcoal and toxic fumes.</p>
+					</div>
+
+					<!-- Pillar 3 -->
+					<div class="fp-essence-card feature-col">
+						<div class="fp-essence-emblem">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+								<path d="M9 12l2 2 4-4"></path>
+							</svg>
+						</div>
+						<h3 class="fp-essence-card__title">ETHICAL &amp; ECO</h3>
+						<p class="fp-essence-card__desc">Eco-safe, biodegradable, and cruelty-free. We proudly empower
+							rural women artisans across India.</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<!-- 4. BLOG POSTS -->
-		<section class="blog-posts-section py-20 md:py-28 max-w-7xl mx-auto px-4 md:px-8 bg-white">
-			<div class="section-header text-center mb-16">
-				<h2 class="section-title text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-6">Journal & Articles
-				</h2>
-				<div class="w-24 h-[1px] bg-sugandhlok-maroon mx-auto opacity-50 mb-8"></div>
-				<a href="/blogs/"
-					class="text-sugandhlok-maroon uppercase tracking-widest text-xs font-semibold hover:text-sugandhlok-peach transition-colors border-b border-sugandhlok-maroon pb-1 inline-block">View
-					All Journals</a>
+		<!-- ==============================================================
+			 7. SENSORY RITUALS (HOW SACRED FRAGRANCE ELEVATES LIVING)
+			 ============================================================== -->
+		<section class="fp-rituals">
+			<div class="fp-rituals__container">
+				<div class="fp-section-header">
+					<div class="fp-badge">
+						<span class="fp-badge__icon">✦</span>
+						Daily Rhythms
+					</div>
+					<h2 class="fp-section-title">The Art of Sacred Living</h2>
+					<p class="fp-section-subtitle">Three timeless ways our pure botanical aromas elevate your daily
+						well-being.</p>
+					<div class="fp-divider">
+						<span class="fp-divider__line"></span>
+						<span class="fp-divider__icon">✦</span>
+						<span class="fp-divider__line"></span>
+					</div>
+				</div>
+
+				<div class="fp-rituals__grid">
+					<!-- Ritual 1 -->
+					<div class="fp-ritual-card">
+						<div class="fp-ritual-card__media">
+							<img src="https://images.unsplash.com/photo-1602192509154-0b900ee1f851?auto=format&fit=crop&w=800&q=80"
+								alt="Dawn Devotion &amp; Puja" class="fp-ritual-card__img" loading="lazy">
+						</div>
+						<div class="fp-ritual-card__content">
+							<div class="fp-ritual-icon">🌅</div>
+							<h3>Dawn Devotion &amp; Puja</h3>
+							<p>Begin your morning by lighting natural champa and sandalwood incense. Awaken conscious
+								intention, align your chakra energies, and invite serene calm into your sacred altar.</p>
+						</div>
+					</div>
+
+					<!-- Ritual 2 -->
+					<div class="fp-ritual-card">
+						<div class="fp-ritual-card__media">
+							<img src="https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png"
+								alt="Space Purification" class="fp-ritual-card__img" loading="lazy">
+						</div>
+						<div class="fp-ritual-card__content">
+							<div class="fp-ritual-icon">✨</div>
+							<h3>Space Purification</h3>
+							<p>Dispel stagnant domestic energies with our charcoal-free Loban and Sambrani havan cups.
+								Ancient Vedic resins purify room air, creating an uplifting sanctuary of spiritual peace.
+							</p>
+						</div>
+					</div>
+
+					<!-- Ritual 3 -->
+					<div class="fp-ritual-card">
+						<div class="fp-ritual-card__media">
+							<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
+								alt="Dusk Serenity &amp; Sleep" class="fp-ritual-card__img" loading="lazy">
+						</div>
+						<div class="fp-ritual-card__content">
+							<div class="fp-ritual-icon">🌙</div>
+							<h3>Dusk Serenity &amp; Sleep</h3>
+							<p>Quiet the mind after a demanding day. Ethereal botanical smoke releases gentle terpenes that
+								dissolve anxiety, calm the nervous system, and prepare the soul for restorative sleep.</p>
+						</div>
+					</div>
+				</div>
 			</div>
+		</section>
 
-			<div class="blog-grid grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-				<?php
-				$blog_args = [
-					'post_type' => 'blog',
-					'posts_per_page' => 2,
-				];
-				$blogs = get_posts($blog_args);
+		<!-- ==============================================================
+			 8. JOURNAL & ARTICLES SECTION
+			 ============================================================== -->
+		<section class="fp-journal">
+			<div class="fp-journal__container">
+				<div class="fp-section-header">
+					<div class="fp-badge">
+						<span class="fp-badge__icon">✦</span>
+						Ayurvedic Wisdom &amp; Stories
+					</div>
+					<h2 class="fp-section-title">From The Tattvah Journal</h2>
+					<p class="fp-section-subtitle">Explore stories of Indian botanical traditions, sacred rituals, and
+						mindful living.</p>
+					<div class="fp-divider">
+						<span class="fp-divider__line"></span>
+						<span class="fp-divider__icon">✦</span>
+						<span class="fp-divider__line"></span>
+					</div>
+				</div>
 
-				if ($blogs) {
-					foreach ($blogs as $post) {
-						setup_postdata($post);
-						$banner = get_field('banner_image') ?: 'https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png';
-						?>
-						<div class="blog-card group">
-							<a href="<?php the_permalink(); ?>"
-								class="blog-img-wrapper block relative aspect-[16/10] mb-6 overflow-hidden rounded-sm">
-								<img src="<?php echo esc_url($banner); ?>" alt="<?php the_title(); ?>"
-									class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out">
-							</a>
-							<div class="blog-content text-center px-4">
-								<div class="text-sugandhlok-peach text-xs uppercase tracking-[0.15em] mb-3 font-semibold">
-									<?php echo get_the_date('M d, Y'); ?>
+				<div class="fp-journal__grid">
+					<?php
+					$blog_args = [
+						'post_type' => 'blog',
+						'posts_per_page' => 2,
+					];
+					$blogs = get_posts($blog_args);
+					$blog_count = 0;
+
+					if ($blogs) {
+						foreach ($blogs as $post) {
+							setup_postdata($post);
+							$blog_count++;
+							$banner = get_field('listing_image', $post->ID) ?: get_field('banner_image', $post->ID);
+							if (is_array($banner) && isset($banner['url'])) {
+								$banner = $banner['url'];
+							} elseif (is_numeric($banner)) {
+								$banner = wp_get_attachment_image_url($banner, 'large');
+							}
+							if (!$banner) {
+								$banner = 'https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png';
+							}
+							$read_time = get_field('read_time', $post->ID) ?: '4 min read';
+							?>
+							<article class="fp-blog-card blog-card">
+								<a href="<?php the_permalink(); ?>" class="fp-blog-card__media">
+									<img src="<?php echo esc_url($banner); ?>" alt="<?php the_title(); ?>"
+										class="fp-blog-card__img" loading="lazy">
+								</a>
+								<div class="fp-blog-card__content">
+									<div class="fp-blog-card__meta">
+										<span><?php echo get_the_date('M d, Y'); ?></span>
+										<span class="meta-dot">&bull;</span>
+										<span><?php echo esc_html($read_time); ?></span>
+									</div>
+									<h3 class="fp-blog-card__title">
+										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									</h3>
+									<div class="fp-blog-card__excerpt">
+										<p><?php echo wp_trim_words(get_the_excerpt(), 22, '...'); ?></p>
+									</div>
+									<a href="<?php the_permalink(); ?>" class="fp-blog-card__link">
+										<span>Read Full Article</span>
+										<span class="arrow">&rarr;</span>
+									</a>
 								</div>
-								<h3
-									class="blog-title text-2xl md:text-3xl font-lora text-gray-900 mb-6 hover:text-sugandhlok-maroon transition-colors line-clamp-2">
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							</article>
+							<?php
+						}
+						wp_reset_postdata();
+					}
+
+					// Curated fallback if catalog has only 1 blog post
+					if ($blog_count < 2) {
+						?>
+						<article class="fp-blog-card blog-card">
+							<a href="/blogs/" class="fp-blog-card__media">
+								<img src="https://phool.co/cdn/shop/articles/denis-oliveira-_12PwFpWZZ0-unsplash_2048x.jpg?v=1682486317"
+									alt="The Sacred Alchemy of Temple Flower Recycling" class="fp-blog-card__img" loading="lazy">
+							</a>
+							<div class="fp-blog-card__content">
+								<div class="fp-blog-card__meta">
+									<span>Sep 24, 2026</span>
+									<span class="meta-dot">&bull;</span>
+									<span>5 min read</span>
+								</div>
+								<h3 class="fp-blog-card__title">
+									<a href="/blogs/">The Sacred Alchemy of Temple Flower Recycling</a>
 								</h3>
-								<a href="<?php the_permalink(); ?>"
-									class="inline-flex items-center text-xs uppercase tracking-widest font-semibold text-gray-900 hover:text-sugandhlok-maroon transition-colors">
-									Read Article <span class="ml-2 font-normal text-lg leading-none">&rarr;</span>
+								<div class="fp-blog-card__excerpt">
+									<p>Every dawn, millions of sacred blossoms are offered in Indian temples. Discover how Tattvah gives these divine blooms an auspicious rebirth into pure, organic agarbattis.</p>
+								</div>
+								<a href="/blogs/" class="fp-blog-card__link">
+									<span>Read Full Article</span>
+									<span class="arrow">&rarr;</span>
 								</a>
 							</div>
-						</div>
+						</article>
 						<?php
 					}
-					wp_reset_postdata();
-				}
-				?>
+					?>
+				</div>
+
+				<div class="fp-journal__action">
+					<a href="/blogs/" class="fp-btn fp-btn--outline">
+						<span>Explore All Journals</span>
+						<svg class="fp-btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==============================================================
+			 9. SANCTUARY COMMUNITY / NEWSLETTER
+			 ============================================================== -->
+		<section class="fp-newsletter">
+			<div class="fp-newsletter__banner">
+				<div class="fp-badge">
+					<span class="fp-badge__icon">✦</span>
+					The Tattvah Circle
+				</div>
+				<h2 class="fp-newsletter__title">Step Into A Sanctuary of Purity</h2>
+				<p class="fp-newsletter__subtitle">
+					Join our conscious living circle. Enjoy 10% off your first ritual order, early access to festive
+					collections, and Ayurvedic wellness insights.
+				</p>
+
+				<form class="fp-newsletter__form"
+					onsubmit="event.preventDefault(); alert('Thank you for joining the Tattvah Sanctuary circle!');">
+					<input type="email" required placeholder="Enter your email address..." class="fp-newsletter__input"
+						aria-label="Email address for newsletter">
+					<button type="submit" class="fp-newsletter__btn">Join Sanctuary</button>
+				</form>
+				<p class="fp-newsletter__disclaimer">Pure devotion, zero spam. Unsubscribe at any time.</p>
 			</div>
 		</section>
 
