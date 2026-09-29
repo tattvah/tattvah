@@ -8,35 +8,218 @@
     rel="stylesheet">
 
 <?php
-// SEO: Hardcoded Meta Tags Per Page
-$meta_title = 'Tattvah - Ancient Essence. Naturally Reimagined.';
-$meta_desc = 'Discover the story behind every Tattvah product. We believe that rituals are sacred, and the elements we use should be pure.';
+// ==============================================================
+// SEO: DYNAMIC META TITLES, DESCRIPTIONS & OPEN GRAPH TAGS
+// ==============================================================
+$site_name   = 'Tattvah';
+$default_img = get_theme_file_uri('public/assets/about/about-hero-ritual.jpg');
 
+$meta_title    = 'Tattvah — 100% Natural, Charcoal-Free Incense & Sacred Essentials';
+$meta_desc     = 'Sacred rituals, naturally reimagined. Handcrafted from temple flowers, pure natural resins & Ayurvedic herbs. 100% charcoal-free, zero toxic soot.';
+$og_image      = $default_img;
+$og_type       = 'website';
+$canonical_url = home_url(add_query_arg([], $GLOBALS['wp']->request ?? ''));
+
+if (empty($canonical_url) || is_front_page()) {
+    $canonical_url = home_url('/');
+}
+
+// 1. Home / Front Page
 if (is_front_page()) {
-    $meta_title = 'Home | Tattvah - Premium Natural Products';
-    $meta_desc = 'Welcome to Tattvah. 100% natural, earth-born elements for your rituals.';
-} elseif (is_page('about-us')) {
-    $meta_title = 'About Tattvah | Our Story';
-    $meta_desc = 'Discover the story behind Tattvah. From nature to your ritual, empowering artisans.';
-} elseif (is_page('products')) {
-    $meta_title = 'Shop Products | Tattvah';
-    $meta_desc = 'Shop our premium collection of Dhoop, Incense, Sambrani, and Diyas.';
-} elseif (is_singular('product')) {
-    $meta_title = get_the_title() . ' | Tattvah';
-    $meta_desc = 'Buy ' . get_the_title() . ' online. 100% natural ingredients crafted with tradition.';
-} elseif (is_page('blogs')) {
-    $meta_title = 'Tattvah Journal | Blogs';
-    $meta_desc = 'Read about Rituals, Fragrance, Natural Living, and Culture in the Tattvah Journal.';
-} elseif (is_singular('blog')) {
-    $meta_title = get_the_title() . ' | Tattvah Journal';
-    $meta_desc = get_the_excerpt() ? strip_tags(get_the_excerpt()) : 'Read this article on the Tattvah Journal.';
-} elseif (is_page('contact-us')) {
-    $meta_title = 'Contact Us | Tattvah';
-    $meta_desc = 'Get in touch with Tattvah. We would love to hear from you.';
+    $meta_title    = 'Tattvah — 100% Charcoal-Free Sacred Incense & Dhoop';
+    $meta_desc     = 'Sacred rituals, naturally reimagined. Handcrafted from temple flowers, pure natural resins & Ayurvedic herbs. 100% charcoal-free, zero toxic soot for daily prayer.';
+    $canonical_url = home_url('/');
+}
+
+// 2. About Us Page
+elseif (is_page('about-us') || is_page('about')) {
+    $meta_title    = 'About Tattvah — Our Story, Founders & Sacred Roots';
+    $meta_desc     = 'Rooted in Tradition. Inspired by Nature. Made for Today. Discover how two friends began Tattvah in 2023 to bring sacred botanical purity back to modern Indian rituals.';
+    $og_image      = get_theme_file_uri('public/assets/about/about-hero-ritual.jpg');
+    $canonical_url = home_url('/about-us/');
+}
+
+// 3. Shop / All Products Archive
+elseif (is_post_type_archive('product') || is_page('products') || is_page('shop')) {
+    $meta_title    = 'Shop Sacred Incense, Dhoop & Sambrani Cups | Tattvah';
+    $meta_desc     = 'Explore our collection of 100% natural, charcoal-free dhoop cones, flora agarbatti, cow dung diyas & sambrani cups. Handcrafted for daily rituals and peaceful living.';
+    $canonical_url = home_url('/products/');
+}
+
+// 4. Product Taxonomy / Tag Archive
+elseif (is_tax('product-tag')) {
+    $current_term = get_queried_object();
+    $term_name    = $current_term ? $current_term->name : single_term_title('', false);
+    $meta_title   = esc_html($term_name) . ' Collection | Tattvah Handcrafted Incense';
+    $meta_desc    = 'Shop pure, handcrafted ' . esc_attr(strtolower($term_name)) . ' by Tattvah. 100% charcoal-free, made from sacred temple flowers, pure resins, and therapeutic botanical oils.';
+    if ($current_term && !is_wp_error(get_term_link($current_term))) {
+        $canonical_url = get_term_link($current_term);
+    }
+}
+
+// 5. Single Product Page
+elseif (is_singular('product')) {
+    $prod_id       = get_the_ID();
+    $prod_title    = get_the_title($prod_id);
+    $short_tagline = function_exists('get_field') ? get_field('short_tagline', $prod_id) : '';
+    $gallery_img_1 = function_exists('get_field') ? get_field('gallery_image_1', $prod_id) : '';
+
+    $meta_title = 'Buy ' . $prod_title . ' Online | Tattvah';
+
+    if ($short_tagline) {
+        $meta_desc = $prod_title . ' — ' . esc_attr($short_tagline) . '. Buy online at Tattvah. 100% natural, charcoal-free, pure botanical ingredients with zero soot.';
+    } else {
+        $meta_desc = 'Buy ' . $prod_title . ' online at Tattvah. Handcrafted from sacred temple flowers and pure natural resins. 100% charcoal-free for serene daily rituals.';
+    }
+
+    if ($gallery_img_1) {
+        $og_image = is_array($gallery_img_1) ? ($gallery_img_1['url'] ?? $default_img) : $gallery_img_1;
+    } elseif (has_post_thumbnail($prod_id)) {
+        $og_image = get_the_post_thumbnail_url($prod_id, 'large');
+    }
+
+    $og_type       = 'product';
+    $canonical_url = get_permalink($prod_id);
+}
+
+// 6. Blogs / Journal Archive
+elseif (is_post_type_archive('blog') || is_page('blogs') || is_page('blog') || (is_home() && !is_front_page())) {
+    $meta_title    = 'The Tattvah Journal — Rituals, Nature & Mindful Living';
+    $meta_desc     = 'Read inspiring stories, ancient Vedic wisdom, and guides on sacred rituals, natural fragrance, and conscious living in the Tattvah Journal.';
+    $canonical_url = home_url('/blogs/');
+}
+
+// 7. Single Blog Article
+elseif (is_singular('blog') || (is_single() && !is_singular('product'))) {
+    $post_id    = get_the_ID();
+    $post_title = get_the_title($post_id);
+    $excerpt    = get_the_excerpt($post_id);
+
+    $meta_title = $post_title . ' | Tattvah Journal';
+
+    if ($excerpt) {
+        $clean_excerpt = wp_strip_all_tags($excerpt);
+        $meta_desc     = (mb_strlen($clean_excerpt) > 155) ? mb_substr($clean_excerpt, 0, 152) . '...' : $clean_excerpt;
+    } else {
+        $meta_desc = 'Read "' . $post_title . '" on the Tattvah Journal. Exploring traditional Indian rituals, sacred botanicals, and mindful modern living.';
+    }
+
+    if (has_post_thumbnail($post_id)) {
+        $og_image = get_the_post_thumbnail_url($post_id, 'large');
+    }
+
+    $og_type       = 'article';
+    $canonical_url = get_permalink($post_id);
+}
+
+// 8. Contact Us Page
+elseif (is_page('contact-us') || is_page('contact')) {
+    $meta_title    = 'Contact Us — We’d Love to Hear From You | Tattvah';
+    $meta_desc     = 'Have questions about our botanical creations, bulk orders, or custom gifting? Reach out to the Tattvah team at tattvahd@gmail.com. We are here to assist you.';
+    $canonical_url = home_url('/contact-us/');
+}
+
+// 9. Our Team Page
+elseif (is_page('our-team') || is_page('team')) {
+    $meta_title    = 'Our Team & Rural Artisans | Tattvah';
+    $meta_desc     = 'Meet the passionate team, founders, and rural Indian craftswomen who hand-roll Tattvah’s charcoal-free botanical incense with love and cultural devotion.';
+    $canonical_url = home_url('/our-team/');
+}
+
+// 10. Track Order Page
+elseif (is_page('track-order') || is_page('order-tracking')) {
+    $meta_title    = 'Track Your Order | Tattvah Live Shipment Status';
+    $meta_desc     = 'Track your Tattvah shipment in real-time. Enter your order details to check live packaging, dispatch, and delivery updates across India.';
+    $canonical_url = home_url('/track-order/');
+}
+
+// 11. Checkout Page
+elseif (is_page('checkout')) {
+    $meta_title    = 'Secure Checkout | Tattvah Sacred Essentials';
+    $meta_desc     = 'Complete your order securely at Tattvah. Enjoy fast pan-India delivery of 100% natural, charcoal-free dhoop, agarbatti, and sacred havan cups.';
+    $canonical_url = home_url('/checkout/');
+}
+
+// 12. Order Success / Thank You Page
+elseif (is_page('success') || is_page('thank-you') || is_page('order-success')) {
+    $meta_title    = 'Order Confirmed | Thank You for Choosing Tattvah';
+    $meta_desc     = 'Thank you for your order with Tattvah. Your sacred essentials are being handcrafted and prepared with reverence for delivery to your doorstep.';
+    $canonical_url = home_url('/thank-you/');
+}
+
+// 13. Shipping Policy Page
+elseif (is_page('shipping-policy') || is_page('shipping')) {
+    $meta_title    = 'Shipping & Delivery Policy | Tattvah';
+    $meta_desc     = 'Learn about Tattvah’s order processing timelines, pan-India domestic shipping partners, dispatch schedules, and delivery estimates.';
+    $canonical_url = home_url('/shipping-policy/');
+}
+
+// 14. Refund & Cancellation Policy Page
+elseif (is_page('refund-policy') || is_page('cancellation-policy') || is_page('returns')) {
+    $meta_title    = 'Refund, Exchange & Cancellation Policy | Tattvah';
+    $meta_desc     = 'Read our transparent return, replacement, and refund policies. At Tattvah, we ensure your sacred essentials reach you in pristine condition.';
+    $canonical_url = home_url('/refund-policy/');
+}
+
+// 15. Privacy Policy Page
+elseif (is_page('privacy-policy') || is_privacy_policy()) {
+    $meta_title    = 'Privacy Policy | Tattvah Data Protection';
+    $meta_desc     = 'Understand how Tattvah collects, protects, and respects your personal information and privacy when you browse and purchase from our store.';
+    $canonical_url = home_url('/privacy-policy/');
+}
+
+// 16. Terms and Conditions Page
+elseif (is_page('terms-and-conditions') || is_page('terms')) {
+    $meta_title    = 'Terms and Conditions | Tattvah Official Terms';
+    $meta_desc     = 'Review the terms of service, intellectual property guidelines, and user conditions governing your use of the Tattvah website and products.';
+    $canonical_url = home_url('/terms-and-conditions/');
+}
+
+// 17. Search Results Page
+elseif (is_search()) {
+    $search_query = get_search_query();
+    $meta_title   = 'Search Results for “' . esc_html($search_query) . '” | Tattvah';
+    $meta_desc    = 'Explore Tattvah products, fragrances, and journal articles matching “' . esc_attr($search_query) . '”. Pure, charcoal-free botanical creations.';
+}
+
+// 18. 404 Not Found Page
+elseif (is_404()) {
+    $meta_title = 'Page Not Found (404) | Tattvah';
+    $meta_desc  = 'We could not find the page you were looking for. Discover Tattvah’s handcrafted collection of pure dhoop, agarbatti, and sacred havan essentials.';
+}
+
+// 19. Generic / Custom Fallback Page
+elseif (is_page()) {
+    $page_title = get_the_title();
+    $meta_title = $page_title . ' | Tattvah';
+    $excerpt    = get_the_excerpt();
+    if ($excerpt) {
+        $clean_excerpt = wp_strip_all_tags($excerpt);
+        $meta_desc     = (mb_strlen($clean_excerpt) > 155) ? mb_substr($clean_excerpt, 0, 152) . '...' : $clean_excerpt;
+    } else {
+        $meta_desc = 'Discover ' . $page_title . ' at Tattvah. Rooted in Tradition. Inspired by Nature. Made for Today.';
+    }
+    $canonical_url = get_permalink();
 }
 ?>
 <title><?php echo esc_html($meta_title); ?></title>
 <meta name="description" content="<?php echo esc_attr($meta_desc); ?>">
+<link rel="canonical" href="<?php echo esc_url($canonical_url); ?>">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="<?php echo esc_attr($og_type); ?>">
+<meta property="og:title" content="<?php echo esc_attr($meta_title); ?>">
+<meta property="og:description" content="<?php echo esc_attr($meta_desc); ?>">
+<meta property="og:url" content="<?php echo esc_url($canonical_url); ?>">
+<meta property="og:site_name" content="<?php echo esc_attr($site_name); ?>">
+<meta property="og:image" content="<?php echo esc_url($og_image); ?>">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?php echo esc_attr($meta_title); ?>">
+<meta name="twitter:description" content="<?php echo esc_attr($meta_desc); ?>">
+<meta name="twitter:image" content="<?php echo esc_url($og_image); ?>">
 
 <?php wp_head(); ?>
 

@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href='/wp-content/themes/tattvah/build/aboutUs/aboutUs.css?v6'>
     <script type="module" defer src='/wp-content/themes/tattvah/build/aboutUs/aboutUs.bundle.js?v6'></script>
 
@@ -14,44 +20,53 @@
     ?>
 
     <main class="tattvah-about-page">
-        <div class="about-container">
-
-            <!-- 1. Hero Header Section -->
-            <section class="about-hero-section" data-aos="fade-up">
-                <span class="hero-badge">OUR ESSENCE</span>
-                <h1 class="hero-title">About TATTVAH</h1>
-                <p class="hero-tagline">Rooted in Tradition. Inspired by Nature. Made for Today.</p>
-                <div class="header-divider" aria-hidden="true">
-                    <span class="divider-line"></span>
-                    <span class="divider-icon">✦</span>
-                    <span class="divider-line"></span>
+        <!-- ==============================================================
+             1. HERO SECTION: OUR ESSENCE & AUTHENTIC RITUAL
+             ============================================================== -->
+        <section class="about-hero" data-aos="fade-up">
+            <div class="about-hero__inner">
+                <div class="about-hero__header">
+                    <span class="hero-badge">OUR ESSENCE</span>
+                    <h1 class="hero-title">About TATTVAH</h1>
+                    <p class="hero-tagline">Rooted in Tradition. Inspired by Nature. Made for Today.</p>
+                    <div class="header-divider" aria-hidden="true">
+                        <span class="divider-line"></span>
+                        <span class="divider-icon">✦</span>
+                        <span class="divider-line"></span>
+                    </div>
                 </div>
-            </section>
 
-            <!-- 2. Founding Story: From Friendship to TATTVAH -->
+                <!-- Editorial Cinematic Image Frame -->
+                <div class="about-hero__frame-container" data-aos="fade-up" data-aos-delay="150">
+                    <div class="about-hero__frame">
+                        <img src="<?php echo get_theme_file_uri('public/assets/about/about-hero-ritual.jpg'); ?>"
+                            alt="Sacred Indian morning incense rituals with brass burner and fresh marigolds"
+                            class="about-hero__image" fetchpriority="high">
+                        <div class="about-hero__caption-card">
+                            <span class="caption-icon">✦</span>
+                            <div class="caption-text">
+                                <strong>Sacred Temple Botanicals</strong>
+                                <span>100% Charcoal-Free &bull; Pure Devotion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="about-container">
+            <!-- ==============================================================
+                 2. FOUNDING STORY: FROM FRIENDSHIP TO TATTVAH (CLIENT CONTENT)
+                 ============================================================== -->
             <section class="about-story-section" data-aos="fade-up">
                 <div class="story-grid">
-                    <!-- Left Column: Philosophical Spark Card -->
-                    <div class="story-quote-card">
-                        <div class="quote-emblem" aria-hidden="true">
-                            <svg viewBox="0 0 48 36" fill="currentColor">
-                                <path
-                                    d="M24 2C24 2 20 12 20 22C20 26.5 21.8 30 24 30C26.2 30 28 26.5 28 22C28 12 24 2 24 2Z"
-                                    fill="#F4B51B" />
-                                <path
-                                    d="M22 8C22 8 15 15 15 23C15 27 17.5 29.5 20.5 30C19.5 27.5 19.5 24 20.5 20C21.2 16.5 22 13 22 8Z"
-                                    fill="#F4B51B" opacity="0.9" />
-                                <path
-                                    d="M26 8C26 8 33 15 33 23C33 27 30.5 29.5 27.5 30C28.5 27.5 28.5 24 27.5 20C26.8 16.5 26 13 26 8Z"
-                                    fill="#F4B51B" opacity="0.9" />
-                                <path
-                                    d="M19 14C19 14 10 20 10 26C10 29 12.5 31 16 30.5C14.5 28.5 14.5 25.5 15.5 22.5C16.5 19 18 16 19 14Z"
-                                    fill="#F4B51B" opacity="0.8" />
-                                <path
-                                    d="M29 14C29 14 38 20 38 26C38 29 35.5 31 32 30.5C33.5 28.5 33.5 25.5 32.5 22.5C31.5 19 30 16 29 14Z"
-                                    fill="#F4B51B" opacity="0.8" />
-                                <path d="M14 32C18 34 30 34 34 32C31 31.2 17 31.2 14 32Z" fill="#F4B51B" />
-                            </svg>
+                    <!-- Left Column: Documentary Craft Visual & Client Spark Question -->
+                    <div class="story-quote-card" data-aos="fade-right">
+                        <div class="craft-img-frame">
+                            <img src="<?php echo get_theme_file_uri('public/assets/about/about-craft-hands.jpg'); ?>"
+                                alt="Indian craftswoman hand-rolling botanical incense in traditional workshop"
+                                class="craft-img">
+                            <span class="craft-badge">Hand-Rolled in Small Batches</span>
                         </div>
                         <p class="quote-question">“Why are we moving so far away from the natural and traditional ways
                             that have been part of our lives for generations?”</p>
@@ -63,8 +78,8 @@
                         </div>
                     </div>
 
-                    <!-- Right Column: Story Narrative Content -->
-                    <div class="story-content">
+                    <!-- Right Column: Story Narrative Content (100% Client Content) -->
+                    <div class="story-content" data-aos="fade-left">
                         <span class="section-eyebrow">OUR BEGINNING</span>
                         <h2 class="section-title">From Friendship to TATTVAH</h2>
                         <p class="story-paragraph story-highlight">
@@ -87,7 +102,9 @@
                 </div>
             </section>
 
-            <!-- 3. Philosophy Section: What We Believe -->
+            <!-- ==============================================================
+                 3. PHILOSOPHY SECTION: WHAT WE BELIEVE (100% CLIENT CONTENT)
+                 ============================================================== -->
             <section class="about-philosophy-section" data-aos="fade-up">
                 <div class="philosophy-banner">
                     <span class="section-eyebrow">OUR PHILOSOPHY</span>
@@ -107,7 +124,7 @@
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                             </svg>
                         </div>
-                        <h3 class="card-title">Nature & Conscious Living</h3>
+                        <h3 class="card-title">Nature &amp; Conscious Living</h3>
                         <p class="card-text">
                             We explore products inspired by nature, Indian traditions, simplicity, and conscious living,
                             and present them in a way that feels relevant to today's homes.
@@ -124,7 +141,7 @@
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="card-title">Purpose & A Meaningful Story</h3>
+                        <h3 class="card-title">Purpose &amp; A Meaningful Story</h3>
                         <p class="card-text">
                             From traditional essentials to natural everyday products, we focus on creating and bringing
                             together products that have a purpose and a story behind them.
@@ -133,7 +150,9 @@
                 </div>
             </section>
 
-            <!-- 4. Guiding Principles: Our Approach -->
+            <!-- ==============================================================
+                 4. GUIDING PRINCIPLES: OUR APPROACH (100% CLIENT CONTENT)
+                 ============================================================== -->
             <section class="about-approach-section" data-aos="fade-up">
                 <div class="section-header-center">
                     <span class="section-eyebrow">GUIDING PRINCIPLES</span>
@@ -183,7 +202,7 @@
                     </div>
                 </div>
 
-                <!-- Core Mantra Box -->
+                <!-- Core Mantra Box (100% Client Content) -->
                 <div class="approach-mantra-box" data-aos="fade-up" data-aos-delay="300">
                     <p class="mantra-intro">TATTVAH is still at the beginning of its journey. But the thought behind it
                         is simple:</p>
@@ -191,7 +210,282 @@
                 </div>
             </section>
 
-            <!-- 5. Our Promise & Brand Signature Banner -->
+            <!-- ==============================================================
+                 5. THE FIVE ELEMENTS OF TATTVAH: INTERACTIVE SACRED SANCTUARY
+                 ============================================================== -->
+            <section class="about-elements-section" data-aos="fade-up">
+                <div class="section-center-head">
+                    <span class="section-eyebrow">ANCIENT WISDOM</span>
+                    <h2 class="section-title">The Five Elements of Tattvah</h2>
+                    <p class="section-subtitle">
+                        In Sanskrit philosophy, <em>Tattva</em> (तत्व) signifies the primordial building blocks of
+                        reality. Explore how each sacred element guides our botanical craft:
+                    </p>
+                    <div class="ornamental-divider">
+                        <span class="divider-leaf">❧</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Element Selector Pills -->
+                <div class="element-tabs-nav" role="tablist">
+                    <button class="element-tab-btn active" data-element="prithvi" role="tab" aria-selected="true">
+                        <span class="tab-glyph">पृथ्वी</span>
+                        <span class="tab-label">Prithvi &bull; Earth</span>
+                    </button>
+                    <button class="element-tab-btn" data-element="jal" role="tab" aria-selected="false">
+                        <span class="tab-glyph">जल</span>
+                        <span class="tab-label">Jal &bull; Water</span>
+                    </button>
+                    <button class="element-tab-btn" data-element="agni" role="tab" aria-selected="false">
+                        <span class="tab-glyph">अग्नि</span>
+                        <span class="tab-label">Agni &bull; Fire</span>
+                    </button>
+                    <button class="element-tab-btn" data-element="vayu" role="tab" aria-selected="false">
+                        <span class="tab-glyph">वायु</span>
+                        <span class="tab-label">Vayu &bull; Air</span>
+                    </button>
+                    <button class="element-tab-btn" data-element="akasha" role="tab" aria-selected="false">
+                        <span class="tab-glyph">आकाश</span>
+                        <span class="tab-label">Akasha &bull; Space</span>
+                    </button>
+                </div>
+
+                <!-- Interactive Element Showcase Stage -->
+                <div class="element-showcase-stage">
+                    <!-- Panel 1: Prithvi -->
+                    <div class="element-panel active" id="panel-prithvi">
+                        <div class="panel-badge-col">
+                            <div class="element-seal">
+                                <span class="seal-sanskrit">पृथ्वी</span>
+                                <span class="seal-sub">Prithvi</span>
+                            </div>
+                            <span class="panel-highlight-pill">Charcoal-Free Earth Base</span>
+                        </div>
+                        <div class="panel-content-col">
+                            <span class="panel-kicker">THE FIRST ELEMENT &bull; EARTH</span>
+                            <h3 class="panel-title">Sacred Cow Dung, Natural Clay &amp; Botanical Herbs</h3>
+                            <p class="panel-lead">
+                                Earth is the foundation of all matter, grounding our existence in physical purity. At
+                                Tattvah, we honor the earth element by refusing toxic industrial black coal powder and
+                                chemical binding sawdust.
+                            </p>
+                            <div class="panel-features-grid">
+                                <div class="feature-item">
+                                    <strong>Indigenous Desi Cow Dung</strong>
+                                    <p>Naturally sun-dried cow dung sourced with care, revered in Vedic havan for
+                                        centuries for its purifying qualities.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <strong>Sacred Herbal Bark &amp; Roots</strong>
+                                    <p>Pure powdered wood, natural joss tree bark, and botanical resins form our clean
+                                        organic dough.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Jal -->
+                    <div class="element-panel" id="panel-jal">
+                        <div class="panel-badge-col">
+                            <div class="element-seal">
+                                <span class="seal-sanskrit">जल</span>
+                                <span class="seal-sub">Jal</span>
+                            </div>
+                            <span class="panel-highlight-pill">Pure Floral Hydrosols</span>
+                        </div>
+                        <div class="panel-content-col">
+                            <span class="panel-kicker">THE SECOND ELEMENT &bull; WATER</span>
+                            <h3 class="panel-title">Steam-Distilled Temple Floral Waters &amp; Essences</h3>
+                            <p class="panel-lead">
+                                Water is the principle of fluidity, life, and emotional calm. We knead our botanical
+                                incense paste not with harsh chemical solvents, but with natural floral waters.
+                            </p>
+                            <div class="panel-features-grid">
+                                <div class="feature-item">
+                                    <strong>Damask Rose &amp; Jasmine Waters</strong>
+                                    <p>Hydro-distilled pure rose water that lends a subtle, delicate sweetness to the
+                                        natural fragrance dough.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <strong>Zero Petrochemical Solvents</strong>
+                                    <p>Completely free of DEP (Diethyl Phthalate) and industrial alcohol compounds
+                                        commonly used in mass factories.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Agni -->
+                    <div class="element-panel" id="panel-agni">
+                        <div class="panel-badge-col">
+                            <div class="element-seal">
+                                <span class="seal-sanskrit">अग्नि</span>
+                                <span class="seal-sub">Agni</span>
+                            </div>
+                            <span class="panel-highlight-pill">Zero Black Soot</span>
+                        </div>
+                        <div class="panel-content-col">
+                            <span class="panel-kicker">THE THIRD ELEMENT &bull; FIRE</span>
+                            <h3 class="panel-title">Gentle, Soot-Free Auspicious Smoulder</h3>
+                            <p class="panel-lead">
+                                Fire transforms the physical into the ethereal. When you light a Tattvah dhoop cone or
+                                stick, the clean botanical blend smoulders gently, without dark chemical smoke.
+                            </p>
+                            <div class="panel-features-grid">
+                                <div class="feature-item">
+                                    <strong>Silky White Sacred Ash</strong>
+                                    <p>Burns completely to fine, pure white ash — the hallmark of pure, charcoal-free
+                                        botanical ingredients.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <strong>Gentle Temperature Curve</strong>
+                                    <p>Smoulders at an optimal, steady pace without scorching the delicate natural
+                                        aromatic oils.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Vayu -->
+                    <div class="element-panel" id="panel-vayu">
+                        <div class="panel-badge-col">
+                            <div class="element-seal">
+                                <span class="seal-sanskrit">वायु</span>
+                                <span class="seal-sub">Vayu</span>
+                            </div>
+                            <span class="panel-highlight-pill">Air Purifying Resins</span>
+                        </div>
+                        <div class="panel-content-col">
+                            <span class="panel-kicker">THE FOURTH ELEMENT &bull; AIR</span>
+                            <h3 class="panel-title">Therapeutic Living Aroma &amp; Sacred Smoke</h3>
+                            <p class="panel-lead">
+                                Air carries the fragrance of devotion through your sanctuary. Infused with authentic
+                                Loban (Benzoin), Guggul, Sandalwood, and Camphor, releasing an aroma that clears
+                                stagnant energy.
+                            </p>
+                            <div class="panel-features-grid">
+                                <div class="feature-item">
+                                    <strong>Natural Air Purifier</strong>
+                                    <p>Ancient Ayurvedic resins contain natural antibacterial properties that help
+                                        refresh indoor living spaces.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <strong>Respiratory-Safe Aroma</strong>
+                                    <p>Clean, breathable, and soothing for homes with elders, meditation practitioners,
+                                        and beloved pets.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5: Akasha -->
+                    <div class="element-panel" id="panel-akasha">
+                        <div class="panel-badge-col">
+                            <div class="element-seal">
+                                <span class="seal-sanskrit">आकाश</span>
+                                <span class="seal-sub">Akasha</span>
+                            </div>
+                            <span class="panel-highlight-pill">Mindful Living</span>
+                        </div>
+                        <div class="panel-content-col">
+                            <span class="panel-kicker">THE FIFTH ELEMENT &bull; SPACE</span>
+                            <h3 class="panel-title">Sanctuary of Inner Stillness &amp; Presence</h3>
+                            <p class="panel-lead">
+                                Space is the silent canvas in which life unfolds. The ultimate purpose of Tattvah is to
+                                help you carve out a sacred sanctuary of peace within the busyness of contemporary life.
+                            </p>
+                            <div class="panel-features-grid">
+                                <div class="feature-item">
+                                    <strong>Ritual of Stillness</strong>
+                                    <p>An intentional morning and evening pause that centers the mind and invites serene
+                                        reflection.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <strong>Sacred Home Ambiance</strong>
+                                    <p>Elevating ordinary rooms into spaces of grace, mindfulness, and divine
+                                        tranquility.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================================
+                 6. THE ARTISANAL JOURNEY: TEMPLE TO SANCTUARY
+                 ============================================================== -->
+            <section class="about-journey-section" data-aos="fade-up">
+                <div class="journey-grid">
+                    <!-- Left: Narrative Steps -->
+                    <div class="journey-content">
+                        <span class="section-eyebrow">OUR CRAFT</span>
+                        <h2 class="section-title">The Artisanal Journey</h2>
+                        <p class="journey-intro">
+                            Every single stick and dhoop cone undergoes a slow, dignified craft journey that honors
+                            nature at every milestone:
+                        </p>
+
+                        <div class="journey-steps">
+                            <div class="journey-step" data-aos="fade-up" data-aos-delay="100">
+                                <div class="step-badge">1</div>
+                                <div class="step-info">
+                                    <h4>Reclaiming Sacred Temple Blooms</h4>
+                                    <p>Discarded floral offerings from local shrines — marigolds, roses, and champa —
+                                        are respectfully gathered before they pollute sacred rivers, giving sacred
+                                        flowers a divine second life.</p>
+                                </div>
+                            </div>
+
+                            <div class="journey-step" data-aos="fade-up" data-aos-delay="150">
+                                <div class="step-badge">2</div>
+                                <div class="step-info">
+                                    <h4>Solar Drying &amp; Botanical Churning</h4>
+                                    <p>Sun-dried under open skies, the petals are gently ground and blended with pure
+                                        crushed herbs, natural wood bark, and organic Ayurvedic gums without any
+                                        chemical binders.</p>
+                                </div>
+                            </div>
+
+                            <div class="journey-step" data-aos="fade-up" data-aos-delay="200">
+                                <div class="step-badge">3</div>
+                                <div class="step-info">
+                                    <h4>Hand-Rolled by Rural Artisans</h4>
+                                    <p>Lovingly hand-rolled one by one by self-help groups of rural women craftspeople,
+                                        upholding an age-old artisanal trade while securing dignified livelihoods for
+                                        their families.</p>
+                                </div>
+                            </div>
+
+                            <div class="journey-step" data-aos="fade-up" data-aos-delay="250">
+                                <div class="step-badge">4</div>
+                                <div class="step-info">
+                                    <h4>Sacred Resin &amp; Essential Oil Bath</h4>
+                                    <p>Finished cones and sticks are naturally aged and infused with pure plant resins
+                                        (Loban, Guggal, Benzoin) and pure essential oils for a soothing, non-toxic
+                                        aromatic profile.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Raw Materials Flatlay Visual -->
+                    <div class="journey-visual" data-aos="fade-left">
+                        <div class="journey-image-wrapper">
+                            <img src="<?php echo get_theme_file_uri('public/assets/about/about-botanical-elements.jpg'); ?>"
+                                alt="Pure Ayurvedic ingredients: Sandalwood, Loban resin, Damask rose petals and brass diya"
+                                class="journey-img">
+                            <div class="journey-overlay-badge">
+                                <strong>100% Purity Verified</strong>
+                                <span>Zero synthetic phthalates or coal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================================
+                 7. OUR PROMISE & BRAND SIGNATURE (100% CLIENT CONTENT)
+                 ============================================================== -->
             <section class="about-promise-banner" data-aos="fade-up">
                 <span class="promise-eyebrow">OUR COMMITMENT</span>
                 <h2 class="promise-title">Our Promise</h2>
@@ -199,7 +493,8 @@
                     We aim to build TATTVAH with honesty, curiosity, and responsibility, one product at a time.
                 </p>
                 <div class="brand-closing-box">
-                    <img src="<?php echo get_theme_file_uri('public/assets/Logo.svg'); ?>" alt="Tattvah Logo" style="max-height: 80px; width: auto; margin: 0 auto 15px; filter: brightness(0) invert(1);">
+                    <img src="<?php echo get_theme_file_uri('public/assets/Logo.svg'); ?>" alt="Tattvah Logo"
+                        style="max-height: 80px; width: auto; margin: 0 auto 15px; filter: brightness(0) invert(1);">
                     <p class="brand-tagline">Rooted in Tradition. Inspired by Nature. Made for Today.</p>
                     <div class="action-buttons">
                         <a href="/products/" class="btn-gold">Explore Products</a>
@@ -208,7 +503,9 @@
                 </div>
             </section>
 
-            <!-- 6. Frequently Asked Questions (FAQs) Accordion -->
+            <!-- ==============================================================
+                 8. FREQUENTLY ASKED QUESTIONS (100% CLIENT CONTENT - ALL 11)
+                 ============================================================== -->
             <section class="about-faq-section" data-aos="fade-up">
                 <header class="faq-header">
                     <span class="faq-badge">HAVE QUESTIONS?</span>
@@ -352,7 +649,7 @@
                         </summary>
                         <div class="faq-answer">
                             <p>Returns are accepted only in situations covered by our Returns Policy. Please check our
-                                <a href="/refund-policy/">Returns & Refund Policy</a> page for complete details.
+                                <a href="/refund-policy/">Returns &amp; Refund Policy</a> page for complete details.
                             </p>
                         </div>
                     </details>
@@ -394,12 +691,10 @@
                             page</a> or reach out at <a href="mailto:tattvahd@gmail.com">tattvahd@gmail.com</a>.</p>
                 </div>
             </section>
-
         </div>
     </main>
 
     <?php get_footer(); ?>
-    
     </body>
 
 </html>

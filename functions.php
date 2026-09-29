@@ -18,7 +18,8 @@ function remove_dashicons_styles()
 }
 add_action('wp_print_styles', 'remove_dashicons_styles', 100);
 
-add_theme_support('title-tag');
+// Note: SEO Title & Meta tags are managed dynamically in header.php
+// add_theme_support('title-tag');
 
 add_theme_support('post-thumbnails', array('blog'));
 add_theme_support('post-thumbnails', array('pr-news'));
