@@ -13,16 +13,16 @@ $color-bg-card: #FFFFFF;
 $color-bg-cream: #F5EFE6;
 $color-bg-warm: #FFFDF9;
 
-$color-primary: #174C3C;        // Deep Vedic Emerald
+$color-primary: #174C3C; // Deep Vedic Emerald
 $color-primary-dark: #0F3328;
-$color-maroon: #490000;         // Sacred Indian Terracotta/Maroon
-$color-gold: #C89A3B;           // Antique Warm Gold
+$color-maroon: #490000; // Sacred Indian Terracotta/Maroon
+$color-gold: #C89A3B; // Antique Warm Gold
 $color-gold-light: #F7EBD0;
 $color-gold-hover: #B08229;
 
-$color-text-title: #2B2118;     // Rich Espresso Brown
-$color-text-body: #5A4E46;      // Warm Charcoal-Brown
-$color-text-muted: #8E7F75;     // Soft Earthy Grey
+$color-text-title: #2B2118; // Rich Espresso Brown
+$color-text-body: #5A4E46; // Warm Charcoal-Brown
+$color-text-muted: #8E7F75; // Soft Earthy Grey
 
 $color-border: #E8E0D5;
 $color-border-gold: rgba(200, 154, 59, 0.35);
@@ -223,6 +223,7 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
             aspect-ratio: 16 / 9;
             max-height: 560px;
             background: #111;
+            margin: auto;
 
             @media (max-width: 768px) {
                 aspect-ratio: 4 / 3;
