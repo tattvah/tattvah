@@ -9,26 +9,26 @@
 // ==============================================================
 
 // Design Tokens & Variables
-$sl-maroon: #490000;
-$sl-maroon-hover: #330000;
-$sl-maroon-light: #5e0b17;
-$sl-maroon-subtle: #fcf8f8;
-$sl-gold: #C89A3B;
-$sl-gold-hover: #b58428;
-$sl-gold-light: #fbf7ee;
-$sl-gold-border: rgba(200, 154, 59, 0.35);
+$sl-maroon: #174C3C;
+$sl-maroon-hover: #33251D;
+$sl-maroon-light: #28735B;
+$sl-maroon-subtle: #EAD9BC;
+$sl-gold: #F4B51B;
+$sl-gold-hover: #E87527;
+$sl-gold-light: #FFF4DF;
+$sl-gold-border: rgba(244, 181, 27, 0.35);
 
-$sl-text-dark: #2A2421;
-$sl-text-body: #3d3531;
-$sl-text-sub: #685f59;
-$sl-text-muted: #8c827a;
+$sl-text-dark: #33251D;
+$sl-text-body: #715846;
+$sl-text-sub: #715846;
+$sl-text-muted: #B59B8A;
 
-$sl-border-light: #ece3db;
-$sl-border-card: #e8dfd7;
+$sl-border-light: #EAD9BC;
+$sl-border-card: #EAD9BC;
 
 $sl-card-bg: #ffffff;
-$sl-bg-warm: #faf7f2;
-$sl-bg-page: #fdfcfb;
+$sl-bg-warm: #FFF4DF;
+$sl-bg-page: #ffffff;
 
 $font-serif: 'Lora', 'Cinzel', Georgia, serif;
 $font-cinzel: 'Cinzel', Georgia, serif;
@@ -155,10 +155,10 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 			// Left Column: Philosophical Spark Card
 			.story-quote-card {
 				background: linear-gradient(145deg, #ffffff 0%, #faf6f0 100%);
-				border: 1px solid rgba(200, 154, 59, 0.4);
+				border: 1px solid rgba(244, 181, 27, 0.4);
 				border-radius: 14px;
 				padding: 38px 32px;
-				box-shadow: 0 6px 24px rgba(73, 0, 0, 0.04);
+				box-shadow: 0 6px 24px rgba(23, 76, 60, 0.04);
 				position: relative;
 				overflow: hidden;
 
@@ -275,7 +275,7 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 			border: 1px solid $sl-border-light;
 			border-radius: 14px;
 			padding: 45px 40px;
-			box-shadow: 0 6px 24px rgba(73, 0, 0, 0.03);
+			box-shadow: 0 6px 24px rgba(23, 76, 60, 0.03);
 			text-align: center;
 			margin-bottom: 30px;
 
@@ -335,13 +335,13 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 				border: 1px solid $sl-border-card;
 				border-radius: 12px;
 				padding: 32px 28px;
-				box-shadow: 0 4px 18px rgba(73, 0, 0, 0.02);
+				box-shadow: 0 4px 18px rgba(23, 76, 60, 0.02);
 				transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
 				&:hover {
 					transform: translateY(-2px);
-					box-shadow: 0 8px 26px rgba(73, 0, 0, 0.06);
-					border-color: rgba(200, 154, 59, 0.45);
+					box-shadow: 0 8px 26px rgba(23, 76, 60, 0.06);
+					border-color: rgba(244, 181, 27, 0.45);
 				}
 
 				.card-icon {
@@ -434,7 +434,7 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 				border: 1px solid $sl-border-light;
 				border-radius: 12px;
 				padding: 26px 22px;
-				box-shadow: 0 3px 14px rgba(73, 0, 0, 0.02);
+				box-shadow: 0 3px 14px rgba(23, 76, 60, 0.02);
 				display: flex;
 				flex-direction: column;
 				gap: 10px;
@@ -474,11 +474,11 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 		// Core Mantra Box
 		.approach-mantra-box {
 			background: linear-gradient(135deg, #FAF7F2 0%, #ffffff 100%);
-			border: 1px solid rgba(200, 154, 59, 0.4);
+			border: 1px solid rgba(244, 181, 27, 0.4);
 			border-radius: 12px;
 			padding: 30px 28px;
 			text-align: center;
-			box-shadow: 0 4px 18px rgba(73, 0, 0, 0.02);
+			box-shadow: 0 4px 18px rgba(23, 76, 60, 0.02);
 
 			.mantra-intro {
 				font-size: 15px;
@@ -506,7 +506,7 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 	// 5. Our Promise & Brand Signature Banner
 	// -------------------------------------------------------------
 	.about-promise-banner {
-		background: linear-gradient(145deg, $sl-maroon 0%, #2f0000 100%);
+		background: linear-gradient(145deg, $sl-maroon 0%, #0d2c22 100%);
 		border-radius: 16px;
 		color: #ffffff;
 		padding: 55px 40px;
@@ -514,7 +514,7 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 		position: relative;
 		overflow: hidden;
 		margin-bottom: 85px;
-		box-shadow: 0 10px 30px rgba(73, 0, 0, 0.2);
+		box-shadow: 0 10px 30px rgba(23, 76, 60, 0.2);
 
 		@include mobile {
 			padding: 40px 20px;
@@ -528,7 +528,7 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 			width: 200px;
 			height: 200px;
 			border-radius: 50%;
-			background: radial-gradient(circle, rgba(200, 154, 59, 0.15) 0%, transparent 70%);
+			background: radial-gradient(circle, rgba(244, 181, 27, 0.15) 0%, transparent 70%);
 			pointer-events: none;
 		}
 
@@ -695,8 +695,8 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 				transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
 				&[open] {
-					border-color: rgba(200, 154, 59, 0.5);
-					box-shadow: 0 4px 18px rgba(73, 0, 0, 0.04);
+					border-color: rgba(244, 181, 27, 0.5);
+					box-shadow: 0 4px 18px rgba(23, 76, 60, 0.04);
 
 					.faq-question {
 						color: $sl-maroon;
@@ -709,7 +709,7 @@ $font-sans: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 				}
 
 				&:hover {
-					border-color: rgba(200, 154, 59, 0.4);
+					border-color: rgba(244, 181, 27, 0.4);
 				}
 
 				.faq-question {

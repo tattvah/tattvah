@@ -13,17 +13,17 @@
     get_header();
     ?>
 
-    <main class="main--container bg-sugandhlok-bg font-openSans text-gray-800 min-h-[60vh]">
+    <main class="main--container bg-tattvah-bg font-openSans text-gray-800 min-h-[60vh]">
         <!-- Page Header -->
         <section class="pt-16 md:pt-24 pb-12 max-w-7xl mx-auto px-4 md:px-8 text-center" data-aos="fade-up">
-            <h1 class="text-4xl md:text-5xl font-lora text-sugandhlok-maroon mb-4"><?php the_title(); ?></h1>
-            <div class="w-16 h-1 bg-sugandhlok-peach mx-auto mb-6"></div>
+            <h1 class="text-4xl md:text-5xl font-lora text-tattvah-maroon mb-4"><?php the_title(); ?></h1>
+            <div class="w-16 h-1 bg-tattvah-peach mx-auto mb-6"></div>
         </section>
 
         <!-- Content -->
         <section class="pb-24 max-w-4xl mx-auto px-4 md:px-8">
             <div
-                class="bg-white p-8 md:p-12 rounded-md shadow-sm border border-gray-100 prose prose-lg prose-headings:font-lora prose-headings:text-sugandhlok-maroon prose-a:text-sugandhlok-peach max-w-none text-gray-600 leading-relaxed font-openSans">
+                class="bg-white p-8 md:p-12 rounded-md shadow-sm border border-gray-100 prose prose-lg prose-headings:font-lora prose-headings:text-tattvah-maroon prose-a:text-tattvah-peach max-w-none text-gray-600 leading-relaxed font-openSans">
                 <?php if (have_posts()):
                     while (have_posts()):
                         the_post();

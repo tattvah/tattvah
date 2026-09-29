@@ -2,12 +2,14 @@ import './product.scss';
 import '../../src-utilities/header';
 import '../../src-utilities/footer';
 import gsap, { ScrollTrigger } from 'gsap/all';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
 gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Product JS Loaded");
     // 1. Initialize Swiper for Thumbnails
-    if (typeof Swiper !== 'undefined' && document.querySelector('.sp-thumb-slider')) {
+    if (document.querySelector('.sp-thumb-slider')) {
         const thumbSlider = new Swiper('.sp-thumb-slider', {
             spaceBetween: 12,
             slidesPerView: 4,
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Initialize Other Products Slider
-    if (typeof Swiper !== 'undefined' && document.querySelector('.other-products-slider')) {
+    if (document.querySelector('.other-products-slider')) {
         const otherProdSlider = new Swiper('.other-products-slider', {
             slidesPerView: 4,
             spaceBetween: 30,

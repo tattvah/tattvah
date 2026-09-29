@@ -5,7 +5,7 @@
 
 .single-product-main {
     padding: 160px 20px 80px;
-    background: #fbf7f4;
+    background: #FFF4DF;
     min-height: 80vh;
 
     @media screen and (max-width: 768px) {
@@ -32,7 +32,7 @@
         transition: color 0.3s;
 
         &:hover {
-            color: #490000;
+            color: #174C3C;
         }
     }
 
@@ -41,7 +41,7 @@
         color: #999;
 
         &.current {
-            color: #490000;
+            color: #174C3C;
             font-weight: 600;
         }
     }
@@ -94,7 +94,7 @@
         position: absolute;
         top: 20px;
         left: 20px;
-        background: #490000;
+        background: #174C3C;
         color: #fff;
         font-family: 'Mulish', sans-serif;
         font-size: 12px;
@@ -135,7 +135,7 @@
 
     .swiper-button-next,
     .swiper-button-prev {
-        color: #490000;
+        color: #174C3C;
         background: #fff;
         width: 32px;
         height: 32px;
@@ -184,7 +184,7 @@
     margin-bottom: 25px;
 
     .stars {
-        color: #C89A3B;
+        color: #F4B51B;
         font-size: 18px;
         letter-spacing: 2px;
     }
@@ -213,7 +213,7 @@
         font-family: 'Mulish', sans-serif;
         font-size: 32px;
         font-weight: 700;
-        color: #490000;
+        color: #174C3C;
     }
 }
 
@@ -228,12 +228,12 @@
 
 .sp-coupon {
     background: #fdfaf5;
-    border: 1px dashed #C89A3B;
+    border: 1px dashed #F4B51B;
     padding: 10px 15px;
     border-radius: 4px;
     font-family: 'Mulish', sans-serif;
     font-size: 14px;
-    color: #490000;
+    color: #174C3C;
     margin-bottom: 20px;
     display: inline-block;
 }
@@ -320,24 +320,24 @@
 
     .sp-add-to-cart {
         background: transparent;
-        border: 1px solid #490000;
-        color: #490000;
+        border: 1px solid #174C3C;
+        color: #174C3C;
 
         &:hover {
             background: #fdfaf5;
-            color: #C89A3B;
-            border-color: #C89A3B;
+            color: #F4B51B;
+            border-color: #F4B51B;
         }
     }
 
     .sp-buy-now {
-        background: #490000;
-        border: 1px solid #490000;
+        background: #174C3C;
+        border: 1px solid #174C3C;
         color: #fff;
 
         &:hover {
-            background: #C89A3B;
-            border-color: #C89A3B;
+            background: #F4B51B;
+            border-color: #F4B51B;
         }
     }
 }
@@ -355,7 +355,7 @@
     border-radius: 4px;
 
     svg {
-        color: #C89A3B;
+        color: #F4B51B;
     }
 }
 
@@ -368,7 +368,7 @@
     font-family: 'Lora', serif;
     font-size: 18px;
     font-style: italic;
-    color: #490000;
+    color: #174C3C;
     margin-bottom: 20px;
     line-height: 1.6;
 }
@@ -382,7 +382,7 @@
     h2,
     h3,
     h4 {
-        color: #490000;
+        color: #174C3C;
         font-family: 'Lora', serif;
         font-weight: 600;
         margin-top: 25px;
@@ -405,7 +405,7 @@
 
             &::before {
                 content: "•";
-                color: #C89A3B;
+                color: #F4B51B;
                 font-size: 24px;
                 position: absolute;
                 left: 0;
@@ -427,14 +427,14 @@
         h2 {
             font-family: 'Lora', serif;
             font-size: 32px;
-            color: #490000;
+            color: #174C3C;
             margin-bottom: 15px;
         }
 
         .header-divider {
             width: 60px;
             height: 2px;
-            background: #C89A3B;
+            background: #F4B51B;
             margin: 0 auto;
         }
     }
@@ -504,7 +504,7 @@
                 transition: color 0.3s ease;
 
                 &:hover {
-                    color: #C89A3B;
+                    color: #F4B51B;
                 }
             }
         }
@@ -513,13 +513,13 @@
             font-family: 'Mulish', sans-serif;
             font-size: 18px;
             font-weight: 700;
-            color: #490000;
+            color: #174C3C;
         }
     }
 
     .swiper-button-next,
     .swiper-button-prev {
-        color: #490000;
+        color: #174C3C;
         background: #fff;
         width: 40px;
         height: 40px;

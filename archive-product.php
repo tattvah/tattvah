@@ -149,7 +149,7 @@
                                             <?php echo $selling_price ? number_format($selling_price) : '0'; ?></span>
                                     </div>
                                     <button
-                                        class="add-to-cart-btn w-full py-3 mt-4 bg-transparent border-2 border-sugandhlok-maroon text-sugandhlok-maroon text-sm uppercase tracking-widest font-semibold hover:bg-sugandhlok-maroon hover:text-white transition-colors duration-300"
+                                        class="add-to-cart-btn w-full py-3 mt-4 bg-transparent border-2 border-tattvah-maroon text-tattvah-maroon text-sm uppercase tracking-widest font-semibold hover:bg-tattvah-maroon hover:text-white transition-colors duration-300"
                                         data-id="<?php echo get_the_ID(); ?>"
                                         data-title="<?php echo esc_attr(get_the_title()); ?>"
                                         data-price="<?php echo esc_attr($selling_price ? $selling_price : 0); ?>"

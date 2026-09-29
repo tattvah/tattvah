@@ -1,7 +1,4 @@
-<link rel="apple-touch-icon" sizes="180x180" href=<?php echo get_theme_file_uri('favicons/apple-touch-icon.png'); ?>>
-<link rel="icon" type="image/png" sizes="32x32" href=<?php echo get_theme_file_uri('favicons/favicon-32x32.png'); ?>>
-<link rel="icon" type="image/png" sizes="16x16" href=<?php echo get_theme_file_uri('favicons/favicon-16x16.png'); ?>>
-<link rel="manifest" href=<?php echo get_theme_file_uri('favicons/site.webmanifest'); ?>>
+<link rel="icon" type="image/png" href="<?php echo get_theme_file_uri('public/assets/FavIcon.png'); ?>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +46,7 @@ if (is_front_page()) {
 
 </head>
 
-<body class="font-openSans text-gray-800 bg-sugandhlok-bg">
+<body class="font-openSans text-gray-800 bg-tattvah-bg">
 
     <header class="header sl-header-container">
         <!-- Unified Top Announcement Bar -->
@@ -101,28 +98,7 @@ if (is_front_page()) {
                 <!-- Center: Sugandh Lok Styled Divine Brand Logo -->
                 <div class="sl-header-center">
                     <a href="/" class="sl-brand-link tattvah-home" aria-label="Tattvah Home">
-                        <!-- Divine Golden Lotus Emblem -->
-                        <svg class="sl-lotus-icon" viewBox="0 0 48 36" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M24 2C24 2 20 12 20 22C20 26.5 21.8 30 24 30C26.2 30 28 26.5 28 22C28 12 24 2 24 2Z"
-                                fill="#C89A3B" />
-                            <path
-                                d="M22 8C22 8 15 15 15 23C15 27 17.5 29.5 20.5 30C19.5 27.5 19.5 24 20.5 20C21.2 16.5 22 13 22 8Z"
-                                fill="#C89A3B" opacity="0.9" />
-                            <path
-                                d="M26 8C26 8 33 15 33 23C33 27 30.5 29.5 27.5 30C28.5 27.5 28.5 24 27.5 20C26.8 16.5 26 13 26 8Z"
-                                fill="#C89A3B" opacity="0.9" />
-                            <path
-                                d="M19 14C19 14 10 20 10 26C10 29 12.5 31 16 30.5C14.5 28.5 14.5 25.5 15.5 22.5C16.5 19 18 16 19 14Z"
-                                fill="#C89A3B" opacity="0.8" />
-                            <path
-                                d="M29 14C29 14 38 20 38 26C38 29 35.5 31 32 30.5C33.5 28.5 33.5 25.5 32.5 22.5C31.5 19 30 16 29 14Z"
-                                fill="#C89A3B" opacity="0.8" />
-                            <path d="M14 32C18 34 30 34 34 32C31 31.2 17 31.2 14 32Z" fill="#C89A3B" />
-                        </svg>
-                        <span class="sl-brand-title">TATTVAH<sup>&reg;</sup></span>
-                        <span class="sl-brand-tagline">NATURALLY DIVINE + AGARBATTIS</span>
+                        <img src="<?php echo get_theme_file_uri('public/assets/Logo.svg'); ?>" alt="Tattvah" class="sl-main-logo" style="max-height: 50px; width: auto;">
                     </a>
                 </div>
 

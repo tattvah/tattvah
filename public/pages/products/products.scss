@@ -5,7 +5,7 @@
 
 .products-archive-main {
     padding: 160px 20px 80px;
-    background: #fbf7f4;
+    background: #FFF4DF;
     min-height: 80vh;
 
     @media screen and (max-width: 768px) {
@@ -24,7 +24,7 @@
     h1 {
         font-family: 'Lora', 'Cinzel', serif;
         font-size: 42px;
-        color: #490000;
+        color: #174C3C;
         margin-bottom: 15px;
         font-weight: 600;
         letter-spacing: 1px;
@@ -37,7 +37,7 @@
     .header-divider {
         width: 80px;
         height: 3px;
-        background: #C89A3B;
+        background: #F4B51B;
         margin: 0 auto;
     }
 }
@@ -90,7 +90,7 @@
         .filter-title {
             font-family: 'Lora', serif;
             font-size: 20px;
-            color: #490000;
+            color: #174C3C;
             margin-bottom: 15px;
             font-weight: 600;
             border-bottom: 1px solid #ECE6DD;
@@ -116,14 +116,14 @@
                     transition: all 0.3s ease;
 
                     input[type="checkbox"] {
-                        accent-color: #C89A3B;
+                        accent-color: #F4B51B;
                         width: 16px;
                         height: 16px;
                         cursor: pointer;
                     }
 
                     &:hover {
-                        color: #C89A3B;
+                        color: #F4B51B;
                         font-weight: 600;
                     }
 
@@ -215,7 +215,7 @@
         flex-grow: 1;
 
         .product-rating {
-            color: #C89A3B;
+            color: #F4B51B;
             font-size: 14px;
             margin-bottom: 12px;
             letter-spacing: 2px;
@@ -229,12 +229,12 @@
             line-height: 1.4;
 
             a {
-                color: #490000;
+                color: #174C3C;
                 text-decoration: none;
                 transition: color 0.3s ease;
 
                 &:hover {
-                    color: #C89A3B;
+                    color: #F4B51B;
                 }
             }
         }
@@ -269,8 +269,8 @@
 
         .add-to-cart-btn {
             background: transparent;
-            border: 1px solid #490000;
-            color: #490000;
+            border: 1px solid #174C3C;
+            color: #174C3C;
             padding: 12px 15px;
             font-family: 'Mulish', sans-serif;
             font-weight: 600;
@@ -285,9 +285,9 @@
             text-align: center;
 
             &:hover {
-                background: #490000;
+                background: #174C3C;
                 color: #fff;
-                border-color: #490000;
+                border-color: #174C3C;
             }
         }
     }
@@ -308,7 +308,7 @@
         height: 42px;
         border-radius: 4px;
         background: #fff;
-        color: #490000;
+        color: #174C3C;
         font-family: 'Mulish', sans-serif;
         font-weight: 600;
         text-decoration: none;
@@ -317,9 +317,9 @@
 
         &:hover,
         &.current {
-            background: #490000;
+            background: #174C3C;
             color: #fff;
-            border-color: #490000;
+            border-color: #174C3C;
         }
 
         &.dots {

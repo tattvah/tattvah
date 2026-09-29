@@ -164,27 +164,9 @@
                     <!-- Card 3: Brand Manifesto Sign-off -->
                     <div class="info-card brand-manifesto-card">
                         <div class="manifesto-decor" aria-hidden="true">
-                            <svg class="lotus-emblem" viewBox="0 0 48 36" fill="currentColor">
-                                <path
-                                    d="M24 2C24 2 20 12 20 22C20 26.5 21.8 30 24 30C26.2 30 28 26.5 28 22C28 12 24 2 24 2Z"
-                                    fill="#C89A3B" />
-                                <path
-                                    d="M22 8C22 8 15 15 15 23C15 27 17.5 29.5 20.5 30C19.5 27.5 19.5 24 20.5 20C21.2 16.5 22 13 22 8Z"
-                                    fill="#C89A3B" opacity="0.9" />
-                                <path
-                                    d="M26 8C26 8 33 15 33 23C33 27 30.5 29.5 27.5 30C28.5 27.5 28.5 24 27.5 20C26.8 16.5 26 13 26 8Z"
-                                    fill="#C89A3B" opacity="0.9" />
-                                <path
-                                    d="M19 14C19 14 10 20 10 26C10 29 12.5 31 16 30.5C14.5 28.5 14.5 25.5 15.5 22.5C16.5 19 18 16 19 14Z"
-                                    fill="#C89A3B" opacity="0.8" />
-                                <path
-                                    d="M29 14C29 14 38 20 38 26C38 29 35.5 31 32 30.5C33.5 28.5 33.5 25.5 32.5 22.5C31.5 19 30 16 29 14Z"
-                                    fill="#C89A3B" opacity="0.8" />
-                                <path d="M14 32C18 34 30 34 34 32C31 31.2 17 31.2 14 32Z" fill="#C89A3B" />
-                            </svg>
+                            <img src="<?php echo get_theme_file_uri('public/assets/Logo.svg'); ?>" alt="Tattvah Logo" style="max-height: 80px; width: auto; margin: 0 auto;">
                         </div>
                         <p class="manifesto-lead">We look forward to hearing from you.</p>
-                        <h3 class="manifesto-brand">TATTVAH</h3>
                         <p class="manifesto-tagline">Rooted in Tradition. Inspired by Nature. Made for Today.</p>
                     </div>
 

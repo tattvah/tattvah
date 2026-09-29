@@ -8,9 +8,7 @@
             <!-- Brand Section -->
             <div class="sl-footer-brand">
                 <a href="/" class="tattvah-home sl-footer-logo-link">
-                    <!-- Text Logo to Match Header -->
-                    <div class="sl-footer-brand-title">TATTVAH<sup>&reg;</sup></div>
-                    <div class="sl-footer-brand-tagline">NATURALLY DIVINE + AGARBATTIS</div>
+                    <img src="<?php echo get_theme_file_uri('public/assets/Logo.svg'); ?>" alt="Tattvah Logo" class="sl-footer-main-logo" style="max-height: 60px; width: auto; filter: brightness(0) invert(1);">
                 </a>
                 <p class="sl-footer-desc">
                     100% natural, earth-born elements for your sacred rituals. Pure, ethical, and traditional.
@@ -21,6 +19,7 @@
             <div class="sl-footer-links">
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/about-us/">About Tattvah</a></li>
                     <li><a href="/blogs/">Blogs</a></li>
                     <li><a href="/products/">Shop</a></li>
@@ -83,29 +82,29 @@
 
 <!-- Cart Drawer -->
 <div id="sl-cart-drawer"
-    class="fixed inset-y-0 right-0 w-full max-w-[34rem] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col">
-    <div class="flex items-center justify-between p-6 border-b border-gray-200">
-        <h2 class="text-3xl font-lora text-sugandhlok-maroon font-semibold">Your Cart</h2>
+    class="fixed inset-y-0 right-0 w-full md:max-w-[40rem] max-w-[90vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-[9999] flex flex-col">
+    <div class="flex items-center justify-between p-8 border-b border-gray-200">
+        <h2 class="text-3xl font-lora text-brand-primary font-semibold">Your Cart</h2>
         <button id="sl-cart-close" class="text-gray-500 hover:text-red-600 transition-colors">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
         </button>
     </div>
 
-    <div id="sl-cart-items" class="flex-grow p-6 overflow-y-auto space-y-6">
+    <div id="sl-cart-items" class="flex-grow p-8 overflow-y-auto space-y-8">
         <!-- Cart Items Injected Here -->
     </div>
 
-    <div class="p-6 border-t border-gray-200 bg-gray-50">
-        <div class="flex justify-between items-center mb-4 text-2xl font-bold text-gray-800">
+    <div class="p-8 border-t border-gray-200 bg-gray-50">
+        <div class="flex justify-between items-center mb-6 text-3xl font-bold text-gray-800">
             <span>Subtotal</span>
             <span id="sl-cart-subtotal">Rs. 0</span>
         </div>
-        <p class="text-base text-gray-500 mb-6 text-center">Taxes and shipping calculated at checkout.</p>
+        <p class="text-lg text-gray-500 mb-8 text-center">Taxes and shipping calculated at checkout.</p>
         <a href="/checkout/" id="sl-checkout-btn"
-            class="block w-full py-5 bg-sugandhlok-maroon text-white text-center uppercase tracking-widest text-xl font-bold rounded hover:bg-red-900 transition-colors">Checkout</a>
+            class="block w-full py-6 bg-brand-primary text-white text-center uppercase tracking-widest text-2xl font-bold rounded-lg hover:bg-brand-secondary transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">Checkout</a>
     </div>
 </div>
 

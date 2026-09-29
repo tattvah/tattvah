@@ -43,7 +43,7 @@ h4 {
 
 		a {
 			text-decoration: underline;
-			color: #0100C8;
+			color: #12639A;
 			transition: color 0.3s ease;
 		}
 
@@ -93,7 +93,7 @@ h4 {
 			display: flex;
 			align-items: center;
 			gap: 10px;
-			background-color: #0100C8;
+			background-color: #12639A;
 			padding-left: 2rem;
 			z-index: -999;
 			height: 30px;
@@ -639,7 +639,7 @@ h4 {
 		&::after {
 			background-color: red;
 			content: '';
-			background: linear-gradient(90deg, #3D0743 4.09%, #91629C 100%);
+			background: linear-gradient(90deg, #174C3C 4.09%, #28735B 100%);
 			width: 0px;
 			height: 100%;
 			left: 5px;
@@ -994,7 +994,7 @@ h4 {
 			gap: 1rem;
 			width: 30%;
 			height: auto;
-			background: #0100C8;
+			background: #12639A;
 			color: #fff;
 			align-items: center;
 			letter-spacing: 0.2rem;
@@ -1083,7 +1083,7 @@ h4 {
 			gap: 10px;
 
 			.sl-meta-cat {
-				color: #C89A3B;
+				color: #F4B51B;
 			}
 
 			.sl-meta-read {
@@ -1096,7 +1096,7 @@ h4 {
 		.sl-blog-title {
 			font-family: 'Lora', 'Cinzel', serif;
 			font-size: 42px;
-			color: #490000;
+			color: #174C3C;
 			margin: 0 0 30px;
 			line-height: 1.2;
 		}
@@ -1117,12 +1117,12 @@ h4 {
 					height: 50px;
 					border-radius: 50%;
 					object-fit: cover;
-					border: 2px solid #C89A3B;
+					border: 2px solid #F4B51B;
 				}
 
 				.sl-author-name {
 					font-weight: 700;
-					color: #490000;
+					color: #174C3C;
 					margin: 0;
 					font-size: 16px;
 				}
@@ -1140,7 +1140,7 @@ h4 {
 				gap: 8px;
 				background: none;
 				border: none;
-				color: #490000;
+				color: #174C3C;
 				font-weight: 600;
 				text-transform: uppercase;
 				font-size: 13px;
@@ -1148,7 +1148,7 @@ h4 {
 				position: relative;
 
 				&:hover {
-					color: #C89A3B;
+					color: #F4B51B;
 				}
 
 				.copied_text {
@@ -1173,7 +1173,7 @@ h4 {
 		display: flex;
 		align-items: center;
 		gap: 30px;
-		background: #fbf7f4;
+		background: #FFF4DF;
 		padding: 20px 30px;
 		border-radius: 8px;
 		margin-bottom: 40px;
@@ -1201,7 +1201,7 @@ h4 {
 					top: 0;
 					left: 0;
 					height: 100%;
-					background: #C89A3B;
+					background: #F4B51B;
 					border-radius: 4px;
 					width: 0%;
 				}
@@ -1223,7 +1223,7 @@ h4 {
 				border: none;
 
 				&.play-pause-btn {
-					background: #490000;
+					background: #174C3C;
 					color: #fff;
 
 					&:hover {
@@ -1266,14 +1266,14 @@ h4 {
 		h2 {
 			font-family: 'Lora', serif;
 			font-size: 28px;
-			color: #490000;
+			color: #174C3C;
 			margin: 40px 0 20px;
 		}
 
 		h3 {
 			font-family: 'Lora', serif;
 			font-size: 22px;
-			color: #490000;
+			color: #174C3C;
 			margin: 30px 0 15px;
 		}
 
@@ -1301,17 +1301,17 @@ h4 {
 	.sl-blog-newsletter {
 		max-width: 900px;
 		margin: 60px auto 0;
-		background: #490000;
+		background: #174C3C;
 		color: #fff;
 		padding: 50px 30px;
 		text-align: center;
 		border-radius: 8px;
-		border: 1px solid rgba(200, 154, 59, 0.3);
+		border: 1px solid rgba(244, 181, 27, 0.3);
 
 		h2 {
 			font-family: 'Lora', serif;
 			font-size: 32px;
-			color: #C89A3B;
+			color: #F4B51B;
 			margin: 0 0 15px;
 		}
 
@@ -1325,7 +1325,7 @@ h4 {
 			display: flex;
 			max-width: 500px;
 			margin: 0 auto;
-			border: 1px solid rgba(200, 154, 59, 0.5);
+			border: 1px solid rgba(244, 181, 27, 0.5);
 			border-radius: 4px;
 			overflow: hidden;
 
@@ -1343,8 +1343,8 @@ h4 {
 			}
 
 			button {
-				background: #C89A3B;
-				color: #490000;
+				background: #F4B51B;
+				color: #174C3C;
 				font-weight: 700;
 				border: none;
 				padding: 0 25px;

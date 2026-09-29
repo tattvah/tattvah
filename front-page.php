@@ -227,7 +227,7 @@
 
 					<!-- Category 3: Sambrani & Cups -->
 					<div class="fp-category-card">
-						<img src="https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png"
+						<img src="https://tattvah.com/cdn/shop/files/havan-cup-lifestyle-min.png"
 							alt="Sambrani & Havan Cups" class="fp-category-card__bg">
 						<div class="fp-category-card__overlay">
 							<h3 class="fp-category-card__title">Sambrani Cups</h3>
@@ -241,7 +241,7 @@
 
 					<!-- Category 4: Festive Gift Sets -->
 					<div class="fp-category-card">
-						<img src="https://sugandhlok.com/cdn/shop/products/SugandhLok-AanganCollection-Ananda-1.jpg"
+						<img src="https://tattvah.com/cdn/shop/products/Tattvah-AanganCollection-Ananda-1.jpg"
 							alt="Artisanal Gift Sets" class="fp-category-card__bg">
 						<div class="fp-category-card__overlay">
 							<h3 class="fp-category-card__title">Artisan Gift Sets</h3>
@@ -589,7 +589,7 @@
 					<!-- Ritual 2 -->
 					<div class="fp-ritual-card">
 						<div class="fp-ritual-card__media">
-							<img src="https://sugandhlok.com/cdn/shop/files/havan-cup-lifestyle-min.png"
+							<img src="https://tattvah.com/cdn/shop/files/havan-cup-lifestyle-min.png"
 								alt="Space Purification" class="fp-ritual-card__img" loading="lazy">
 						</div>
 						<div class="fp-ritual-card__content">

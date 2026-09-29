@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="flex gap-5 items-center border-b border-gray-100 pb-5">
                         <img src="${item.image}" alt="${item.title}" class="w-24 h-24 object-cover rounded shadow-sm">
                         <div class="flex-grow">
-                            <h4 class="text-2xl font-semibold text-gray-800">${item.title}</h4>
-                            <div class="text-sugandhlok-maroon text-xl font-bold mt-2">Rs. ${item.price}</div>
+                            <h4 class="text-3xl font-semibold text-gray-800">${item.title}</h4>
+                            <div class="text-brand-primary text-2xl font-bold mt-2">Rs. ${item.price}</div>
                             <div class="flex items-center gap-4 mt-4">
                                 <button onclick="updateCartQty('${item.id}', -1)" class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded text-gray-600 hover:bg-gray-200 text-2xl">-</button>
                                 <span class="text-xl font-medium">${item.quantity}</span>

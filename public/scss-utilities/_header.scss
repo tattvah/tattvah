@@ -4,15 +4,32 @@
        SUGANDH LOK HEADER STYLES (PURE CSS - NO EXTERNAL DEPENDENCY)
        ============================================================== */
 :root {
-    --sl-gold-primary: #C89A3B;
-    --sl-gold-secondary: #B58428;
-    --sl-maroon: #490000;
-    --sl-maroon-dark: #330000;
-    --sl-text-dark: #2A2421;
-    --sl-text-muted: #666666;
-    --sl-border: #ECE6DD;
+    /* --- NEW BRAND PALETTE --- */
+    --brand-primary: #174C3C;
+    --brand-secondary: #28735B;
+    --bg-cream: #FFF4DF;
+    --bg-sand: #EAD9BC;
+    --text-primary: #33251D;
+    --text-secondary: #715846;
+    --white: #FFFFFF;
+
+    --accent-yellow: #F4B51B;
+    --accent-orange: #E87527;
+    --accent-coral: #E85D68;
+    --fragrance-rose: #D94F70;
+    --fragrance-lavender: #8D7BC3;
+    --fragrance-teal: #168C82;
+    --accent-blue: #12639A;
+
+    /* --- OLD VARIABLES MAPPED TO NEW PALETTE --- */
+    --sl-gold-primary: var(--accent-yellow);
+    --sl-gold-secondary: var(--accent-orange);
+    --sl-maroon: var(--brand-primary);
+    --sl-maroon-dark: var(--text-primary);
+    --sl-text-dark: var(--text-primary);
+    --sl-text-muted: var(--text-secondary);
+    --sl-border: var(--bg-sand);
     --header-height: 0px;
-    /* Prevents unwanted double margin on main container */
 }
 
 .sl-header-container,

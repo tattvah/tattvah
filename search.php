@@ -18,8 +18,8 @@
         <div class="text-center mb-16" data-aos="fade-up">
             <h1 class="text-4xl md:text-5xl font-lora text-gray-900 font-semibold mb-6">Search Results</h1>
             <p class="text-xl text-gray-600">You searched for: <span
-                    class="text-sugandhlok-maroon font-semibold">"<?php echo esc_html($search_query); ?>"</span></p>
-            <div class="w-24 h-1 bg-sugandhlok-peach mx-auto mt-8"></div>
+                    class="text-brand-primary font-semibold">"<?php echo esc_html($search_query); ?>"</span></p>
+            <div class="w-24 h-1 bg-tattvah-peach mx-auto mt-8"></div>
         </div>
 
         <div class="search-results-container">
@@ -48,7 +48,7 @@
                                 <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <div
-                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-xs font-bold text-sugandhlok-maroon uppercase tracking-widest shadow-sm">
+                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-xs font-bold text-brand-primary uppercase tracking-widest shadow-sm">
                                     <?php
                                     if ($post_type === 'product')
                                         echo 'Product';
@@ -62,7 +62,7 @@
                             <div class="p-8 flex flex-col flex-grow">
                                 <h2 class="text-2xl font-lora font-semibold text-gray-900 mb-4 line-clamp-2">
                                     <a href="<?php the_permalink(); ?>"
-                                        class="hover:text-sugandhlok-maroon transition-colors"><?php the_title(); ?></a>
+                                        class="hover:text-brand-primary transition-colors"><?php the_title(); ?></a>
                                 </h2>
                                 <div class="text-gray-600 mb-6 line-clamp-3 text-lg flex-grow">
                                     <?php
@@ -75,7 +75,7 @@
                                 </div>
 
                                 <a href="<?php the_permalink(); ?>"
-                                    class="inline-flex items-center text-sugandhlok-maroon font-bold text-lg hover:text-red-900 transition-colors mt-auto group">
+                                    class="inline-flex items-center text-brand-primary font-bold text-lg hover:text-red-900 transition-colors mt-auto group">
                                     <?php echo ($post_type === 'product') ? 'View Product' : 'Read More'; ?>
                                     <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,10 +112,10 @@
 
                     <form action="/" method="GET" class="max-w-md mx-auto mt-8 relative">
                         <input type="text" name="s" value="<?php echo esc_attr(get_search_query()); ?>"
-                            class="w-full border border-gray-300 p-4 pl-6 text-lg rounded-full focus:outline-none focus:border-sugandhlok-maroon focus:ring-1 focus:ring-sugandhlok-maroon"
+                            class="w-full border border-gray-300 p-4 pl-6 text-lg rounded-full focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
                             placeholder="Search again...">
                         <button type="submit"
-                            class="absolute right-2 top-2 bottom-2 bg-sugandhlok-maroon text-white w-12 rounded-full flex items-center justify-center hover:bg-red-900 transition-colors">
+                            class="absolute right-2 top-2 bottom-2 bg-brand-primary text-white w-12 rounded-full flex items-center justify-center hover:bg-red-900 transition-colors">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -131,9 +131,9 @@
     <style>
         /* Custom styling for pagination to look like Tailwind */
         .page-numbers.current {
-            background-color: #490000;
+            background-color: #174C3C;
             color: white;
-            border-color: #490000;
+            border-color: #174C3C;
             font-weight: bold;
         }
 

@@ -17,7 +17,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		background: #fbf7f4;
+		background: #FFF4DF;
 		padding: 60px 20px;
 
 		.hero-inner {
@@ -28,7 +28,7 @@
 		h1 {
 			font-family: 'Lora', 'Cinzel', serif;
 			font-size: 48px;
-			color: #490000;
+			color: #174C3C;
 			margin-bottom: 20px;
 			font-weight: 600;
 			letter-spacing: 1px;
@@ -37,7 +37,7 @@
 		.hero-divider {
 			width: 80px;
 			height: 3px;
-			background: #C89A3B;
+			background: #F4B51B;
 			margin: 0 auto 20px;
 		}
 
@@ -432,7 +432,7 @@
 			font-weight: 700;
 			line-height: 1.4;
 			text-align: left;
-			color: #490000;
+			color: #174C3C;
 
 			@media screen and (max-width: 768px) {
 				font-size: 20px;
@@ -485,9 +485,9 @@
 				display: flex;
 				height: 40px;
 				background: #fff;
-				color: #490000;
+				color: #174C3C;
 				align-items: center;
-				border: solid 1px #490000;
+				border: solid 1px #174C3C;
 				padding-left: 15px;
 				cursor: pointer;
 				border-radius: 4px;
@@ -498,8 +498,8 @@
 				transition: all 0.3s ease;
 
 				&:hover {
-					border-color: #C89A3B;
-					color: #C89A3B;
+					border-color: #F4B51B;
+					color: #F4B51B;
 				}
 
 				@media screen and (max-width: 768px) {
@@ -527,7 +527,7 @@
 			div {
 				width: 40px;
 				height: 2px;
-				background: #C89A3B;
+				background: #F4B51B;
 				margin-left: 53px;
 				position: absolute;
 				transition: 0.5s;

@@ -85,7 +85,7 @@ const muteIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xm
 const unmuteIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_534_429)">
 <path d="M12 21.9999C11.74 21.9999 11.484 21.8979 11.293 21.7069L6.586 16.9999H4C2.897 16.9999 2 16.1029 2 14.9999V8.99992C2 7.89692 2.897 6.99992 4 6.99992H6.586L11.293 2.29292C11.579 2.00592 12.009 1.92092 12.383 2.07592C12.757 2.23092 13 2.59592 13 2.99992V20.9999C13 21.4039 12.757 21.7689 12.383 21.9239C12.259 21.9749 12.129 21.9999 12 21.9999Z" fill="white"/>
-<path d="M1.13281 3L17.9638 22.0976" stroke="#0100C8" stroke-width="2" stroke-linecap="round"/>
+<path d="M1.13281 3L17.9638 22.0976" stroke="#12639A" stroke-width="2" stroke-linecap="round"/>
 <path d="M1.13281 1L17.9638 20.0976" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
 </g>
 <defs>
