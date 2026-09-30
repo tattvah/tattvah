@@ -1,6 +1,3 @@
-<div class="loading-div hidden relative">
-    <img src="https://tattvah.com/wp-content/uploads/2025/01/Form-Loader-Gif.gif" alt="loader">
-</div>
 
 <footer class="sl-footer">
     <div class="sl-footer-inner">

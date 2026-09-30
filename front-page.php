@@ -723,12 +723,12 @@
 					collections, and Ayurvedic wellness insights.
 				</p>
 
-				<form class="fp-newsletter__form"
-					onsubmit="event.preventDefault(); alert('Thank you for joining the Tattvah Sanctuary circle!');">
-					<input type="email" required placeholder="Enter your email address..." class="fp-newsletter__input"
-						aria-label="Email address for newsletter">
-					<button type="submit" class="fp-newsletter__btn">Join Sanctuary</button>
+				<form id="tattvah-newsletter-form" class="fp-newsletter__form">
+					<input type="hidden" name="formType" value="newsletter">
+					<input type="email" name="Email" required placeholder="Enter your email address..." class="fp-newsletter__input" aria-label="Email address for newsletter">
+					<button type="submit" id="tattvah-newsletter-submit" class="fp-newsletter__btn">Join Sanctuary</button>
 				</form>
+				<p id="tattvah-newsletter-msg" style="margin-top: 15px; font-weight: 500; font-size: 1.1rem;"></p>
 				<p class="fp-newsletter__disclaimer">Pure devotion, zero spam. Unsubscribe at any time.</p>
 			</div>
 		</section>

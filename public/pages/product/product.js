@@ -7,7 +7,6 @@ import 'swiper/css/bundle';
 
 gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Product JS Loaded");
     // 1. Initialize Swiper for Thumbnails
     if (document.querySelector('.sp-thumb-slider')) {
         const thumbSlider = new Swiper('.sp-thumb-slider', {
