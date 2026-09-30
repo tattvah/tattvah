@@ -10,8 +10,8 @@
 		href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
 		rel="stylesheet">
 
-	<link rel="stylesheet" href='/wp-content/themes/tattvah/build/frontpage/frontpage.css?v6'>
-	<script type="module" defer src='/wp-content/themes/tattvah/build/frontpage/frontpage.bundle.js?v6'></script>
+	<link rel="stylesheet" href="<?php echo get_theme_file_uri('/build/frontPage/frontPage.css'); ?>?v=7">
+	<script type="module" defer src="<?php echo get_theme_file_uri('/build/frontPage/frontPage.bundle.js'); ?>?v=7"></script>
 
 	<?php
 	$homeUrl = get_home_url();
@@ -227,7 +227,7 @@
 
 					<!-- Category 3: Sambrani & Cups -->
 					<div class="fp-category-card">
-						<img src="https://tattvah.com/cdn/shop/files/havan-cup-lifestyle-min.png"
+						<img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80"
 							alt="Sambrani & Havan Cups" class="fp-category-card__bg">
 						<div class="fp-category-card__overlay">
 							<h3 class="fp-category-card__title">Sambrani Cups</h3>
@@ -241,7 +241,7 @@
 
 					<!-- Category 4: Festive Gift Sets -->
 					<div class="fp-category-card">
-						<img src="https://tattvah.com/cdn/shop/products/Tattvah-AanganCollection-Ananda-1.jpg"
+						<img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
 							alt="Artisanal Gift Sets" class="fp-category-card__bg">
 						<div class="fp-category-card__overlay">
 							<h3 class="fp-category-card__title">Artisan Gift Sets</h3>
@@ -589,7 +589,7 @@
 					<!-- Ritual 2 -->
 					<div class="fp-ritual-card">
 						<div class="fp-ritual-card__media">
-							<img src="https://tattvah.com/cdn/shop/files/havan-cup-lifestyle-min.png"
+							<img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80"
 								alt="Space Purification" class="fp-ritual-card__img" loading="lazy">
 						</div>
 						<div class="fp-ritual-card__content">
